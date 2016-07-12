@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "jest": {
-     "haste": {
+    "haste": {
       "defaultPlatform": "ios",
       "platforms": [
         "ios",
@@ -54,6 +54,7 @@
     "immutable": "3.7.6",
     "key-mirror": "1.0.1",
     "react-native": "0.24.0",
+    "react-native-fbsdk": "^0.2.2",
     "react-native-gifted-spinner": "0.0.3",
     "react-native-navbar": "1.4.0",
     "react-native-router-flux": "3.22.0",

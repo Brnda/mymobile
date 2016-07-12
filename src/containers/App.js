@@ -116,7 +116,7 @@ let App = React.createClass({
             <Text style={styles.messageBoxTitleText}>Welcome to Owal!</Text>
           </View>
           <View>
-            <TouchableHighlight onPress={this._onPressButton}>
+            <TouchableHighlight underlayColor="#1e9e6b" onPress={this._onPressButton}>
               <Text style={styles.messageBoxBodyText}>Login using FB.</Text>
             </TouchableHighlight>
           </View>
