@@ -51,7 +51,7 @@
     #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"snowflake"
+                                                      moduleName:@"owal"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
 

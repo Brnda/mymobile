@@ -1185,13 +1185,13 @@ return Array.from(arr);}};})(
 
 
 typeof global!=='undefined'?global:typeof self!=='undefined'?self:this);
-__d('snowflake/index.ios.js',function(global, require, module, exports) {  'use strict';var _snowflake=require('snowflake/src/snowflake.js');var _snowflake2=babelHelpers.interopRequireDefault(_snowflake);
+__d('snowflake/index.ios.js',function(global, require, module, exports) {  'use strict';var _snowflake=require('snowflake/src/owal.js');var _snowflake2=babelHelpers.interopRequireDefault(_snowflake);
 
 
 
 (0,_snowflake2.default)('ios');
 });
-__d('snowflake/src/snowflake.js',function(global, require, module, exports) {  'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+__d('snowflake/src/owal.js',function(global, require, module, exports) {  'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 

@@ -1,6 +1,6 @@
 'use strict';
 
-import snowflake from './src/snowflake';
+import snowflake from './src/owal';
 
 snowflake('android');
 

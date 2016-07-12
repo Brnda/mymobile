@@ -1,5 +1,5 @@
 'use strict';
 
-import snowflake from './src/snowflake';
+import owal from './src/owal';
 
-snowflake('ios');
+owal('ios');
