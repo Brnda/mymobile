@@ -103,50 +103,7 @@ export default function native(platform) {
                      title="App"
                      initial={true}/>
 
-              <Scene key="InitialLoginForm"
-                     component={Register}
-                     title="Register"/>
 
-              <Scene key="Login"
-                     component={Login}
-                     title="Login"/>
-
-              <Scene key="Register"
-                     component={Register}
-                     title="Register"/>
-
-              <Scene key="ForgotPassword"
-                     component={ForgotPassword}
-                     title="ForgotPassword"
-                     type="replace"/>
-
-              <Scene key="Subview"
-                     component={Subview}
-                     title="Subview"/>
-
-              <Scene key="Tabbar" tabs={true} default="Main">
-                <Scene key="Logout"
-                       title="logout"
-                       icon={TabIcon}
-                       iconName={"sign-out"}
-                       hideNavBar={true}
-                       component={Logout}/>
-
-                <Scene key="Main"
-                       title="main"
-                       iconName={"home"}
-                       icon={TabIcon}
-                       hideNavBar={true}
-                       component={Main}
-                       initial={true}/>
-
-                <Scene key="Profile"
-                       title="profile"
-                       icon={TabIcon}
-                       iconName={"gear"}
-                       hideNavBar={true}
-                       component={Profile}/>
-              </Scene>
             </Scene>
           </Router>
         </Provider>

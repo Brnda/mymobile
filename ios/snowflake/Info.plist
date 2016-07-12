@@ -31,6 +31,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Lato-Regular.ttf</string>
 		<string>FontAwesome.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
