@@ -30,8 +30,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
-                .addPackage(new MainReactPackage(),
-            new FBSDKPackage())
+                .addPackage(new MainReactPackage())
 
                 // and this line:
                 .addPackage(new VectorIconsPackage())
