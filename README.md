@@ -18,7 +18,23 @@ git clone https://github.com/owal/mobile.git
 ```
 cd <root-folder>/ && npm install
 ```
-3- Run the application in the simulator
+
+3- Install the FacebookSDK for iOS
+
+Download FB sdk here: ***version: 4.13.1*** 
+
+https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip
+
+Make sure that you put it under ~/Documents/<FB-FOLDER> and then update the Build Framework path on Xcode. 
+
+4- Install RNPM and React Native sdk bridge
+```
+npm install rnpm -g
+
+rnpm install react-native-fbsdk
+```
+
+4- Run the application in the simulator
 
 Open the .xcodeproj file under the root /ios folder and then run as you would any other Xcode project in the simulator.
 
