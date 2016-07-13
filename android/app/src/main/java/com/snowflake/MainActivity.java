@@ -1,10 +1,14 @@
 package com.snowflake;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
 // Add this line:
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 // Add this line:
 import com.burnweb.rnsimplealertdialog.RNSimpleAlertDialogPackage;
@@ -25,13 +29,18 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mReactRootView = new ReactRootView(this);
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
-                .addPackage(new MainReactPackage(),
-            new FBSDKPackage())
+                .addPackage(new MainReactPackage())
+                .addPackage(new FBSDKPackage(new CallbackManager() {
+                    @Override
+                    public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+                        return true;
+                    }
+                }))
 
                 // and this line:
                 .addPackage(new VectorIconsPackage())
@@ -42,7 +51,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
 
-        mReactRootView.startReactApplication(mReactInstanceManager, "snowflake", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "owal", null);
 
         setContentView(mReactRootView);
     }
@@ -75,7 +84,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
         super.onPause();
 
         if (mReactInstanceManager != null) {
-            mReactInstanceManager.onPause();
+            mReactInstanceManager.onHostPause();
         }
     }
 
@@ -84,7 +93,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
         super.onResume();
 
         if (mReactInstanceManager != null) {
-            mReactInstanceManager.onResume(this, this);
+            mReactInstanceManager.onHostResume(this, this);
         }
     }
 }
