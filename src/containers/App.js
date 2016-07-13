@@ -19,6 +19,10 @@ import React, {
   Text,
   TouchableHighlight
 } from 'react-native';
+const FBSDK = require('react-native-fbsdk');
+const {
+  LoginButton,
+} = FBSDK;
 
 /**
  * ## Actions
@@ -116,9 +120,20 @@ let App = React.createClass({
             <Text style={styles.messageBoxTitleText}>Welcome to Owal!</Text>
           </View>
           <View>
-            <TouchableHighlight underlayColor="#1e9e6b" onPress={this._onPressButton}>
-              <Text style={styles.messageBoxBodyText}>Login using FB.</Text>
-            </TouchableHighlight>
+            <LoginButton
+              publishPermissions={["publish_actions"]}
+              onLoginFinished={
+                (error, result) => {
+                  if (error) {
+                    alert("Login failed with error: " + result.error);
+                  } else if (result.isCancelled) {
+                    alert("Login was cancelled");
+                  } else {
+                    alert("Login was successful with permissions: " + result.grantedPermissions)
+                  }
+                }
+              }
+              onLogoutFinished={() => alert("User logged out")}/>
           </View>
         </View>
       </View>
