@@ -16,11 +16,11 @@
 #define TIMEOUT_SECONDS 240
 #define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
 
-@interface snowflakeTests : XCTestCase
+@interface owalTests : XCTestCase
 
 @end
 
-@implementation snowflakeTests
+@implementation owalTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
