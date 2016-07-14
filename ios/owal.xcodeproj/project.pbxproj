@@ -24,7 +24,6 @@
 		2D5C73351D35CC6E004231FC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5C73321D35CC6E004231FC /* FBSDKShareKit.framework */; };
 		2D65854B1D37021B00CCD6BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6585471D37021B00CCD6BD /* AppDelegate.m */; };
 		2D65854C1D37021B00CCD6BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6585481D37021B00CCD6BD /* Images.xcassets */; };
-		2D65854D1D37021B00CCD6BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D6585491D37021B00CCD6BD /* Info.plist */; };
 		2D65854E1D37021B00CCD6BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D65854A1D37021B00CCD6BD /* main.m */; };
 		362534D31C1C5551003948CD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362534D21C1C5551003948CD /* Media.xcassets */; };
 		36ED1C181C12063B0080BCE0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */; };
@@ -393,7 +392,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -564,7 +563,6 @@
 			files = (
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				2D65854C1D37021B00CCD6BD /* Images.xcassets in Resources */,
-				2D65854D1D37021B00CCD6BD /* Info.plist in Resources */,
 				2D373E611D35A67000D5EE49 /* Lato-Regular.ttf in Resources */,
 				362534D31C1C5551003948CD /* Media.xcassets in Resources */,
 				36ED1C181C12063B0080BCE0 /* FontAwesome.ttf in Resources */,
@@ -687,7 +685,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libs",
 					"/Users/matzero/Documents/FacebookSDK/**",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -716,7 +713,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libs",
 					"/Users/matzero/Documents/FacebookSDK/**",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -756,6 +752,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -776,7 +773,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -819,7 +816,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

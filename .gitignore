@@ -35,5 +35,3 @@ npm-debug.log
 node_modules/
 # jest
 coverage/
-
-src/lib/config.js

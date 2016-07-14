@@ -17,20 +17,7 @@ import {
 } from 'react-redux';
 import configureStore from './lib/configureStore';
 import App from './containers/App';
-import Login from './containers/Login';
-import Logout from './containers/Logout';
-import Register from './containers/Register';
-import ForgotPassword from './containers/ForgotPassword';
-import Profile from './containers/Profile';
-import Main from './containers/Main';
-import Subview from './containers/Subview';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {setPlatform, setVersion} from './reducers/device/deviceActions';
-import {setStore} from './reducers/global/globalActions';
-import authInitialState from './reducers/auth/authInitialState';
-import deviceInitialState from './reducers/device/deviceInitialState';
-import globalInitialState from './reducers/global/globalInitialState';
-import profileInitialState from './reducers/profile/profileInitialState';
 
 /**
  *  The version of the app but not  displayed yet
@@ -45,10 +32,7 @@ var VERSION = '0.1.1';
  */
 function getInitialState() {
   const _initState = {
-    auth: new authInitialState,
-    device: (new deviceInitialState).set('isMobile', true),
-    global: (new globalInitialState),
-    profile: new profileInitialState
+
   };
   return _initState;
 }
@@ -88,10 +72,6 @@ export default function native(platform) {
 
       //Connect w/ the Router
       const Router = connect()(RNRF.Router);
-
-      store.dispatch(setPlatform(platform));
-      store.dispatch(setVersion(VERSION));
-      store.dispatch(setStore(store));
 
       // setup the router table with App selected as the initial component
       return (

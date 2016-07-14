@@ -11,8 +11,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Map} from 'immutable';
 import * as authActions from '../reducers/auth/authActions';
-import * as deviceActions from '../reducers/device/deviceActions';
-import * as globalActions from '../reducers/global/globalActions';
+
 import React, {
   StyleSheet,
   View,
@@ -29,9 +28,7 @@ const {
  * 3 of our actions will be available as ```actions```
  */
 const actions = [
-  authActions,
-  deviceActions,
-  globalActions
+  authActions
 ];
 
 /**
@@ -105,7 +102,7 @@ let App = React.createClass({
    *
    */
   componentDidMount() {
-    this.props.actions.getSessionToken();
+    
   },
 
   _onPressButton() {
