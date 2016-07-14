@@ -102,7 +102,7 @@ let App = React.createClass({
    *
    */
   componentDidMount() {
-    
+
   },
 
   _onPressButton() {
@@ -118,7 +118,7 @@ let App = React.createClass({
           </View>
           <View>
             <LoginButton
-              publishPermissions={["publish_actions"]}
+              //publishPermissions={["publish_actions"]}
               onLoginFinished={
                 (error, result) => {
                   if (error) {
@@ -142,4 +142,3 @@ let App = React.createClass({
  * Connect the properties
  */
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
