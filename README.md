@@ -42,7 +42,12 @@ Open the .xcodeproj file under the root /ios folder and then run as you would an
 #### <i class="icon-file"></i> Android
 1- Clone the repository
 ```
-git clone https://github.com/owal/mobile.git
+git clone https://github.com/owal/mobile.git owal-mobile
+```
+
+Also clone the main repository; we need the protocol buffers from there
+```
+git clone https://github.com/owal/owal.git owal
 ```
 
 2- Install all the dependencies
@@ -70,3 +75,5 @@ If it complains that you don't have an emulator, then open Android Studio and
 click the AVD Manager button. Create (or launch) an AVD; I use Nexus 5X on
 API 23 (Marshmallow) w/ Google APIs. Make sure it's an x86 - x86_64 uses
 unnecessarily more RAM, and an ARM would be too slow.
+
+
