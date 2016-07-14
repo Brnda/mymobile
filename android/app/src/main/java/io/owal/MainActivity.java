@@ -1,4 +1,4 @@
-package com.snowflake;
+package io.owal;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -30,6 +30,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
         super.onCreate(savedInstanceState);
         mReactRootView = new ReactRootView(this);
         FacebookSdk.sdkInitialize(getApplicationContext());
+        FacebookSdk.setApplicationId("1038715489517463");
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
