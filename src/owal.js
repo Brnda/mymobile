@@ -1,66 +1,32 @@
-'use strict';
-
 import React, {
   AppRegistry,
   Navigator,
   View,
   Text
-} from 'react-native';
+} from 'react-native'
 import RNRF, {
   Route,
-  Scene,
-  TabBar
-} from 'react-native-router-flux';
+  Scene
+} from 'react-native-router-flux'
 import {
   Provider,
   connect
-} from 'react-redux';
-import configureStore from './lib/configureStore';
-import App from './containers/App';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
-/**
- *  The version of the app but not  displayed yet
- */
-var VERSION = '0.1.1';
+} from 'react-redux'
+import configureStore from './lib/configureStore'
+import App from './containers/App'
+import Home from './containers/Home'
 
 /**
  *
  * ## Initial state
- * Create instances for the keys of each structure
  * @returns {Object} object with 4 keys
  */
 function getInitialState() {
-  const _initState = {
-
-  };
-  return _initState;
-}
-/**
- * ## TabIcon
- *
- * Displays the icon for the tab w/ color dependent upon selection
- */
-
-class TabIcon extends React.Component {
-  render() {
-    var color = this.props.selected ? '#FF3366' : '#FFB3B3';
-    return (
-      <View style={{flex:1, flexDirection:'column', alignItems:'center', alignSelf:'center'}}>
-        <Icon style={{color: color}} name={this.props.iconName} size={30}/>
-        <Text style={{color: color}}>{this.props.title}</Text>
-      </View>
-    );
-  }
+  return {};
 }
 
 /**
- * ## Native
- *
- * ```configureStore``` with the ```initialState``` and set the
- * ```platform``` and ```version``` into the store by ```dispatch```.
- * *Note* the ```store``` itself is set into the ```store```.  This
- * will be used when doing hot loading
+ * ## Native entry point.
  */
 
 export default function native(platform) {
@@ -78,12 +44,13 @@ export default function native(platform) {
         <Provider store={store}>
           <Router hideNavBar={true}>
             <Scene key="root">
-              <Scene key="App"
+              <Scene key="app"
                      component={App}
                      title="App"
                      initial={true}/>
 
-
+              <Scene key="home" 
+                     component={Home}/>
             </Scene>
           </Router>
         </Provider>
