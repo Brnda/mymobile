@@ -1,4 +1,4 @@
-rootProject.name = 'snowflake'
+rootProject.name = 'owal'
 
 include ':app'
 include ':react-native-fbsdk'
