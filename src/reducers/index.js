@@ -1,15 +1,3 @@
-/**
- * # reducers
- * 
- * This class combines all the reducers into one
- * 
- */
-'use strict';
-/**
- * ## Imports
- * 
- * our 4 reducers
- */ 
 import auth from './auth/authReducer';
 
 import { combineReducers } from 'redux';
@@ -21,7 +9,7 @@ import { combineReducers } from 'redux';
  * EVERY TIME there is a basic action
  */ 
 const rootReducer = combineReducers({
-  auth,
+  auth
 });
 
 export default rootReducer;
