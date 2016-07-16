@@ -60,7 +60,7 @@ let App = React.createClass({
       <View style={styles.container}>
         <View style={styles.messageBox}>
           <View>
-            <Text style={styles.messageBoxTitleText}>Welcome to Owal!</Text>
+            <Text style={styles.messageBoxTitleText}>Welcome to Owal, {this.props.name}!</Text>
             <TestView handleLogin={this.props.actions.loginRequest}/>
           </View>
           <View>
@@ -86,8 +86,9 @@ let App = React.createClass({
 })
 
 function mapStateToProps(state) {
+  console.log(`State is ${JSON.stringify(state)}`)
   return {
-    ...state
+    name: state.auth.getIn(['user', 'username'])
   }
 }
 

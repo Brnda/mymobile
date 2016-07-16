@@ -16,14 +16,6 @@ import configureStore from './lib/configureStore'
 import App from './containers/App'
 import Home from './containers/Home'
 
-/**
- *
- * ## Initial state
- * @returns {Object} object with 4 keys
- */
-function getInitialState() {
-  return {};
-}
 
 /**
  * ## Native entry point.
@@ -34,7 +26,7 @@ export default function native(platform) {
   let Owal = React.createClass({
     render() {
 
-      const store = configureStore(getInitialState());
+      const store = configureStore();
 
       //Connect w/ the Router
       const Router = connect()(RNRF.Router);
