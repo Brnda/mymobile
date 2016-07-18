@@ -25,6 +25,7 @@
 		2D65854B1D37021B00CCD6BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6585471D37021B00CCD6BD /* AppDelegate.m */; };
 		2D65854C1D37021B00CCD6BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6585481D37021B00CCD6BD /* Images.xcassets */; };
 		2D65854E1D37021B00CCD6BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D65854A1D37021B00CCD6BD /* main.m */; };
+		2D6585881D3D40A300CCD6BD /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6585871D3D40A300CCD6BD /* CustomComponent.m */; };
 		362534D31C1C5551003948CD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362534D21C1C5551003948CD /* Media.xcassets */; };
 		36ED1C181C12063B0080BCE0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */; };
 		76EEF350540C4FEE9DEC9D12 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8D8268B2C846A59E6D2E2E /* libRCTFBSDK.a */; };
@@ -142,6 +143,8 @@
 		2D6585481D37021B00CCD6BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = owal/Images.xcassets; sourceTree = "<group>"; };
 		2D6585491D37021B00CCD6BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = owal/Info.plist; sourceTree = "<group>"; };
 		2D65854A1D37021B00CCD6BD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = owal/main.m; sourceTree = "<group>"; };
+		2D6585861D3D40A300CCD6BD /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomComponent.h; path = owal/CustomComponent.h; sourceTree = "<group>"; };
+		2D6585871D3D40A300CCD6BD /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomComponent.m; path = owal/CustomComponent.m; sourceTree = "<group>"; };
 		362534D21C1C5551003948CD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				2D65854A1D37021B00CCD6BD /* main.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				2D6585861D3D40A300CCD6BD /* CustomComponent.h */,
+				2D6585871D3D40A300CCD6BD /* CustomComponent.m */,
 			);
 			name = owal;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D65854E1D37021B00CCD6BD /* main.m in Sources */,
+				2D6585881D3D40A300CCD6BD /* CustomComponent.m in Sources */,
 				2D65854B1D37021B00CCD6BD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
