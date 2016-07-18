@@ -28,6 +28,10 @@
 		2D6585881D3D40A300CCD6BD /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6585871D3D40A300CCD6BD /* CustomComponent.m */; };
 		362534D31C1C5551003948CD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362534D21C1C5551003948CD /* Media.xcassets */; };
 		36ED1C181C12063B0080BCE0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */; };
+		66BACDFC1D3D637100FBAFD3 /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BACDFB1D3D637100FBAFD3 /* ProtoWrapper.m */; };
+		66BACDFD1D3D637100FBAFD3 /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BACDFB1D3D637100FBAFD3 /* ProtoWrapper.m */; };
+		66BACDFF1D3D65DD00FBAFD3 /* libowalprotos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BACDDA1D3D618E00FBAFD3 /* libowalprotos.a */; };
+		66BACE011D3D672400FBAFD3 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BACE001D3D672400FBAFD3 /* libProtocolBuffers.a */; };
 		76EEF350540C4FEE9DEC9D12 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8D8268B2C846A59E6D2E2E /* libRCTFBSDK.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -103,6 +107,13 @@
 			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
 			remoteInfo = RCTFBSDK;
 		};
+		66BACDD91D3D618E00FBAFD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66BACDD51D3D618D00FBAFD3 /* owalprotos.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66BACDC91D3D618D00FBAFD3;
+			remoteInfo = owalprotos;
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -147,6 +158,10 @@
 		2D6585871D3D40A300CCD6BD /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomComponent.m; path = owal/CustomComponent.m; sourceTree = "<group>"; };
 		362534D21C1C5551003948CD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		66BACDD51D3D618D00FBAFD3 /* owalprotos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = owalprotos.xcodeproj; path = owalprotos/owalprotos.xcodeproj; sourceTree = "<group>"; };
+		66BACDFB1D3D637100FBAFD3 /* ProtoWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProtoWrapper.m; path = owal/ProtoWrapper.m; sourceTree = "<group>"; };
+		66BACDFE1D3D638500FBAFD3 /* ProtoWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProtoWrapper.h; path = owal/ProtoWrapper.h; sourceTree = "<group>"; };
+		66BACE001D3D672400FBAFD3 /* libProtocolBuffers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProtocolBuffers.a; path = "../../owal/third_party/protobuf/objectivec/build/Debug-iphoneos/libProtocolBuffers.a"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		BA8D8268B2C846A59E6D2E2E /* libRCTFBSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTFBSDK.a; sourceTree = "<group>"; };
@@ -165,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BACE011D3D672400FBAFD3 /* libProtocolBuffers.a in Frameworks */,
+				66BACDFF1D3D65DD00FBAFD3 /* libowalprotos.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				2D5C73331D35CC6E004231FC /* FBSDKCoreKit.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -271,6 +288,8 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				2D6585861D3D40A300CCD6BD /* CustomComponent.h */,
 				2D6585871D3D40A300CCD6BD /* CustomComponent.m */,
+				66BACDFB1D3D637100FBAFD3 /* ProtoWrapper.m */,
+				66BACDFE1D3D638500FBAFD3 /* ProtoWrapper.h */,
 			);
 			name = owal;
 			sourceTree = "<group>";
@@ -287,6 +306,14 @@
 			isa = PBXGroup;
 			children = (
 				2D5C73201D35C5EE004231FC /* libRCTFBSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66BACDD61D3D618D00FBAFD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66BACDDA1D3D618E00FBAFD3 /* libowalprotos.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +358,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				66BACE001D3D672400FBAFD3 /* libProtocolBuffers.a */,
+				66BACDD51D3D618D00FBAFD3 /* owalprotos.xcodeproj */,
 				2D373E601D35A67000D5EE49 /* Lato-Regular.ttf */,
 				362534D21C1C5551003948CD /* Media.xcassets */,
 				36ED1C171C12063B0080BCE0 /* FontAwesome.ttf */,
@@ -421,6 +450,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 66BACDD61D3D618D00FBAFD3 /* Products */;
+					ProjectRef = 66BACDD51D3D618D00FBAFD3 /* owalprotos.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -538,6 +571,13 @@
 			remoteRef = 2D5C731F1D35C5EE004231FC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		66BACDDA1D3D618E00FBAFD3 /* libowalprotos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libowalprotos.a;
+			remoteRef = 66BACDD91D3D618E00FBAFD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -598,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BACDFD1D3D637100FBAFD3 /* ProtoWrapper.m in Sources */,
 				00E356F31AD99517003FC87E /* snowflakeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +649,7 @@
 			files = (
 				2D65854E1D37021B00CCD6BD /* main.m in Sources */,
 				2D6585881D3D40A300CCD6BD /* CustomComponent.m in Sources */,
+				66BACDFC1D3D637100FBAFD3 /* ProtoWrapper.m in Sources */,
 				2D65854B1D37021B00CCD6BD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,6 +820,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
+					"$(SRCROOT)/owalprotos/owalprotos/",
+					"$(SRCROOT)/protos/",
+					"$(SRCROOT)/../../owal/third_party/protobuf/objectivec/",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -821,6 +866,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
+					"$(SRCROOT)/owalprotos/owalprotos/",
+					"$(SRCROOT)/protos/",
+					"$(SRCROOT)/../../owal/third_party/protobuf/objectivec/",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
