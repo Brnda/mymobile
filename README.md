@@ -11,7 +11,10 @@ How to run the application
 
 1- Clone the repository
 ```
-git clone https://github.com/owal/mobile.git
+git clone https://github.com/owal/mobile.git owal-mobile
+git clone https://github.com/owal/owal/git owal
+cd owal
+git fetch; git submodule update --init
 ```
 
 2- Install all the dependencies
@@ -34,7 +37,16 @@ npm install rnpm -g
 rnpm install react-native-fbsdk
 ```
 
-4- Run the application in the simulator
+5- Install the Protocol Buffer compiler
+```
+cd owal/third_party/protobuf/
+./autogen.sh
+./configure
+make
+make install
+```
+
+6- Run the application in the simulator
 
 Open the .xcodeproj file under the root /ios folder and then run as you would any other Xcode project in the simulator.
 
