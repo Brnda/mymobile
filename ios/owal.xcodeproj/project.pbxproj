@@ -329,6 +329,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				66BACE001D3D672400FBAFD3 /* libProtocolBuffers.a */,
 				2D5C73301D35CC6E004231FC /* FBSDKCoreKit.framework */,
 				2D5C73311D35CC6E004231FC /* FBSDKLoginKit.framework */,
 				2D5C73321D35CC6E004231FC /* FBSDKShareKit.framework */,
@@ -358,7 +359,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				66BACE001D3D672400FBAFD3 /* libProtocolBuffers.a */,
 				66BACDD51D3D618D00FBAFD3 /* owalprotos.xcodeproj */,
 				2D373E601D35A67000D5EE49 /* Lato-Regular.ttf */,
 				362534D21C1C5551003948CD /* Media.xcassets */,
