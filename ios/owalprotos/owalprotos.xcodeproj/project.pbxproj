@@ -142,10 +142,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66BACDD21D3D618D00FBAFD3 /* Build configuration list for PBXNativeTarget "owalprotos" */;
 			buildPhases = (
+				66BACDEC1D3D628900FBAFD3 /* Run Script (Build Protos) */,
 				66BACDC51D3D618D00FBAFD3 /* Sources */,
 				66BACDC61D3D618D00FBAFD3 /* Frameworks */,
 				66BACDC71D3D618D00FBAFD3 /* CopyFiles */,
-				66BACDEC1D3D628900FBAFD3 /* Run Script (Build Protos) */,
 			);
 			buildRules = (
 			);
@@ -385,6 +385,7 @@
 				66BACDD41D3D618D00FBAFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
