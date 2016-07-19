@@ -1,24 +1,22 @@
 package io.owal;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-// Add this line:
+import com.burnweb.rnsimplealertdialog.RNSimpleAlertDialogPackage;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
-// Add this line:
-import com.burnweb.rnsimplealertdialog.RNSimpleAlertDialogPackage;
-
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
-import com.facebook.soloader.SoLoader;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+
+// Add this line:
+// Add this line:
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
 
@@ -37,7 +35,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setJSMainModuleName("index.android")
                 .addPackage(new MainReactPackage())
                 .addPackage(new FBSDKPackage(CallbackManager.Factory.create()))
-
+                .addPackage(new AnExampleReactPackage())
                 // and this line:
                 .addPackage(new VectorIconsPackage())
                 // and this line:
