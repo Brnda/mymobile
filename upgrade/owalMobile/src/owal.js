@@ -16,7 +16,7 @@ import {
 import configureStore from './lib/configureStore'
 import App from './containers/App'
 import Home from './containers/Home'
-// import {CustomComponent} from 'NativeModules'
+import {CustomComponent} from 'NativeModules'
 
 
 /**
@@ -25,16 +25,16 @@ import Home from './containers/Home'
 
 export default function native(platform) {
 
-  // CustomComponent.writeFile(
-  //   'MyFile.txt',
-  //   'Some Text',
-  //   function errorCallback(results) {
-  //     alert('Error: ' + results);
-  //   },
-  //   function successCallback(results) {
-  //     alert('Success : ' + results);
-  //   }
-  // )
+  CustomComponent.writeFile(
+    'MyFile.txt',
+    'Some Text',
+    function errorCallback(results) {
+      alert('Error: ' + results);
+    },
+    function successCallback(results) {
+      alert('Success : ' + results);
+    }
+  )
 
   let Owal = React.createClass({
     render() {
