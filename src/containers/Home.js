@@ -1,10 +1,9 @@
-import React, {
-  Component,
+import {
   View,
   Text,
-  StyleSheet,
-  PropTypes
+  StyleSheet
 } from 'react-native'
+import React, {Component, PropTypes} from 'react'
 import {Actions} from 'react-native-router-flux'
 
 var styles = StyleSheet.create({

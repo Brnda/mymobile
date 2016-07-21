@@ -2,8 +2,9 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import * as authActions from '../reducers/auth/authActions'
 import TestView from '../components/TestView'
+import React from 'react'
 
-import React, {
+import {
   StyleSheet,
   View,
   Text,

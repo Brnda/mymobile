@@ -1,11 +1,12 @@
-import React, {
+import React from 'react'
+import {
   AppRegistry,
   Navigator,
   View,
   Text
 } from 'react-native'
-import RNRF, {
-  Route,
+import {
+  Router,
   Scene
 } from 'react-native-router-flux'
 import {
@@ -38,10 +39,7 @@ export default function native(platform) {
   let Owal = React.createClass({
     render() {
 
-      const store = configureStore();
-
-      //Connect w/ the Router
-      const Router = connect()(RNRF.Router);
+      const store = configureStore()
 
       // setup the router table with App selected as the initial component
       return (
@@ -65,5 +63,5 @@ export default function native(platform) {
    * registerComponent to the AppRegistery and off we go....
    */
 
-  AppRegistry.registerComponent('owal', () => Owal);
+  AppRegistry.registerComponent('owalMobile', () => Owal);
 }
