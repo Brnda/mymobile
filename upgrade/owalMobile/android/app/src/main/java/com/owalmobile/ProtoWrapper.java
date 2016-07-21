@@ -1,6 +1,6 @@
 package com.owalmobile;
 
-import com.owalmobile.*;
+import owal.*;
 
 public class ProtoWrapper {
 }
