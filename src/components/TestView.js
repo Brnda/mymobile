@@ -1,4 +1,5 @@
-import React, {Component, View, Text, TouchableHighlight} from 'react-native'
+import React, {Component} from 'react'
+import { View, Text, TouchableHighlight} from 'react-native'
 import {Actions} from 'react-native-router-flux'
 // import {t} from 'tcomb-form-native'
 
