@@ -29,10 +29,10 @@ export default function native(platform) {
     'MyFile.txt',
     'Some Text',
     function errorCallback(results) {
-      alert('Error: ' + results);
+      alert('Error: ' + results)
     },
     function successCallback(results) {
-      alert('Success : ' + results);
+      alert('Success : ' + results)
     }
   )
 
@@ -56,12 +56,12 @@ export default function native(platform) {
             </Scene>
           </Router>
         </Provider>
-      );
+      )
     }
-  });
+  })
   /**
    * registerComponent to the AppRegistery and off we go....
    */
 
-  AppRegistry.registerComponent('owalMobile', () => Owal);
+  AppRegistry.registerComponent('owalMobile', () => Owal)
 }
