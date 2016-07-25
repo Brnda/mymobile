@@ -1,4 +1,4 @@
-package com.owalmobile;
+package io.owal.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
+import com.facebook.reactnative.androidsdk.BuildConfig;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {

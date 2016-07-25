@@ -1,4 +1,4 @@
-package com.owalmobile;
+package io.owal.android;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
