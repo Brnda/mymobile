@@ -1,0 +1,17 @@
+fastlane_version "1.46.1"
+
+platform :ios do
+                
+        lane :beta do
+            increment_build_number(
+              xcodeproj: './ios/owalMobile.xcodeproj'
+            )
+
+            sh("xctool -project ../ios/owalMobile.xcodeproj -scheme owalMobile clean archive -archivePath ../build/owalMobile")
+
+            sh("xcodebuild -exportArchive -exportFormat ipa -archivePath ../build/owalMobile.xcarchive -exportPath ../build/owalMobile.ipa -exportProvisioningProfile 'iOS Team Provisioning Profile: *'")
+
+            sh("cp ../build/owalMobile.ipa $BITRISE_DEPLOY_DIR")
+        end
+
+end

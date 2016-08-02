@@ -1,0 +1,2 @@
+app_identifier "com.owal.mobile.ios" # The bundle identifier of your app
+apple_id "apple@owal.io" # Your Apple email address
