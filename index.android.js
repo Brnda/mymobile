@@ -1,7 +1,6 @@
 'use strict';
 
-import snowflake from './src/owal';
+import owal from './src/owal';
 
-snowflake('android');
-
+owal('android');
 

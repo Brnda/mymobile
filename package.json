@@ -30,7 +30,6 @@
     "enzyme": "^2.3.0",
     "react-dom": "^15.1.0"
   },
-
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "unmockedModulePathPatterns": [
