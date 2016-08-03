@@ -4,6 +4,5 @@
 # and protos are in (something)/owal/src/proto/...
 # but their "root" dir is (something)/owal/src/...
 PROTOS_DIR=${SRCROOT}/../../../owal/src/
-
 mkdir -p protos
-protoc --objc_out=protos --proto_path=${PROTOS_DIR} ${PROTOS_DIR}/proto/*.proto
+../../bin/protoc --objc_out=protos --proto_path=${PROTOS_DIR} ${PROTOS_DIR%/}/proto/*.proto
