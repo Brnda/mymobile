@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6612F5A81D413DBC006E08AB /* OwalProtos.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6612F5A71D413DBC006E08AB /* OwalProtos.h */; };
-		6612F5E21D414139006E08AB /* Credentials.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5DB1D414139006E08AB /* Credentials.pbobjc.m */; };
-		6612F5E31D414139006E08AB /* Device.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5DD1D414139006E08AB /* Device.pbobjc.m */; };
-		6612F5E41D414139006E08AB /* Incident.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5DF1D414139006E08AB /* Incident.pbobjc.m */; };
-		6612F5E51D414139006E08AB /* Types.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5E11D414139006E08AB /* Types.pbobjc.m */; };
 		6612F5E61D4142AD006E08AB /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612F5CF1D413FE3006E08AB /* libProtocolBuffers.a */; };
+		6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */; };
+		6630E2991D523E9E003A20AF /* Device.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2911D523E9E003A20AF /* Device.pbobjc.m */; };
+		6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2931D523E9E003A20AF /* Incident.pbobjc.m */; };
+		6630E29B1D523E9E003A20AF /* Schemata.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */; };
+		6630E29C1D523E9E003A20AF /* Types.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2971D523E9E003A20AF /* Types.pbobjc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +64,16 @@
 		6612F5A41D413DBC006E08AB /* libOwalProtos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOwalProtos.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6612F5A71D413DBC006E08AB /* OwalProtos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwalProtos.h; sourceTree = "<group>"; };
 		6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = ../../../owal/third_party/protobuf/objectivec/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
-		6612F5DA1D414139006E08AB /* Credentials.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credentials.pbobjc.h; path = protos/Credentials.pbobjc.h; sourceTree = SOURCE_ROOT; };
-		6612F5DB1D414139006E08AB /* Credentials.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Credentials.pbobjc.m; path = protos/Credentials.pbobjc.m; sourceTree = SOURCE_ROOT; };
-		6612F5DC1D414139006E08AB /* Device.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.pbobjc.h; path = protos/Device.pbobjc.h; sourceTree = SOURCE_ROOT; };
-		6612F5DD1D414139006E08AB /* Device.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Device.pbobjc.m; path = protos/Device.pbobjc.m; sourceTree = SOURCE_ROOT; };
-		6612F5DE1D414139006E08AB /* Incident.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Incident.pbobjc.h; path = protos/Incident.pbobjc.h; sourceTree = SOURCE_ROOT; };
-		6612F5DF1D414139006E08AB /* Incident.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Incident.pbobjc.m; path = protos/Incident.pbobjc.m; sourceTree = SOURCE_ROOT; };
-		6612F5E01D414139006E08AB /* Types.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Types.pbobjc.h; path = protos/Types.pbobjc.h; sourceTree = SOURCE_ROOT; };
-		6612F5E11D414139006E08AB /* Types.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Types.pbobjc.m; path = protos/Types.pbobjc.m; sourceTree = SOURCE_ROOT; };
+		6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.pbobjc.h; sourceTree = "<group>"; };
+		6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credentials.pbobjc.m; sourceTree = "<group>"; };
+		6630E2901D523E9E003A20AF /* Device.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.pbobjc.h; sourceTree = "<group>"; };
+		6630E2911D523E9E003A20AF /* Device.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.pbobjc.m; sourceTree = "<group>"; };
+		6630E2921D523E9E003A20AF /* Incident.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Incident.pbobjc.h; sourceTree = "<group>"; };
+		6630E2931D523E9E003A20AF /* Incident.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Incident.pbobjc.m; sourceTree = "<group>"; };
+		6630E2941D523E9E003A20AF /* Schemata.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schemata.pbobjc.h; sourceTree = "<group>"; };
+		6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schemata.pbobjc.m; sourceTree = "<group>"; };
+		6630E2961D523E9E003A20AF /* Types.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.pbobjc.h; sourceTree = "<group>"; };
+		6630E2971D523E9E003A20AF /* Types.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.pbobjc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +109,7 @@
 		6612F5A61D413DBC006E08AB /* OwalProtos */ = {
 			isa = PBXGroup;
 			children = (
-				6612F5D91D41412A006E08AB /* protos */,
+				6630E28D1D523E9E003A20AF /* proto */,
 				6612F5A71D413DBC006E08AB /* OwalProtos.h */,
 			);
 			path = OwalProtos;
@@ -138,20 +141,23 @@
 			name = Scripts;
 			sourceTree = "<group>";
 		};
-		6612F5D91D41412A006E08AB /* protos */ = {
+		6630E28D1D523E9E003A20AF /* proto */ = {
 			isa = PBXGroup;
 			children = (
-				6612F5DA1D414139006E08AB /* Credentials.pbobjc.h */,
-				6612F5DB1D414139006E08AB /* Credentials.pbobjc.m */,
-				6612F5DC1D414139006E08AB /* Device.pbobjc.h */,
-				6612F5DD1D414139006E08AB /* Device.pbobjc.m */,
-				6612F5DE1D414139006E08AB /* Incident.pbobjc.h */,
-				6612F5DF1D414139006E08AB /* Incident.pbobjc.m */,
-				6612F5E01D414139006E08AB /* Types.pbobjc.h */,
-				6612F5E11D414139006E08AB /* Types.pbobjc.m */,
+				6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */,
+				6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */,
+				6630E2901D523E9E003A20AF /* Device.pbobjc.h */,
+				6630E2911D523E9E003A20AF /* Device.pbobjc.m */,
+				6630E2921D523E9E003A20AF /* Incident.pbobjc.h */,
+				6630E2931D523E9E003A20AF /* Incident.pbobjc.m */,
+				6630E2941D523E9E003A20AF /* Schemata.pbobjc.h */,
+				6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */,
+				6630E2961D523E9E003A20AF /* Types.pbobjc.h */,
+				6630E2971D523E9E003A20AF /* Types.pbobjc.m */,
 			);
-			name = protos;
-			sourceTree = "<group>";
+			name = proto;
+			path = protos/proto;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -264,10 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6612F5E41D414139006E08AB /* Incident.pbobjc.m in Sources */,
-				6612F5E21D414139006E08AB /* Credentials.pbobjc.m in Sources */,
-				6612F5E51D414139006E08AB /* Types.pbobjc.m in Sources */,
-				6612F5E31D414139006E08AB /* Device.pbobjc.m in Sources */,
+				6630E29B1D523E9E003A20AF /* Schemata.pbobjc.m in Sources */,
+				6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */,
+				6630E2991D523E9E003A20AF /* Device.pbobjc.m in Sources */,
+				6630E29C1D523E9E003A20AF /* Types.pbobjc.m in Sources */,
+				6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/protos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -371,7 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/protos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
