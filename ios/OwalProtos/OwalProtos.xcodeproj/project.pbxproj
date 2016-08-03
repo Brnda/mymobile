@@ -8,39 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		6612F5A81D413DBC006E08AB /* OwalProtos.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6612F5A71D413DBC006E08AB /* OwalProtos.h */; };
-		6612F5E61D4142AD006E08AB /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612F5CF1D413FE3006E08AB /* libProtocolBuffers.a */; };
 		6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */; };
 		6630E2991D523E9E003A20AF /* Device.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2911D523E9E003A20AF /* Device.pbobjc.m */; };
 		6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2931D523E9E003A20AF /* Incident.pbobjc.m */; };
 		6630E29B1D523E9E003A20AF /* Schemata.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */; };
 		6630E29C1D523E9E003A20AF /* Types.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2971D523E9E003A20AF /* Types.pbobjc.m */; };
+		66635ED91D526E3100002065 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66635ED21D526DF600002065 /* libProtocolBuffers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6612F5CE1D413FE3006E08AB /* PBXContainerItemProxy */ = {
+		66635ED11D526DF600002065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */;
+			containerPortal = 66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7461B52E0F94FAF800A0C422;
 			remoteInfo = ProtocolBuffers;
 		};
-		6612F5D01D413FE3006E08AB /* PBXContainerItemProxy */ = {
+		66635ED31D526DF600002065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */;
+			containerPortal = 66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8BBEA4A6147C727100C4ADB7;
 			remoteInfo = UnitTests;
 		};
-		6612F5D21D413FE3006E08AB /* PBXContainerItemProxy */ = {
+		66635ED51D526DF600002065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */;
+			containerPortal = 66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8B9A5EA51831993600A9D33B;
 			remoteInfo = iOSTestHarness;
 		};
-		6612F5D41D413FE3006E08AB /* PBXContainerItemProxy */ = {
+		66635ED71D526DF600002065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */;
+			containerPortal = 66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F4487C6E1A9F8F8100531423;
 			remoteInfo = TestSingleSourceBuild;
@@ -63,7 +63,6 @@
 /* Begin PBXFileReference section */
 		6612F5A41D413DBC006E08AB /* libOwalProtos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOwalProtos.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6612F5A71D413DBC006E08AB /* OwalProtos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwalProtos.h; sourceTree = "<group>"; };
-		6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = ../../../owal/third_party/protobuf/objectivec/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
 		6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.pbobjc.h; sourceTree = "<group>"; };
 		6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credentials.pbobjc.m; sourceTree = "<group>"; };
 		6630E2901D523E9E003A20AF /* Device.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.pbobjc.h; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schemata.pbobjc.m; sourceTree = "<group>"; };
 		6630E2961D523E9E003A20AF /* Types.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.pbobjc.h; sourceTree = "<group>"; };
 		6630E2971D523E9E003A20AF /* Types.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.pbobjc.m; sourceTree = "<group>"; };
+		66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = ../../../protobuf/objectivec/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6612F5E61D4142AD006E08AB /* libProtocolBuffers.a in Frameworks */,
+				66635ED91D526E3100002065 /* libProtocolBuffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,20 +118,9 @@
 		6612F5C51D413FC4006E08AB /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */,
+				66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		6612F5C71D413FE3006E08AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6612F5CF1D413FE3006E08AB /* libProtocolBuffers.a */,
-				6612F5D11D413FE3006E08AB /* UnitTests.xctest */,
-				6612F5D31D413FE3006E08AB /* iOSTestHarness.app */,
-				6612F5D51D413FE3006E08AB /* libTestSingleSourceBuild.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6612F5D61D414007006E08AB /* Scripts */ = {
@@ -158,6 +147,17 @@
 			name = proto;
 			path = protos/proto;
 			sourceTree = SOURCE_ROOT;
+		};
+		66635ECA1D526DF600002065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66635ED21D526DF600002065 /* libProtocolBuffers.a */,
+				66635ED41D526DF600002065 /* UnitTests.xctest */,
+				66635ED61D526DF600002065 /* iOSTestHarness.app */,
+				66635ED81D526DF600002065 /* libTestSingleSourceBuild.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -206,8 +206,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6612F5C71D413FE3006E08AB /* Products */;
-					ProjectRef = 6612F5C61D413FE3006E08AB /* ProtocolBuffers_iOS.xcodeproj */;
+					ProductGroup = 66635ECA1D526DF600002065 /* Products */;
+					ProjectRef = 66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -218,32 +218,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6612F5CF1D413FE3006E08AB /* libProtocolBuffers.a */ = {
+		66635ED21D526DF600002065 /* libProtocolBuffers.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libProtocolBuffers.a;
-			remoteRef = 6612F5CE1D413FE3006E08AB /* PBXContainerItemProxy */;
+			remoteRef = 66635ED11D526DF600002065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6612F5D11D413FE3006E08AB /* UnitTests.xctest */ = {
+		66635ED41D526DF600002065 /* UnitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = UnitTests.xctest;
-			remoteRef = 6612F5D01D413FE3006E08AB /* PBXContainerItemProxy */;
+			remoteRef = 66635ED31D526DF600002065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6612F5D31D413FE3006E08AB /* iOSTestHarness.app */ = {
+		66635ED61D526DF600002065 /* iOSTestHarness.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = iOSTestHarness.app;
-			remoteRef = 6612F5D21D413FE3006E08AB /* PBXContainerItemProxy */;
+			remoteRef = 66635ED51D526DF600002065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6612F5D51D413FE3006E08AB /* libTestSingleSourceBuild.a */ = {
+		66635ED81D526DF600002065 /* libTestSingleSourceBuild.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTestSingleSourceBuild.a;
-			remoteRef = 6612F5D41D413FE3006E08AB /* PBXContainerItemProxy */;
+			remoteRef = 66635ED71D526DF600002065 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
