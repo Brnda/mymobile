@@ -255,7 +255,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Scripts/build-protos.sh";
+			shellScript = "./Scripts/build-protos.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -397,6 +397,7 @@
 				6612F5AF1D413DBC006E08AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
