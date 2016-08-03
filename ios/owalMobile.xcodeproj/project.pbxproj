@@ -812,7 +812,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
 					"$(SRCROOT)/OwalProtos/OwalProtos",
-					"$(SRCROOT)/../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/../../protobuf/objectivec/",
 					"$(SRCROOT)/OwalProtos/protos",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -856,7 +856,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/iOS/RCTFBSDK/**",
 					"$(SRCROOT)/OwalProtos/OwalProtos",
-					"$(SRCROOT)/../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/../../protobuf/objectivec/",
 					"$(SRCROOT)/OwalProtos/protos",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

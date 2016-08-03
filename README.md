@@ -12,7 +12,8 @@ How to run the application
 1- Clone the repository
 ```
 git clone https://github.com/owal/mobile.git owal-mobile
-git clone https://github.com/owal/owal/git owal
+git clone https://github.com/owal/owal.git owal
+git clone https://github.com/google/protobuf
 cd owal
 git fetch; git submodule update --init
 ```

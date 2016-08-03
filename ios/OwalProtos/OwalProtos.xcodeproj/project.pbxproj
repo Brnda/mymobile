@@ -368,7 +368,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/../../../protobuf/objectivec/",
 					"$(SRCROOT)/protos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -382,7 +382,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../owal/third_party/protobuf/objectivec/",
+					"$(SRCROOT)/../../../protobuf/objectivec/",
 					"$(SRCROOT)/protos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
