@@ -7,11 +7,9 @@ platform :ios do
               xcodeproj: './ios/owalMobile.xcodeproj'
             )
 
-            sh("xctool -project ../ios/owalMobile.xcodeproj -scheme owalMobile clean archive -archivePath ../build/owalMobile")
+            gym(scheme: "owalMobile", project: "./ios/owalMobile.xcodeproj", use_legacy_build_api: true)
 
-            sh("xcodebuild -exportArchive -exportFormat ipa -archivePath ../build/owalMobile.xcarchive -exportPath ../build/owalMobile.ipa -exportProvisioningProfile 'iOS Team Provisioning Profile: *'")
-
-            sh("cp ../build/owalMobile.ipa $BITRISE_DEPLOY_DIR")
+            sh("cp owalMobile.ipa $BITRISE_DEPLOY_DIR")
         end
 
 end
