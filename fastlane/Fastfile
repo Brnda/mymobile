@@ -9,7 +9,7 @@ platform :ios do
 
             gym(scheme: "owalMobile", project: "./ios/owalMobile.xcodeproj", use_legacy_build_api: true)
 
-            sh("cp owalMobile.ipa $BITRISE_DEPLOY_DIR")
+            sh("cp ../owalMobile.ipa $BITRISE_DEPLOY_DIR")
         end
 
 end
