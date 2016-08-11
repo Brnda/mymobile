@@ -20,13 +20,17 @@
     "key-mirror": "^1.0.1",
     "mongoose": "^4.5.8",
     "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0",
+    "passport-local": "^1.0.0",
     "react": "15.2.1",
     "react-native": "0.29.2",
     "react-native-fbsdk": "^0.2.2",
     "react-native-router-flux": "^3.31.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
