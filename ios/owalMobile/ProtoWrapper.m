@@ -14,8 +14,8 @@
 - (id)init {
   self = [super init];
   if (self) {
-    CameraRequest *cameraRequest = [CameraRequest message];
-    cameraRequest = nil;
+    CameraListRequest *request = [CameraListRequest message];
+    request = nil;
   }
   return self;
 }

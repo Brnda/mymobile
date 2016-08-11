@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6612F5A81D413DBC006E08AB /* OwalProtos.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6612F5A71D413DBC006E08AB /* OwalProtos.h */; };
 		6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */; };
-		6630E2991D523E9E003A20AF /* Device.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2911D523E9E003A20AF /* Device.pbobjc.m */; };
 		6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2931D523E9E003A20AF /* Incident.pbobjc.m */; };
-		6630E29B1D523E9E003A20AF /* Schemata.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */; };
 		6630E29C1D523E9E003A20AF /* Types.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2971D523E9E003A20AF /* Types.pbobjc.m */; };
 		66635ED91D526E3100002065 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66635ED21D526DF600002065 /* libProtocolBuffers.a */; };
+		667E0FD31D5CBF5600A3555B /* Camera.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 667E0FD01D5CBF5600A3555B /* Camera.pbobjc.m */; };
+		667E0FD41D5CBF5600A3555B /* Clip.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 667E0FD21D5CBF5600A3555B /* Clip.pbobjc.m */; };
+		667E0FD91D5CBF6300A3555B /* Domain.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 667E0FD61D5CBF6300A3555B /* Domain.pbobjc.m */; };
+		667E0FDA1D5CBF6300A3555B /* Service.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 667E0FD81D5CBF6300A3555B /* Service.pbobjc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,15 +67,19 @@
 		6612F5A71D413DBC006E08AB /* OwalProtos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwalProtos.h; sourceTree = "<group>"; };
 		6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.pbobjc.h; sourceTree = "<group>"; };
 		6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credentials.pbobjc.m; sourceTree = "<group>"; };
-		6630E2901D523E9E003A20AF /* Device.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.pbobjc.h; sourceTree = "<group>"; };
-		6630E2911D523E9E003A20AF /* Device.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.pbobjc.m; sourceTree = "<group>"; };
 		6630E2921D523E9E003A20AF /* Incident.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Incident.pbobjc.h; sourceTree = "<group>"; };
 		6630E2931D523E9E003A20AF /* Incident.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Incident.pbobjc.m; sourceTree = "<group>"; };
-		6630E2941D523E9E003A20AF /* Schemata.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schemata.pbobjc.h; sourceTree = "<group>"; };
-		6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schemata.pbobjc.m; sourceTree = "<group>"; };
 		6630E2961D523E9E003A20AF /* Types.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.pbobjc.h; sourceTree = "<group>"; };
 		6630E2971D523E9E003A20AF /* Types.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Types.pbobjc.m; sourceTree = "<group>"; };
 		66635EC91D526DF600002065 /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = ../../../protobuf/objectivec/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
+		667E0FCF1D5CBF5600A3555B /* Camera.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.pbobjc.h; sourceTree = "<group>"; };
+		667E0FD01D5CBF5600A3555B /* Camera.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.pbobjc.m; sourceTree = "<group>"; };
+		667E0FD11D5CBF5600A3555B /* Clip.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clip.pbobjc.h; sourceTree = "<group>"; };
+		667E0FD21D5CBF5600A3555B /* Clip.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clip.pbobjc.m; sourceTree = "<group>"; };
+		667E0FD51D5CBF6300A3555B /* Domain.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Domain.pbobjc.h; sourceTree = "<group>"; };
+		667E0FD61D5CBF6300A3555B /* Domain.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Domain.pbobjc.m; sourceTree = "<group>"; };
+		667E0FD71D5CBF6300A3555B /* Service.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.pbobjc.h; sourceTree = "<group>"; };
+		667E0FD81D5CBF6300A3555B /* Service.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.pbobjc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +139,18 @@
 		6630E28D1D523E9E003A20AF /* proto */ = {
 			isa = PBXGroup;
 			children = (
+				667E0FCF1D5CBF5600A3555B /* Camera.pbobjc.h */,
+				667E0FD01D5CBF5600A3555B /* Camera.pbobjc.m */,
+				667E0FD11D5CBF5600A3555B /* Clip.pbobjc.h */,
+				667E0FD21D5CBF5600A3555B /* Clip.pbobjc.m */,
 				6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */,
 				6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */,
-				6630E2901D523E9E003A20AF /* Device.pbobjc.h */,
-				6630E2911D523E9E003A20AF /* Device.pbobjc.m */,
+				667E0FD51D5CBF6300A3555B /* Domain.pbobjc.h */,
+				667E0FD61D5CBF6300A3555B /* Domain.pbobjc.m */,
 				6630E2921D523E9E003A20AF /* Incident.pbobjc.h */,
 				6630E2931D523E9E003A20AF /* Incident.pbobjc.m */,
-				6630E2941D523E9E003A20AF /* Schemata.pbobjc.h */,
-				6630E2951D523E9E003A20AF /* Schemata.pbobjc.m */,
+				667E0FD71D5CBF6300A3555B /* Service.pbobjc.h */,
+				667E0FD81D5CBF6300A3555B /* Service.pbobjc.m */,
 				6630E2961D523E9E003A20AF /* Types.pbobjc.h */,
 				6630E2971D523E9E003A20AF /* Types.pbobjc.m */,
 			);
@@ -270,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6630E29B1D523E9E003A20AF /* Schemata.pbobjc.m in Sources */,
+				667E0FDA1D5CBF6300A3555B /* Service.pbobjc.m in Sources */,
 				6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */,
-				6630E2991D523E9E003A20AF /* Device.pbobjc.m in Sources */,
+				667E0FD31D5CBF5600A3555B /* Camera.pbobjc.m in Sources */,
+				667E0FD91D5CBF6300A3555B /* Domain.pbobjc.m in Sources */,
 				6630E29C1D523E9E003A20AF /* Types.pbobjc.m in Sources */,
+				667E0FD41D5CBF5600A3555B /* Clip.pbobjc.m in Sources */,
 				6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
