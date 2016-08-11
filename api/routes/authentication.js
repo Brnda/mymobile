@@ -1,15 +1,25 @@
 import Express from 'express';
 import wrap from 'express-async-wrap';
 import User from '../models/user';
+import jwt from 'jwt-simple';
+import {key} from '../config/secret';
 
 const Router = new Express.Router();
 
-export default [
+const tokenForUser = (user) => {
+  const timeStamp = new Date().getTime();
+  return jwt.encode({ sub: user.id, iat: timeStamp }, key);
+};
 
+export default [
   Router.post('/signup', wrap(async function(req, res) {
     const email = req.body.email;
     const password = req.body.password;
-    console.log(`Got ${email} and ${password}`);
+
+    if(!email || !password) {
+      return res.status(422).send({error: 'You must provide both an email and a password'});
+    }
+
     User.findOne({email: email}, function (err, existingUser) {
       if(err) {return next(err)}
 
@@ -25,8 +35,8 @@ export default [
       user.save(function (err) {
         if(err) {return next(err)}
 
-        return res.json(user);
+        return res.json({token: tokenForUser(user)});
       })
     });
-  })),
+  }))
 ];

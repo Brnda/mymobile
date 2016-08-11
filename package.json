@@ -8,6 +8,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.7.1",
@@ -15,6 +16,7 @@
     "express-async-wrap": "^1.0.0",
     "helmet": "^2.1.2",
     "immutable": "^3.8.1",
+    "jwt-simple": "^0.5.0",
     "key-mirror": "^1.0.1",
     "mongoose": "^4.5.8",
     "morgan": "^1.7.0",
