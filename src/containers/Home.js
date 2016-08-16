@@ -2,9 +2,8 @@ import {
   View,
   Text,
   StyleSheet
-} from 'react-native'
-import React, {Component, PropTypes} from 'react'
-import {Actions} from 'react-native-router-flux'
+} from 'react-native';
+import React, {Component, PropTypes} from 'react';
 
 var styles = StyleSheet.create({
   container: {
@@ -24,7 +23,7 @@ var styles = StyleSheet.create({
     fontSize: 12,
     color: '#fff'
   }
-})
+});
 
 class Home extends Component {
   render() {
@@ -33,9 +32,6 @@ class Home extends Component {
         <View>
           <Text style={styles.text}>Hi, {this.props.name}.</Text>
         </View>
-        <View>
-          <Text style={styles.back} onPress={()=> Actions.pop()}> Back </Text>
-        </View>
       </View>
     )
   }
@@ -43,6 +39,6 @@ class Home extends Component {
 
 Home.propTypes = {
   name: PropTypes.string.isRequired
-}
+};
 
-export default Home
+export default Home;

@@ -1,7 +1,9 @@
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
-import * as authActions from '../reducers/auth/authActions'
-import React from 'react'
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as authActions from '../reducers/auth/authActions';
+import React, {Component} from 'react';
+import Button from 'react-native-button';
+import {Actions} from 'react-native-router-flux';
 
 import {
   StyleSheet,
@@ -9,10 +11,6 @@ import {
   Text,
   TouchableHighlight
 } from 'react-native';
-const FBSDK = require('react-native-fbsdk');
-const {
-  LoginButton,
-} = FBSDK;
 
 
 var styles = StyleSheet.create({
@@ -53,39 +51,31 @@ var styles = StyleSheet.create({
  * ## App class
  *
  */
-let App = React.createClass({
+class App extends Component {
+  onEmailSignup(event) {
+
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.messageBox}>
           <View>
-            <Text style={styles.messageBoxTitleText}>Welcome to Owal, {this.props.name}!</Text>
+            <Button onPress={Actions.fbsignup}>Signup with an Facebook</Button>
           </View>
           <View>
-            <LoginButton
-              //publishPermissions={["publish_actions"]}
-              onLoginFinished={
-                (error, result) => {
-                  if (error) {
-                    alert("Login failed with error: " + result.error);
-                  } else if (result.isCancelled) {
-                    alert("Login was cancelled");
-                  } else {
-                    alert("Login was successful with permissions: " + result.grantedPermissions)
-                  }
-                }
-              }
-              onLogoutFinished={() => alert("User logged out")}/>
+            <Button onPress={Actions.googsignup}>Signup with an Google</Button>
+          </View>
+          <View>
+            <Button onPress={Actions.emailsignup}>Signup with an email</Button>
           </View>
         </View>
       </View>
     )
   }
-})
+}
 
 function mapStateToProps(state) {
-  console.log(`State is ${JSON.stringify(state)}`)
   return {
     name: state.auth.getIn(['user', 'username'])
   }
