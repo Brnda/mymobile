@@ -1,7 +1,6 @@
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import * as authActions from '../reducers/auth/authActions'
-import TestView from '../components/TestView'
 import React from 'react'
 
 import {
@@ -62,7 +61,6 @@ let App = React.createClass({
         <View style={styles.messageBox}>
           <View>
             <Text style={styles.messageBoxTitleText}>Welcome to Owal, {this.props.name}!</Text>
-            <TestView handleLogin={this.props.actions.loginRequest}/>
           </View>
           <View>
             <LoginButton
