@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66052B801D639A9900BFA7B4 /* Users.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 66052B7F1D639A9900BFA7B4 /* Users.pbobjc.m */; };
 		6612F5A81D413DBC006E08AB /* OwalProtos.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6612F5A71D413DBC006E08AB /* OwalProtos.h */; };
 		6630E2981D523E9E003A20AF /* Credentials.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E28F1D523E9E003A20AF /* Credentials.pbobjc.m */; };
 		6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630E2931D523E9E003A20AF /* Incident.pbobjc.m */; };
@@ -63,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66052B7E1D639A9900BFA7B4 /* Users.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.pbobjc.h; sourceTree = "<group>"; };
+		66052B7F1D639A9900BFA7B4 /* Users.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.pbobjc.m; sourceTree = "<group>"; };
 		6612F5A41D413DBC006E08AB /* libOwalProtos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOwalProtos.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6612F5A71D413DBC006E08AB /* OwalProtos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwalProtos.h; sourceTree = "<group>"; };
 		6630E28E1D523E9E003A20AF /* Credentials.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.pbobjc.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				667E0FD81D5CBF6300A3555B /* Service.pbobjc.m */,
 				6630E2961D523E9E003A20AF /* Types.pbobjc.h */,
 				6630E2971D523E9E003A20AF /* Types.pbobjc.m */,
+				66052B7E1D639A9900BFA7B4 /* Users.pbobjc.h */,
+				66052B7F1D639A9900BFA7B4 /* Users.pbobjc.m */,
 			);
 			name = proto;
 			path = protos/proto;
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				667E0FDA1D5CBF6300A3555B /* Service.pbobjc.m in Sources */,
+				66052B801D639A9900BFA7B4 /* Users.pbobjc.m in Sources */,
 				6630E29A1D523E9E003A20AF /* Incident.pbobjc.m in Sources */,
 				667E0FD31D5CBF5600A3555B /* Camera.pbobjc.m in Sources */,
 				667E0FD91D5CBF6300A3555B /* Domain.pbobjc.m in Sources */,
