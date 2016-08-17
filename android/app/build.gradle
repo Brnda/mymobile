@@ -128,7 +128,10 @@ android {
     sourceSets {
         main {
             proto {
-                srcDir '../../../owal/src/protobuf'
+                srcDir '../../../owal/src/'
+                exclude '**/bazel-src/**/*.proto'
+                exclude '**/blaze-src/**/*.proto'
+                include '../../../owal/src/proto/*.proto'
             }
         }
     }
@@ -161,6 +164,7 @@ protobuf {
                     // Options added to --javanano_out
                     option 'java_multiple_files=true'
                     option 'ignore_services=true'
+                    option 'java_outer_classname=proto/camera.proto|CameraNano'
                 }
             }
             // Here you can configure the task
