@@ -1,4 +1,12 @@
 apply plugin: "com.android.application"
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.7.7'
+    }
+}
 apply plugin: "com.google.protobuf"
 
 import com.android.build.OutputFile
