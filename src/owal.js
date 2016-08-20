@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  AppRegistry,
-  Navigator,
-  View,
-  Text
+    AppRegistry,
+    Navigator,
+    View,
+    Text
 } from 'react-native';
 import {
-  Router,
-  Scene
+    Router,
+    Scene
 } from 'react-native-router-flux';
 import {
-  Provider,
-  connect
+    Provider,
+    connect
 } from 'react-redux';
 import configureStore from './lib/configureStore';
 import App from './containers/App';
@@ -19,6 +19,7 @@ import Home from './containers/Home';
 import FacebookSignup from './components/FacebookSignup';
 import GoogleSignup from './components/GoogleSignup';
 import EmailSignup from './components/EmailSignup';
+import QRCodeScreen from './components/QRCodeScreen';
 // import {CustomComponent} from 'NativeModules'
 
 /**
@@ -27,48 +28,50 @@ import EmailSignup from './components/EmailSignup';
 
 export default function native(platform) {
 
-  // CustomComponent.writeFile(
-  //   'MyFile.txt',
-  //   'Some Text',
-  //   function errorCallback(results) {
-  //     alert('Error: ' + results)
-  //   },
-  //   function successCallback(results) {
-  //     alert('Success : ' + results)
-  //   }
-  // )
+    // CustomComponent.writeFile(
+    //   'MyFile.txt',
+    //   'Some Text',
+    //   function errorCallback(results) {
+    //     alert('Error: ' + results)
+    //   },
+    //   function successCallback(results) {
+    //     alert('Success : ' + results)
+    //   }
+    // )
 
-  let Owal = React.createClass({
-    render() {
+    let Owal = React.createClass({
+        render() {
 
-      const store = configureStore()
+            const store = configureStore()
 
-      // setup the router table with App selected as the initial component
-      return (
-        <Provider store={store}>
-          <Router hideNavBar={true}>
-            <Scene key="root">
-              <Scene key="app"
-                     component={App}
-                     title="App"
-                     initial={true}/>
-              <Scene key="home"
-                     component={Home}/>
-              <Scene key="fbsignup"
-                     component={FacebookSignup}/>
-              <Scene key="googsignup"
-                     component={GoogleSignup}/>
-              <Scene key="emailsignup"
-                     component={EmailSignup}/>
-            </Scene>
-          </Router>
-        </Provider>
-      )
-    }
-  })
-  /**
-   * registerComponent to the AppRegistery and off we go....
-   */
+            // setup the router table with App selected as the initial component
+            return (
+                <Provider store={store}>
+                    <Router hideNavBar={true}>
+                        <Scene key="root">
+                            <Scene key="app"
+                                   component={App}
+                                   title="App"
+                                   initial={true}/>
+                            <Scene key="home"
+                                   component={Home}/>
+                            <Scene key="fbsignup"
+                                   component={FacebookSignup}/>
+                            <Scene key="googsignup"
+                                   component={GoogleSignup}/>
+                            <Scene key="emailsignup"
+                                   component={EmailSignup}/>
+                            <Scene key="qrcodescreen"
+                                   component={QRCodeScreen}/>
+                        </Scene>
+                    </Router>
+                </Provider>
+            )
+        }
+    })
+    /**
+     * registerComponent to the AppRegistery and off we go....
+     */
 
-  AppRegistry.registerComponent('owalMobile', () => Owal)
+    AppRegistry.registerComponent('owalMobile', () => Owal)
 }

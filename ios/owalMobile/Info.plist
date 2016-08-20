@@ -46,6 +46,8 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>192.168.0.78</key>
+			<string></string>
 			<key>localhost</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>

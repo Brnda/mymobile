@@ -27,6 +27,7 @@
 		2D5C9C691D3FE8990028B3D9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5C9C661D3FE8990028B3D9 /* FBSDKShareKit.framework */; };
 		2D5C9C911D3FF7700028B3D9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C9C901D3FF7700028B3D9 /* Lato-Regular.ttf */; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
+		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
 		6612F5C31D413DF0006E08AB /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5C21D413DF0006E08AB /* ProtoWrapper.m */; };
 		6612F5C41D413DF0006E08AB /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5C21D413DF0006E08AB /* ProtoWrapper.m */; };
 		6612F5D81D41410A006E08AB /* libOwalProtos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612F5B51D413DBD006E08AB /* libOwalProtos.a */; };
@@ -105,6 +106,13 @@
 			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
 			remoteInfo = RCTFBSDK;
 		};
+		2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RCTCamera;
+		};
 		6612F5B41D413DBD006E08AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */;
@@ -155,6 +163,7 @@
 		2D5C9C901D3FF7700028B3D9 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
 		2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComponent.m; sourceTree = "<group>"; };
+		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OwalProtos.xcodeproj; path = OwalProtos/OwalProtos.xcodeproj; sourceTree = "<group>"; };
 		6612F5C11D413DF0006E08AB /* ProtoWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProtoWrapper.h; path = owalMobile/ProtoWrapper.h; sourceTree = "<group>"; };
 		6612F5C21D413DF0006E08AB /* ProtoWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProtoWrapper.m; path = owalMobile/ProtoWrapper.m; sourceTree = "<group>"; };
@@ -176,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */,
 				6612F5D81D41410A006E08AB /* libOwalProtos.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -312,6 +322,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		2DF4FB5E1D66C657004F0EEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DF4FB641D66C658004F0EEE /* libRCTCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6612F5B11D413DBC006E08AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +349,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */,
 				6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */,
 				2D5C9C641D3FE8990028B3D9 /* FBSDKCoreKit.framework */,
 				2D5C9C651D3FE8990028B3D9 /* FBSDKLoginKit.framework */,
@@ -458,6 +477,10 @@
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
 				{
+					ProductGroup = 2DF4FB5E1D66C657004F0EEE /* Products */;
+					ProjectRef = 2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */;
+				},
+				{
 					ProductGroup = 2D5C9C7E1D3FE8BD0028B3D9 /* Products */;
 					ProjectRef = 9CD7D3F532924DF19CC59DE1 /* RCTFBSDK.xcodeproj */;
 				},
@@ -568,6 +591,13 @@
 			fileType = archive.ar;
 			path = libRCTFBSDK.a;
 			remoteRef = 2D5C9C821D3FE8BD0028B3D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF4FB641D66C658004F0EEE /* libRCTCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCamera.a;
+			remoteRef = 2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		6612F5B51D413DBD006E08AB /* libOwalProtos.a */ = {
@@ -716,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 12;
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -738,6 +769,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -747,6 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 12;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -768,6 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
