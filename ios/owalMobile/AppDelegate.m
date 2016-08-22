@@ -11,22 +11,11 @@
 
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-
-
 
 @implementation AppDelegate
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-  //FB Tracking analytics setup
-  [FBSDKAppEvents activateApp];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  //FB Tracking analytics setup
-  [[FBSDKApplicationDelegate sharedInstance] application:application
-                           didFinishLaunchingWithOptions:launchOptions];
 
   NSURL *jsCodeLocation;
 
@@ -45,17 +34,6 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-  //FB Tracking analytics setup
-  return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                        openURL:url
-                                              sourceApplication:sourceApplication
-                                                     annotation:annotation];
 }
 
 @end

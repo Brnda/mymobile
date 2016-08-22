@@ -3,7 +3,6 @@ package io.owal.android;
 import android.content.Intent;
 
 import com.facebook.react.ReactActivity;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 
 public class MainActivity extends ReactActivity {
 
