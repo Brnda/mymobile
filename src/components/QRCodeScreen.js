@@ -18,8 +18,8 @@ var QRCodeScreen = React.createClass({
     propTypes: {
         cancelButtonVisible: React.PropTypes.bool,
         cancelButtonTitle: React.PropTypes.string,
-        onSuccess: React.PropTypes.func.isrequired,
-        onCancel: React.PropTypes.func,
+        // onSuccess: React.PropTypes.func.isrequired,
+        // onCancel: React.PropTypes.func,
     },
 
     getDefaultProps: function() {
