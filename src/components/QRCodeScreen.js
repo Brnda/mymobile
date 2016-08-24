@@ -86,7 +86,6 @@ var CancelButton = React.createClass({
 });
 
 var styles = StyleSheet.create({
-
     camera: {
         height: 568,
         alignItems: 'center',
@@ -120,7 +119,7 @@ var styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: '500',
         color: '#0097CE',
-    },
+    }
 });
 
 export default QRCodeScreen;

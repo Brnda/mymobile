@@ -14,30 +14,15 @@ import {
     connect
 } from 'react-redux';
 import configureStore from './lib/configureStore';
-import App from './containers/App';
+import App from './containers/App/index';
 import Home from './containers/Home';
-import FacebookSignup from './components/FacebookSignup';
-import GoogleSignup from './components/GoogleSignup';
-import EmailSignup from './components/EmailSignup';
 import QRCodeScreen from './components/QRCodeScreen';
-// import {CustomComponent} from 'NativeModules'
 
 /**
  * ## Native entry point.
  */
 
 export default function native(platform) {
-
-    // CustomComponent.writeFile(
-    //   'MyFile.txt',
-    //   'Some Text',
-    //   function errorCallback(results) {
-    //     alert('Error: ' + results)
-    //   },
-    //   function successCallback(results) {
-    //     alert('Success : ' + results)
-    //   }
-    // )
 
     let Owal = React.createClass({
         render() {
@@ -55,12 +40,6 @@ export default function native(platform) {
                                    initial={true}/>
                             <Scene key="home"
                                    component={Home}/>
-                            <Scene key="fbsignup"
-                                   component={FacebookSignup}/>
-                            <Scene key="googsignup"
-                                   component={GoogleSignup}/>
-                            <Scene key="emailsignup"
-                                   component={EmailSignup}/>
                             <Scene key="qrcodescreen"
                                    component={QRCodeScreen}/>
                         </Scene>
