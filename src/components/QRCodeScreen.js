@@ -10,7 +10,6 @@ import {
     VibrationIOS,
 } from 'react-native';
 
-import {Actions} from 'react-native-router-flux';
 import Camera from 'react-native-camera';
 
 var QRCodeScreen = React.createClass({
@@ -48,8 +47,7 @@ var QRCodeScreen = React.createClass({
             setTimeout(function() {
                 VibrationIOS.vibrate();
                 //console.log('props '+$this.props.text);
-                $this.props.onSuccess(result.data);
-                Actions.pop();
+                $this.props.onSelect(result.data);
             }, 1000);
         }
     },

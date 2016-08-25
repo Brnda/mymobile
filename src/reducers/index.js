@@ -1,4 +1,4 @@
-import auth from './auth/authReducer'
+import induction from './induction/inductionReducer'
 
 import { combineReducers } from 'redux'
 
@@ -9,7 +9,7 @@ import { combineReducers } from 'redux'
  * EVERY TIME there is a basic action
  */ 
 const rootReducer = combineReducers({
-  auth
+  induction
 })
 
 export default rootReducer

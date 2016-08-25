@@ -1,9 +1,9 @@
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import * as authActions from '../../reducers/auth/authActions';
-import React, {Component} from 'react';
-import {Actions} from 'react-native-router-flux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as InductionState from '../../reducers/induction/inductionReducer';
+import React, { Component } from 'react';
 import styles from './styles';
+import CodeInputSelector from '../../components/CodeInputSelector'
 
 import {
     StyleSheet,
@@ -18,13 +18,6 @@ import {
  *
  */
 class App extends Component {
-  _onPressOut() {
-    Actions.qrcodescreen({onSuccess: App._onSuccess});
-  }
-
-  static _onSuccess(result) {
-    console.log('I got this far '+ result);
-  }
 
   render() {
     return (
@@ -39,32 +32,17 @@ class App extends Component {
               <Text style={styles.messageBoxBodyText}>Welcome to OWAL. Enter an invite code or scan a QR code.</Text>
             </View>
           </View>
-          <View style={styles.choiceBoxes}>
-            <TouchableHighlight onPress={this._onPressOut} style={styles.touchable}>
-              <View style={styles.choiceBox}>
-                <Text>QR Code</Text>
-              </View>
-            </TouchableHighlight>
-            <View style={styles.choiceBox}>
-              <Text>Invite Code</Text>
-            </View>
-          </View>
+          <CodeInputSelector onSelect={this.props.actions.setInviteCode}/>
         </View>
     )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    name: state.auth.getIn(['user', 'username'])
-  }
-}
-
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({...authActions}, dispatch),
+    actions: bindActionCreators({...InductionState}, dispatch),
     dispatch
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
