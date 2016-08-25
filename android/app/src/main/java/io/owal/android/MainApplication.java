@@ -9,6 +9,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.eguma.barcodescanner.BarcodeScannerPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +27,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new AnExampleReactPackage()
+          new AnExampleReactPackage(),
+          new RCTCameraPackage(),
+          new BarcodeScannerPackage()
       );
     }
   };
