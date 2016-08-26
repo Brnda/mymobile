@@ -1,7 +1,7 @@
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import * as InductionState from '../../reducers/induction/inductionReducer';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styles from './styles';
 import CodeInputSelector from '../../components/CodeInputSelector'
 

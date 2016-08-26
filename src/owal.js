@@ -9,13 +9,10 @@ import {
     Router,
     Scene
 } from 'react-native-router-flux';
-import {
-    Provider,
-    connect
-} from 'react-redux';
+import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
 import App from './containers/App/index';
-import Home from './containers/Home';
+import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import TextInviteCodeScreen from './components/TextInviteCodeScreen';
 
@@ -39,8 +36,8 @@ export default function native(platform) {
                                    component={App}
                                    title="App"
                                    initial={true}/>
-                            <Scene key="home"
-                                   component={Home}/>
+                            <Scene key="tenatreview"
+                                   component={TenantReview}/>
                             <Scene key="qrcodescreen"
                                    component={QRCodeScreen}/>
                             <Scene key="textinvitecodescreen"

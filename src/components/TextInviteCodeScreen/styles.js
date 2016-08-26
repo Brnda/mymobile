@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
 
@@ -62,51 +62,51 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   inputcontainer: {
-      marginTop: 5,
-      padding: 10,
-      flexDirection: 'row'
-    },
-    enterButton: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      backgroundColor: 'white',
-      borderRadius: 3,
-      padding: 15,
-      width: 100
-      //height: 36,
-    },
-    enterButtonText: {
-      fontSize: 17,
-      fontWeight: '500',
-      color: '#0097CE',
-      //marginTop: 6,
-    },
+    marginTop: 5,
+    padding: 10,
+    flexDirection: 'row'
+  },
+  enterButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: 3,
+    padding: 15,
+    width: 100
+    //height: 36,
+  },
+  enterButtonText: {
+    fontSize: 17,
+    fontWeight: '500',
+    color: '#0097CE',
+    //marginTop: 6,
+  },
 
-      cancelButton: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-        borderRadius: 3,
-        padding: 15,
-        width: 100,
-        marginTop: 10,
-      },
-      cancelButtonText: {
-        fontSize: 17,
-        fontWeight: '500',
-        color: '#0097CE',
-      },
-    input: {
-      height: 36,
-      padding: 4,
-      marginRight: 5,
-      flex: 4,
-      fontSize: 18,
-      borderWidth: 1,
-      borderColor: '#48afdb',
-      borderRadius: 4,
-      color: '#48BBEC'
-    },
+  cancelButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: 3,
+    padding: 15,
+    width: 100,
+    marginTop: 10,
+  },
+  cancelButtonText: {
+    fontSize: 17,
+    fontWeight: '500',
+    color: '#0097CE',
+  },
+  input: {
+    height: 36,
+    padding: 4,
+    marginRight: 5,
+    flex: 4,
+    fontSize: 18,
+    borderWidth: 1,
+    borderColor: '#48afdb',
+    borderRadius: 4,
+    color: '#48BBEC'
+  },
 });
 
 export default styles;
