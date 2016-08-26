@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   camera: {
     height: 568,
     alignItems: 'center',
+    backgroundColor: 'black'
   },
 
   rectangleContainer: {

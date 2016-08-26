@@ -10,16 +10,13 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 import styles from './styles';
-import { Actions } from 'react-native-router-flux';
+import {Actions} from 'react-native-router-flux';
 
 class QRCodeScreen extends Component {
   _onBarCodeRead(result) {
     var $this = this;
-
-    setTimeout(function () {
-      (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();
-      $this.props.onSelect(result.data);
-    }, 1000);
+    (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();
+    $this.props.onSelect(result.data);
   }
 
   _onCancel() {
