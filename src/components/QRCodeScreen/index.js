@@ -3,6 +3,8 @@ import {
     StyleSheet,
     View,
     Text,
+    Platform,
+    Vibration,
     VibrationIOS,
     TouchableOpacity
 } from 'react-native';
@@ -15,7 +17,7 @@ class QRCodeScreen extends Component {
     var $this = this;
 
     setTimeout(function () {
-      VibrationIOS.vibrate();
+      (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();
       $this.props.onSelect(result.data);
     }, 1000);
   }
