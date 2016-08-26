@@ -14,6 +14,10 @@ class CodeInputSelector extends Component {
     Actions.qrcodescreen({onSelect: this.props.onSelect});
   }
 
+  _onChooseText() {
+    Actions.textinvitecodescreen({onSelect: this.props.onSelect});
+  }
+
   render() {
     return (
         <View style={styles.choiceBoxes}>
@@ -22,9 +26,11 @@ class CodeInputSelector extends Component {
               <Text>QR Code</Text>
             </View>
           </TouchableHighlight>
-          <View style={styles.choiceBox}>
-            <Text>Invite Code</Text>
-          </View>
+          <TouchableHighlight onPress={this._onChooseText.bind(this)}>
+            <View style={styles.choiceBox}>
+              <Text>Invite Code</Text>
+            </View>
+          </TouchableHighlight>
         </View>
     )
   }

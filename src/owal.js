@@ -17,6 +17,7 @@ import configureStore from './lib/configureStore';
 import App from './containers/App/index';
 import Home from './containers/Home';
 import QRCodeScreen from './components/QRCodeScreen';
+import TextInviteCodeScreen from './components/TextInviteCodeScreen';
 
 /**
  * ## Native entry point.
@@ -42,6 +43,8 @@ export default function native(platform) {
                                    component={Home}/>
                             <Scene key="qrcodescreen"
                                    component={QRCodeScreen}/>
+                            <Scene key="textinvitecodescreen"
+                                   component={TextInviteCodeScreen}/>
                         </Scene>
                     </Router>
                 </Provider>

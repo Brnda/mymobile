@@ -9,7 +9,7 @@ const INVITE_CODE = 'INVITE_CODE';
 //Action creators
 export const setInviteCode = (code) => {
   Actions.pop();
-
+  console.log("Invite code is: " + code);
   return {
     type: SET_INVITATION,
     payload: code
