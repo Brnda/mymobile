@@ -32,7 +32,7 @@ class App extends Component {
               <Text style={styles.messageBoxBodyText}>Welcome to OWAL. Enter an invite code or scan a QR code.</Text>
             </View>
           </View>
-          <CodeInputSelector onSelect={this.props.actions.setInviteCode}/>
+          <CodeInputSelector onSelect={this.props.actions.checkInviteCode}/>
         </View>
     )
   }

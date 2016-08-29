@@ -1,12 +1,6 @@
-import keyMirror from 'key-mirror';
+const APP_CONST = {
+  BaseUrl: '192.168.1.68',
+  Port: '3030'
+};
 
-export default keyMirror({
-
-  LOGIN_REQUEST: null,
-  LOGIN_SUCCESS: null,
-  LOGIN_FAILURE: null,
-
-  //Application states
-  NOT_AUTHENTICATED: null,
-  AUTHENTICATED: null
-});
+export default APP_CONST;
