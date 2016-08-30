@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     View,
     Text,
     TouchableHighlight,
+    Image
 } from 'react-native';
 
-import { Actions } from 'react-native-router-flux';
+import {Actions} from 'react-native-router-flux';
 
 import styles from './styles';
 
@@ -22,18 +23,24 @@ class CodeInputSelector extends Component {
     return (
         <View style={styles.choiceBoxes}>
           <TouchableHighlight onPress={this._onChoose.bind(this)}>
-            <View style={styles.choiceBox}>
-              <Text>QR Code</Text>
+            <View style={styles.qrCode}>
+              <Image source={require('./img/qr_code.png')}/>
+              <View style={styles.inviteLabel}>
+                <Text style={styles.inviteText}>QR CODE</Text>
+              </View>
             </View>
           </TouchableHighlight>
           <TouchableHighlight onPress={this._onChooseText.bind(this)}>
-            <View style={styles.choiceBox}>
-              <Text>Invite Code</Text>
+            <View style={styles.inviteCode}>
+              <Image source={require('./img/invite_code.png')}/>
+              <View style={styles.inviteLabel}>
+                <Text style={styles.inviteText}>INVITE CODE</Text>
+              </View>
             </View>
           </TouchableHighlight>
         </View>
     )
   }
-};
+}
 
 export default CodeInputSelector;

@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   camera: {
     height: 568,
     alignItems: 'center',
-    backgroundColor: 'black'
+    backgroundColor: '#272727'
   },
 
   rectangleContainer: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   cancelButton: {
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#272727',
     borderRadius: 3,
     padding: 15,
     width: 100,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   cancelButtonText: {
     fontSize: 17,
     fontWeight: '500',
-    color: '#0097CE',
+    color: '#fff',
   }
 });
 

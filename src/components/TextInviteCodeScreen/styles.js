@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   messageBoxTitleText: {
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'DINPro',
     fontSize: 18,
     color: '#fff',
     textAlign: 'center',
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   messageBoxBodyText: {
     color: '#fff',
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'DINPro',
     textAlign: 'center',
     fontSize: 18
   },
@@ -73,13 +73,11 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     padding: 15,
     width: 100
-    //height: 36,
   },
   enterButtonText: {
     fontSize: 17,
     fontWeight: '500',
     color: '#0097CE',
-    //marginTop: 6,
   },
 
   cancelButton: {

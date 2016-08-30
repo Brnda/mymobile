@@ -24,13 +24,11 @@ class App extends Component {
         <View style={styles.container}>
           <View>
             <Image
-                source={{uri: 'http://owal.io/wp-content/uploads/2016/04/Screen-Shot-2016-04-17-at-7.22.29-PM.png'}}
+                source={require('./img/logo_icon_only.png')}
                 style={styles.logo}/>
           </View>
           <View style={styles.messageBoxContainer}>
-            <View style={styles.messageBox}>
-              <Text style={styles.messageBoxBodyText}>Welcome to OWAL. Enter an invite code or scan a QR code.</Text>
-            </View>
+            <Text style={styles.messageBoxBodyText}>Enter an invite code or scan a QR code to continue.</Text>
           </View>
           <CodeInputSelector onSelect={this.props.actions.checkInviteCode}/>
         </View>

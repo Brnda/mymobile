@@ -1,16 +1,15 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   choiceBoxes: {
     flexDirection: 'row',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: 150,
+    bottom: 50,
     left: 0,
-    right: 0,
+    right: 0
   },
   choiceBox: {
-    backgroundColor: 'white',
     borderColor: 'black',
     borderStyle: 'solid',
     borderWidth: 2,
@@ -18,6 +17,24 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     borderRadius: 7
+  },
+  qrCode: {
+    marginRight: 15
+  },
+  inviteCode: {
+    marginLeft: 15
+  },
+  inviteText: {
+    paddingTop: 10,
+    color: 'white',
+    fontSize: 12,
+    alignItems: 'center'
+  },
+  inviteLabel: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flex: 1
   }
 });
 
