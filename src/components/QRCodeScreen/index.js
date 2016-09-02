@@ -15,7 +15,6 @@ import {Actions} from 'react-native-router-flux';
 class QRCodeScreen extends Component {
   _onBarCodeRead(result) {
     (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();
-    console.log(`stypid ${result.data}`);
     this.props.onSelect(result.data);
   }
 

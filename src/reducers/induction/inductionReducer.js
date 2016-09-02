@@ -35,7 +35,6 @@ export const checkInviteCode = (code) => {
             user: json.user
           }
         });
-        console.log(`Here `)
         Actions.tenatReview();
       } else {
         //dispatches invalid invitation token.
