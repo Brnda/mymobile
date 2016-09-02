@@ -3,7 +3,7 @@ import {Actions} from 'react-native-router-flux';
 import APP_CONST from '../../lib/constants'
 
 //Actions
-export const SET_INVITATION = 'InductionState/SET_INVITATION';
+export const SEND_INVITATION = 'InductionState/SEND_INVITATION';
 export const SEND_INVITATION_FAIL = 'InductionState/SEND_INVITATION_FAIL';
 
 //Action creators
@@ -35,6 +35,8 @@ export const checkInviteCode = (code) => {
             user: json.user
           }
         });
+        console.log(`Here `)
+        Actions.tenatReview();
       } else {
         //dispatches invalid invitation token.
       }
@@ -52,7 +54,7 @@ const initialState = Map({});
  */
 export default function inductionReducer(state = initialState, action) {
   switch (action.type) {
-    case SET_INVITATION:
+    case SEND_INVITATION:
       return state.set('USER', action.payload.user).set('SESSION_TOKEN', action.payload.token);
     case SEND_INVITATION_FAIL:
       return state.delete('USER').delete('SESSION_TOKEN');

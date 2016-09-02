@@ -51,6 +51,9 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>DINPro-Medium.otf</string>
+		<string>DINPro-Bold.otf</string>
+		<string>DINPro-Italic.otf</string>
 		<string>DINPro.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

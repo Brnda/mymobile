@@ -23,6 +23,9 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3511D7622B000FBCFFD /* DINPro.otf */; };
+		2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */; };
+		2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */; };
+		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
 		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
 		6612F5C31D413DF0006E08AB /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5C21D413DF0006E08AB /* ProtoWrapper.m */; };
@@ -146,6 +149,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = owalMobile/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D16A3511D7622B000FBCFFD /* DINPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINPro.otf; sourceTree = "<group>"; };
+		2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Italic.otf"; sourceTree = "<group>"; };
+		2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
 		2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComponent.m; sourceTree = "<group>"; };
 		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
@@ -289,6 +295,9 @@
 		2D5C9C8F1D3FF6AF0028B3D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */,
+				2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */,
+				2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */,
 				2D16A3511D7622B000FBCFFD /* DINPro.otf */,
 			);
 			name = Resources;
@@ -592,8 +601,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */,
+				2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */,
+				2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

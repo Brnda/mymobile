@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {
     StyleSheet,
     View,
@@ -14,9 +14,9 @@ import {Actions} from 'react-native-router-flux';
 
 class QRCodeScreen extends Component {
   _onBarCodeRead(result) {
-    var $this = this;
     (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();
-    $this.props.onSelect(result.data);
+    console.log(`stypid ${result.data}`);
+    this.props.onSelect(result.data);
   }
 
   _onCancel() {
@@ -38,5 +38,9 @@ class QRCodeScreen extends Component {
     )
   }
 }
+
+QRCodeScreen.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+};
 
 export default QRCodeScreen;

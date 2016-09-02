@@ -14,19 +14,14 @@ import configureStore from './lib/configureStore';
 import App from './containers/App/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
+import TenantReviewLastQuestion from './components/TenantReviewLastQuestion';
 import TextInviteCodeScreen from './components/TextInviteCodeScreen';
-
-/**
- * ## Native entry point.
- */
 
 export default function native(platform) {
 
     let Owal = React.createClass({
         render() {
-
             const store = configureStore()
-
             // setup the router table with App selected as the initial component
             return (
                 <Provider store={store}>
@@ -36,8 +31,10 @@ export default function native(platform) {
                                    component={App}
                                    title="App"
                                    initial={true}/>
-                            <Scene key="tenatreview"
+                            <Scene key="tenatReview"
                                    component={TenantReview}/>
+                            <Scene key="lastTenantQuestion"
+                                   component={TenantReviewLastQuestion}/>
                             <Scene key="qrcodescreen"
                                    component={QRCodeScreen}/>
                             <Scene key="textinvitecodescreen"
@@ -47,10 +44,7 @@ export default function native(platform) {
                 </Provider>
             )
         }
-    })
-    /**
-     * registerComponent to the AppRegistery and off we go....
-     */
+    });
 
     AppRegistry.registerComponent('owalMobile', () => Owal)
 }

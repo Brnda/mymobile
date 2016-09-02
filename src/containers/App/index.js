@@ -6,7 +6,6 @@ import styles from './styles';
 import CodeInputSelector from '../../components/CodeInputSelector'
 
 import {
-    StyleSheet,
     View,
     Text,
     TouchableHighlight,
@@ -23,9 +22,7 @@ class App extends Component {
     return (
         <View style={styles.container}>
           <View>
-            <Image
-                source={require('./img/logo_icon_only.png')}
-                style={styles.logo}/>
+            <Image source={require('./img/logo_icon_only.png')} style={styles.logo}/>
           </View>
           <View style={styles.messageBoxContainer}>
             <Text style={styles.messageBoxBodyText}>Enter an invite code or scan a QR code to continue.</Text>

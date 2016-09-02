@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {
     View,
     Text,
@@ -42,5 +42,9 @@ class CodeInputSelector extends Component {
     )
   }
 }
+
+CodeInputSelector.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+};
 
 export default CodeInputSelector;

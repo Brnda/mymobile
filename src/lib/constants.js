@@ -1,5 +1,5 @@
 const APP_CONST = {
-  BaseUrl: '192.168.1.68',
+  BaseUrl: '192.168.1.70',
   Port: '3030'
 };
 
