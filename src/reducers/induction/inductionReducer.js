@@ -8,7 +8,7 @@ export const SEND_INVITATION_FAIL = 'InductionState/SEND_INVITATION_FAIL';
 
 //Action creators
 export const setInviteCode = (code) => {
-  Actions.tenatreview();
+  Actions.tenatReview();
   return {
     type: SET_INVITATION,
     payload: code
@@ -27,20 +27,22 @@ export const checkInviteCode = (code) => {
     })
     .then((res) => res.json())
     .then((json) => {
-      if(json.token && json.user) {
+      console.log("JSON response: " + JSON.stringify(json, null, 2));
+      if(json.auth && json.user) {
         dispatch({
           type: SEND_INVITATION,
           payload: {
-            token: json.token,
+            auth: json.auth,
             user: json.user
           }
         });
         Actions.tenatReview();
       } else {
         //dispatches invalid invitation token.
+        console.log("Response does not have 'token' and 'auth'");
       }
     })
-    .catch((err) => { console.log(`Got an error: ${err}`)});
+    .catch((err) => { console.log('Got an error: ${err}')});
   };
 };
 
@@ -54,9 +56,12 @@ const initialState = Map({});
 export default function inductionReducer(state = initialState, action) {
   switch (action.type) {
     case SEND_INVITATION:
-      return state.set('USER', action.payload.user).set('SESSION_TOKEN', action.payload.token);
+      return state.set('USER', action.payload.user)
+          .set('SESSION_TOKEN', action.payload.auth.token)
+          .set('SESSION_TOKEN_CAN_DELEGATE', action.payload.auth.can_delegate);
     case SEND_INVITATION_FAIL:
-      return state.delete('USER').delete('SESSION_TOKEN');
+      return state.delete('USER').delete('SESSION_TOKEN')
+          .delete('SESSION_TOKEN_CAN_DELEGATE');
   }
   return state;
 }
