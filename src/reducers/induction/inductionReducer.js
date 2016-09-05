@@ -5,6 +5,7 @@ import APP_CONST from '../../lib/constants'
 //Actions
 export const SEND_INVITATION = 'InductionState/SEND_INVITATION';
 export const SEND_INVITATION_FAIL = 'InductionState/SEND_INVITATION_FAIL';
+export const TOGGLE_INCLUDE_DIR = 'InductionState/TOGGLE_INCLUDE_DIR';
 
 //Action creators
 export const setInviteCode = (code) => {
@@ -44,8 +45,14 @@ export const checkInviteCode = (code) => {
   };
 };
 
+export const includeInDirectory = () => {
+  return {
+    type: TOGGLE_INCLUDE_DIR
+    };
+};
+
 //Reducer
-const initialState = Map({});
+const initialState = Map({'INCLUDE_DIR': true});
 /**
  * ## inductionReducer function
  * @param {Object} state - initialState
@@ -53,6 +60,8 @@ const initialState = Map({});
  */
 export default function inductionReducer(state = initialState, action) {
   switch (action.type) {
+    case TOGGLE_INCLUDE_DIR:
+      return state.set('INCLUDE_DIR', !state.get('INCLUDE_DIR'))
     case SEND_INVITATION:
       return state.set('USER', action.payload.user).set('SESSION_TOKEN', action.payload.token);
     case SEND_INVITATION_FAIL:
