@@ -28,7 +28,7 @@ export const checkInviteCode = (code) => {
     })
     .then((res) => res.json())
     .then((json) => {
-      if(json.token && json.user) {
+      if(json.ok) {
         dispatch({
           type: SEND_INVITATION,
           payload: {
