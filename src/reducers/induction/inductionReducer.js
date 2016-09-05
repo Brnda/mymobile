@@ -9,7 +9,7 @@ export const TOGGLE_INCLUDE_DIR = 'InductionState/TOGGLE_INCLUDE_DIR';
 
 //Action creators
 export const setInviteCode = (code) => {
-  Actions.tenatreview();
+  Actions.tenatReview();
   return {
     type: SET_INVITATION,
     payload: code
@@ -32,16 +32,17 @@ export const checkInviteCode = (code) => {
         dispatch({
           type: SEND_INVITATION,
           payload: {
-            token: json.token,
+            auth: json.auth,
             user: json.user
           }
         });
         Actions.tenatReview();
       } else {
         //dispatches invalid invitation token.
+        console.log("Response does not have 'token' and 'auth'");
       }
     })
-    .catch((err) => { console.log(`Got an error: ${err}`)});
+    .catch((err) => { console.log('Got an error: ${err}')});
   };
 };
 
@@ -63,9 +64,12 @@ export default function inductionReducer(state = initialState, action) {
     case TOGGLE_INCLUDE_DIR:
       return state.set('INCLUDE_DIR', !state.get('INCLUDE_DIR'))
     case SEND_INVITATION:
-      return state.set('USER', action.payload.user).set('SESSION_TOKEN', action.payload.token);
+      return state.set('USER', action.payload.user)
+          .set('SESSION_TOKEN', action.payload.auth.token)
+          .set('SESSION_TOKEN_CAN_DELEGATE', action.payload.auth.can_delegate);
     case SEND_INVITATION_FAIL:
-      return state.delete('USER').delete('SESSION_TOKEN');
+      return state.delete('USER').delete('SESSION_TOKEN')
+          .delete('SESSION_TOKEN_CAN_DELEGATE');
   }
   return state;
 }

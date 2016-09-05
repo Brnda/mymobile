@@ -1,8 +1,12 @@
-const APP_CONST = {
-  // BaseUrl: '192.168.0.78',
+const APP_CONST_PROD = {
   BaseUrl: 'owal-api.herokuapp.com',
   Port: '80'
-  // Port: '3030'
 };
 
-export default APP_CONST;
+// Local server
+const APP_CONST_LOCALDEV = {
+  BaseUrl: '127.0.0.1',
+  Port: '3030'
+};
+
+export default APP_CONST_PROD;

@@ -30,6 +30,8 @@ class TextInviteCodeScreen extends Component {
 
   _onEnter() {
     // bring up spinner
+    console.log("User typed invite code: " + this.state.inviteCode);
+    console.log("Going to: " + this.props.onSelect);
     this.props.onSelect(this.state.inviteCode);
   }
 
