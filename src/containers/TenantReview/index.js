@@ -6,7 +6,8 @@ import {
     View,
     Text,
     TouchableOpacity,
-    Image
+    Image,
+    StatusBar
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 
@@ -18,6 +19,7 @@ class TenantReview extends Component {
   render() {
     return (
         <View style={styles.container}>
+          <StatusBar hidden={true}/>
           <View>
             <Image source={require('../App/img/logo_icon_only.png')} style={styles.logo}/>
           </View>

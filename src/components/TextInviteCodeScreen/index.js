@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {
     StyleSheet,
     View,
@@ -13,59 +13,50 @@ import {
 } from 'react-native';
 import styles from './styles';
 
-import {Actions} from 'react-native-router-flux';
-
 class TextInviteCodeScreen extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      inviteCode: 'Enter invite code'
+      continue: false
     };
   }
 
-  _onCancel() {
-    Actions.pop();
+  _onPressContinueButton() {
+    this.props.onSelect(this.refs.inviteCode.value);
   }
 
-  _onEnter() {
-    // bring up spinner
-    console.log("User typed invite code: " + this.state.inviteCode);
-    console.log("Going to: " + this.props.onSelect);
-    this.props.onSelect(this.state.inviteCode);
+  _onCodeEntered(text) {
+    if (text.length > 0) {
+      this.setState({continue: true});
+    } else {
+      this.setState({continue: false});
+    }
   }
 
   render() {
     return (
         <View style={styles.container}>
           <View>
-            <Image
-                source={{uri: 'http://owal.io/wp-content/uploads/2016/04/Screen-Shot-2016-04-17-at-7.22.29-PM.png'}}
-                style={styles.logo}/>
+            <Image source={require('../../containers/App/img/logo_icon_only.png')} style={styles.logo}/>
           </View>
-          <View style={styles.messageBoxContainer}>
-            <View style={styles.messageBox}>
-              <Text style={styles.messageBoxBodyText}>Please enter your invite code below.</Text>
-            </View>
+          <View style={styles.header}>
+            <Text style={styles.headerText}>Enter your invite code</Text>
           </View>
-          <View style={styles.inputcontainer}>
-            <TextInput style={styles.input} onChangeText={(text)=>this.setState({inviteCode: text})}
-                       value={this.state.inviteCode}/>
-            <TouchableOpacity
-                style={styles.enterButton}
-                onPress={()=>this._onEnter()}
-                underlayColor='#dddddd'>
-              <Text style={styles.enterButtonText}>Verify</Text>
+          <View style={styles.containerInputText}>
+            <TextInput ref="inviteCode" style={styles.inviteTextInput} onChangeText={this._onCodeEntered.bind(this)}/>
+          </View>
+          {this.state.continue &&
+            <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton.bind(this)}>
+              <Text style={styles.continueButtonText}>CONTINUE</Text>
             </TouchableOpacity>
-          </View>
-          <View style={styles.cancelButton}>
-            <TouchableOpacity onPress={this._onCancel}>
-              <Text style={styles.cancelButtonText}>Cancel</Text>
-            </TouchableOpacity>
-          </View>
+          }
         </View>
-    )
+    );
   }
 }
+
+TextInviteCodeScreen.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+};
 
 export default TextInviteCodeScreen;

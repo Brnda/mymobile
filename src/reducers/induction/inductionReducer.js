@@ -39,7 +39,6 @@ export const checkInviteCode = (code) => {
         Actions.tenatReview();
       } else {
         //dispatches invalid invitation token.
-        console.log("Response does not have 'token' and 'auth'");
       }
     })
     .catch((err) => { console.log('Got an error: ${err}')});

@@ -9,7 +9,8 @@ import {
     View,
     Text,
     TouchableHighlight,
-    Image
+    Image,
+    StatusBar
 } from 'react-native';
 
 /**
@@ -21,6 +22,7 @@ class App extends Component {
   render() {
     return (
         <View style={styles.container}>
+          <StatusBar hidden={true} />
           <View>
             <Image source={require('./img/logo_icon_only.png')} style={styles.logo}/>
           </View>

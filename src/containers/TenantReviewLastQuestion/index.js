@@ -8,7 +8,8 @@ import {
     Text,
     Image,
     Switch,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar
 } from 'react-native';
 import styles from './styles';
 import * as InductionState from '../../reducers/induction/inductionReducer';
@@ -21,6 +22,7 @@ class TenantReviewLastQuestion extends Component {
   render() {
     return (
         <View style={styles.container}>
+          <StatusBar hidden={true} />
           <View>
             <Image source={require('../App/img/logo_icon_only.png')} style={styles.logo}/>
           </View>

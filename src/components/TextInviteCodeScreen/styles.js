@@ -1,110 +1,59 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-
-  rectangleContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-  },
-
-  rectangle: {
-    height: 250,
-    width: 250,
-    borderWidth: 2,
-    borderColor: '#00FF00',
-    backgroundColor: 'transparent',
-  },
-
   container: {
     flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#272727'
+    backgroundColor: '#272727',
+    flexDirection: 'column'
   },
-
   logo: {
-    width: 175,
-    height: 68,
-    marginTop: 20
+    width: 65,
+    height: 65,
+    marginTop: 50,
+    marginBottom: 35,
+    alignSelf: 'center'
   },
-
-  messageBox: {
-    backgroundColor: '#1e9e6b',
-    width: 300,
-    paddingTop: 10,
-    paddingBottom: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderRadius: 7
+  header: {
+    justifyContent: 'flex-start',
+    alignSelf: 'flex-start',
+    marginLeft: 20,
+    marginRight: 20,
   },
-
-  messageBoxContainer: {
-    justifyContent: 'center',
-    flexDirection: 'row',
-    //position: 'absolute',
-    marginTop: 20,
-    left: 0,
-    right: 0
-  },
-
-  messageBoxTitleText: {
-    fontFamily: 'DINPro',
-    fontSize: 18,
-    color: '#fff',
-    textAlign: 'center',
-    marginBottom: 10
-  },
-  messageBoxBodyText: {
+  headerText: {
     color: '#fff',
     fontFamily: 'DINPro',
-    textAlign: 'center',
-    fontSize: 18
+    fontSize: 26
   },
-  inputcontainer: {
-    marginTop: 5,
-    padding: 10,
-    flexDirection: 'row'
+  inviteTextInput: {
+    height: 40,
+    color: 'white',
+    paddingRight: 8,
+    paddingLeft: 8,
   },
-  enterButton: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    borderRadius: 3,
-    padding: 15,
-    width: 100
-  },
-  enterButtonText: {
-    fontSize: 17,
-    fontWeight: '500',
-    color: '#0097CE',
-  },
-
-  cancelButton: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    borderRadius: 3,
-    padding: 15,
-    width: 100,
-    marginTop: 10,
-  },
-  cancelButtonText: {
-    fontSize: 17,
-    fontWeight: '500',
-    color: '#0097CE',
-  },
-  input: {
-    height: 36,
-    padding: 4,
-    marginRight: 5,
-    flex: 4,
-    fontSize: 18,
+  containerInputText: {
     borderWidth: 1,
-    borderColor: '#48afdb',
-    borderRadius: 4,
-    color: '#48BBEC'
+    borderBottomColor: 'white',
+    borderTopColor: '#272727',
+    borderLeftColor: '#272727',
+    borderRightColor: '#272727',
+    marginLeft: 20,
+    marginRight: 20,
   },
+  continueButton: {
+    borderColor: '#d6d7da',
+    borderWidth: 1,
+    alignItems: 'center',
+    borderRadius: 5,
+    marginTop: 32,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+
+  continueButtonText: {
+    color: 'white',
+    padding: 20,
+    fontFamily: 'DINPro-Bold',
+  }
 });
 
 export default styles;
