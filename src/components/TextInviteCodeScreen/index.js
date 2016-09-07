@@ -12,6 +12,7 @@ import {
     TouchableHighlight
 } from 'react-native';
 import styles from './styles';
+import {Actions} from 'react-native-router-flux';
 
 class TextInviteCodeScreen extends Component {
   constructor(props) {
@@ -33,9 +34,16 @@ class TextInviteCodeScreen extends Component {
     }
   }
 
+  _onPressBackButton() {
+    Actions.pop();
+  }
+
   render() {
     return (
         <View style={styles.container}>
+          <TouchableOpacity style={styles.chevron} onPress={this._onPressBackButton}>
+            <Image source={require('./img/left-chevron.png')} style={styles.chevronImg}/>
+          </TouchableOpacity>
           <View>
             <Image source={require('../../containers/App/img/logo_icon_only.png')} style={styles.logo}/>
           </View>

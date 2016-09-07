@@ -53,6 +53,16 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 20,
     fontFamily: 'DINPro-Bold',
+  },
+  chevron: {
+    marginTop: 10,
+    marginLeft: 3,
+    width: 25,
+    height: 25,
+  },
+  chevronImg: {
+    height: 25,
+    width: 25
   }
 });
 
