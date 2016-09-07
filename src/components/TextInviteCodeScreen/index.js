@@ -22,14 +22,14 @@ class TextInviteCodeScreen extends Component {
   }
 
   _onPressContinueButton() {
-    this.props.onSelect(this.refs.inviteCode.value);
+    this.props.onSelect(this.state.text);
   }
 
   _onCodeEntered(text) {
     if (text.length > 0) {
-      this.setState({continue: true});
+      this.setState({continue: true, text});
     } else {
-      this.setState({continue: false});
+      this.setState({continue: false, text});
     }
   }
 
