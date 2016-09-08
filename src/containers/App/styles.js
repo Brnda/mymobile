@@ -7,12 +7,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#272727',
   },
 
-  logo: {
-    width: 75,
-    height: 75,
-    marginTop: 50
-  },
-
   messageBoxContainer: {
     justifyContent: 'center',
     flexDirection: 'column',
@@ -24,8 +18,7 @@ const styles = StyleSheet.create({
     fontFamily: 'DINPro',
     textAlign: 'left',
     fontSize: 22
-  },
-  touchable: {}
+  }
 });
 
 export default styles;

@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 import {Actions} from 'react-native-router-flux';
+import InductionHeader from '../../components/InductionHeader';
 
 class TextInviteCodeScreen extends Component {
   constructor(props) {
@@ -44,9 +45,7 @@ class TextInviteCodeScreen extends Component {
           <TouchableOpacity style={styles.chevron} onPress={this._onPressBackButton}>
             <Image source={require('./img/left-chevron.png')} style={styles.chevronImg}/>
           </TouchableOpacity>
-          <View>
-            <Image source={require('../../containers/App/img/logo_icon_only.png')} style={styles.logo}/>
-          </View>
+          <InductionHeader imageStyle={styles.logo}/>
           <View style={styles.header}>
             <Text style={styles.headerText}>Enter your invite code</Text>
           </View>

@@ -10,6 +10,7 @@ import {
     StatusBar
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import InductionHeader from '../../components/InductionHeader';
 
 class TenantReview extends Component {
   _onPressContinueButton() {
@@ -20,9 +21,7 @@ class TenantReview extends Component {
     return (
         <View style={styles.container}>
           <StatusBar hidden={true}/>
-          <View>
-            <Image source={require('../App/img/logo_icon_only.png')} style={styles.logo}/>
-          </View>
+          <InductionHeader/>
           <View style={styles.header}>
             <Text style={styles.headerText}>Welcome home</Text>
           </View>

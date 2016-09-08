@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 import * as InductionState from '../../reducers/induction/inductionReducer';
+import InductionHeader from '../../components/InductionHeader';
 
 class TenantReviewLastQuestion extends Component {
   _onPressContinueButton() {
@@ -23,9 +24,7 @@ class TenantReviewLastQuestion extends Component {
     return (
         <View style={styles.container}>
           <StatusBar hidden={true} />
-          <View>
-            <Image source={require('../App/img/logo_icon_only.png')} style={styles.logo}/>
-          </View>
+          <InductionHeader/>
           <View style={styles.header}>
             <Text style={styles.headerText}>One more question</Text>
           </View>
