@@ -710,7 +710,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 15;
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -731,7 +731,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "d1ffe14a-dec5-47f7-884d-685fa0810b9d";
+				PROVISIONING_PROFILE = "f992bb20-0798-4997-9aa7-211528bbbf57";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -742,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -762,7 +762,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "d1ffe14a-dec5-47f7-884d-685fa0810b9d";
+				PROVISIONING_PROFILE = "f992bb20-0798-4997-9aa7-211528bbbf57";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
