@@ -6,6 +6,8 @@ import APP_CONST from '../../lib/constants'
 export const SEND_INVITATION = 'InductionState/SEND_INVITATION';
 export const SEND_INVITATION_FAIL = 'InductionState/SEND_INVITATION_FAIL';
 export const TOGGLE_INCLUDE_DIR = 'InductionState/TOGGLE_INCLUDE_DIR';
+export const INVITE_ERROR = 'InductionState/INVITE_ERROR';
+export const INVITE_ERROR_RESET = 'InductionState/INVITE_ERROR_RESET';
 
 //Action creators
 export const setInviteCode = (code) => {
@@ -13,6 +15,12 @@ export const setInviteCode = (code) => {
   return {
     type: SET_INVITATION,
     payload: code
+  };
+};
+
+export const resetInviteError = () => {
+  return {
+    type: INVITE_ERROR_RESET
   };
 };
 
@@ -38,10 +46,19 @@ export const checkInviteCode = (code) => {
         });
         Actions.tenatReview();
       } else {
-        //dispatches invalid invitation token.
+      console.log(`Invite ERROR`);
+       dispatch({
+        type: INVITE_ERROR,
+        message: 'Token not valid.'
+       });
       }
     })
-    .catch((err) => { console.log('Got an error: ${err}')});
+    .catch((err) => {
+      dispatch({
+        type: INVITE_ERROR,
+        message: 'Network problem.'
+      });
+    });
   };
 };
 
@@ -60,6 +77,10 @@ const initialState = Map({'INCLUDE_DIR': true});
  */
 export default function inductionReducer(state = initialState, action) {
   switch (action.type) {
+    case INVITE_ERROR:
+      return state.set('ERROR', action.message );
+    case INVITE_ERROR_RESET:
+      return state.set('ERROR', null );
     case TOGGLE_INCLUDE_DIR:
       return state.set('INCLUDE_DIR', !state.get('INCLUDE_DIR'))
     case SEND_INVITATION:

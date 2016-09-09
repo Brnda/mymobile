@@ -7,7 +7,8 @@ import {
 } from 'react-native';
 import {
     Router,
-    Scene
+    Scene,
+    ActionConst
 } from 'react-native-router-flux';
 import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
@@ -32,9 +33,7 @@ export default function native(platform) {
                        component={App}
                        title="App"
                        initial={true}/>
-                <Scene key="tenatReview"
-                       component={TenantReview}
-                />
+                <Scene key="tenatReview" component={TenantReview} type={ActionConst.REPLACE}/>
                 <Scene key="lastTenantQuestion"
                        component={TenantReviewLastQuestion}
                 />

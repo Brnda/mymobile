@@ -9,11 +9,13 @@ import {
     Vibration,
     VibrationIOS,
     TouchableOpacity,
-    TouchableHighlight
+    Alert
 } from 'react-native';
 import styles from './styles';
 import {Actions} from 'react-native-router-flux';
 import InductionHeader from '../../components/InductionHeader';
+import {connect} from 'react-redux';
+import * as InductionState from '../../reducers/induction/inductionReducer'
 
 class TextInviteCodeScreen extends Component {
   constructor(props) {
@@ -29,9 +31,9 @@ class TextInviteCodeScreen extends Component {
 
   _onCodeEntered(text) {
     if (text.length > 0) {
-      this.setState({continue: true, text});
+      this.setState({...this.state, continue: true, text});
     } else {
-      this.setState({continue: false, text});
+      this.setState({...this.state, continue: false, text});
     }
   }
 
@@ -53,9 +55,15 @@ class TextInviteCodeScreen extends Component {
             <TextInput ref="inviteCode" style={styles.inviteTextInput} onChangeText={this._onCodeEntered.bind(this)}/>
           </View>
           {this.state.continue &&
-            <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton.bind(this)}>
-              <Text style={styles.continueButtonText}>CONTINUE</Text>
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton.bind(this)}>
+            <Text style={styles.continueButtonText}>CONTINUE</Text>
+          </TouchableOpacity>
+          }
+          {this.props.error &&
+            Alert.alert(
+                'Error',
+                this.props.error,
+                [{text: 'OK', onPress: () => this.props.dispatch(InductionState.resetInviteError())}])
           }
         </View>
     );
@@ -66,4 +74,10 @@ TextInviteCodeScreen.propTypes = {
   onSelect: PropTypes.func.isRequired,
 };
 
-export default TextInviteCodeScreen;
+function mapStateToProps(state) {
+  return {
+    error: state.induction.get('ERROR')
+  }
+}
+
+export default connect(mapStateToProps)(TextInviteCodeScreen);
