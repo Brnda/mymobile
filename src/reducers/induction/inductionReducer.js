@@ -26,7 +26,7 @@ export const resetInviteError = () => {
 
 export const checkInviteCode = (code) => {
   return (dispatch) => {
-    fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/verifyinvitecode`, {
+    fetch('http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/invitecode/verify', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
