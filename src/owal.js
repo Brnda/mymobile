@@ -17,7 +17,7 @@ import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Home from './containers/Home';
 import TenantReviewLastQuestion from './containers/TenantReviewLastQuestion';
-import TextInviteCodeScreen from './components/TextInviteCodeScreen';
+import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
 
 export default function native(platform) {
 

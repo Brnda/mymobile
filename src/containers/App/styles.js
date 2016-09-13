@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   messageBoxContainer: {
     justifyContent: 'center',
     flexDirection: 'column',
-    height: 200
+    marginTop: 30,
   },
 
   messageBoxBodyText: {
