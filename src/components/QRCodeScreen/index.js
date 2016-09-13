@@ -12,7 +12,6 @@ import {
 import Camera from 'react-native-camera';
 import styles from './styles';
 import {Actions} from 'react-native-router-flux';
-import _ from 'lodash';
 import * as InductionState from '../../reducers/induction/inductionReducer'
 import {connect} from 'react-redux';
 
