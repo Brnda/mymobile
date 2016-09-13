@@ -11,8 +11,8 @@
     "immutable": "^3.8.1",
     "key-mirror": "^1.0.1",
     "lodash": "^4.15.0",
-    "react": "~15.2.0",
-    "react-native": "0.29.2",
+    "react": "~15.3.1",
+    "react-native": "^0.33.0",
     "react-native-barcodescanner": "^3.1.1",
     "react-native-button": "^1.6.0",
     "react-native-camera": "git+https://github.com/codyhazelwood/react-native-camera.git",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
-    "babel-jest": "^13.2.2",
+    "babel-jest": "^15.0.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-react-native": "^1.9.0",
     "jest-cli": "^13.2.3",
@@ -33,13 +33,27 @@
     "babel-types": "^6.1.2",
     "chai": "^3.5.0",
     "enzyme": "^2.3.0",
-    "react-dom": "~15.2.0"
+    "react-dom": "~15.2.0",
+    "react-test-renderer": "^15.3.1"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "scriptPreprocessor": "node_modules/babel-jest",
     "unmockedModulePathPatterns": [
       "node_modules"
-    ]
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "packager/react-packager/src/Activity/"
+    ],
+    "testFileExtensions": [
+      "js"
+    ],
+    "preprocessorIgnorePatterns": [
+      "png$"
+    ],
+    "moduleNameMapper": {
+      "^[./a-zA-Z0-9$_-]+\\.png$": "StaticImageStub"
+    }
   },
   "babel": {
     "presets": [
