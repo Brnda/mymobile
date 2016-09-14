@@ -5,7 +5,6 @@ import styles from './styles';
 export default Home = () => {
   return (
       <View style={styles.container}>
-
         <Text>Home</Text>
       </View>
   );

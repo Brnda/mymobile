@@ -17,7 +17,7 @@ import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Home from './containers/Home';
 import TenantReviewLastQuestion from './containers/TenantReviewLastQuestion';
-import TextInviteCodeScreen from './components/TextInviteCodeScreen';
+import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
 
 export default function native(platform) {
 
@@ -33,7 +33,9 @@ export default function native(platform) {
                        component={App}
                        title="App"
                        initial={true}/>
-                <Scene key="tenatReview" component={TenantReview} type={ActionConst.REPLACE}/>
+                <Scene key="tenatReview"
+                       component={TenantReview}
+                       type={ActionConst.REPLACE}/>
                 <Scene key="lastTenantQuestion"
                        component={TenantReviewLastQuestion}
                 />

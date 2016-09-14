@@ -26,7 +26,9 @@ class App extends Component {
           <StatusBar hidden={true} />
           <InductionHeader />
           <View style={styles.messageBoxContainer}>
-            <Text style={styles.messageBoxBodyText}>Enter an invite code or scan a QR code to continue.</Text>
+            <Text style={styles.messageBoxBodyText}>
+            Do you have an invite code or scan a QR code?
+            </Text>
           </View>
           <CodeInputSelector onSelect={this.props.actions.checkInviteCode}/>
         </View>
