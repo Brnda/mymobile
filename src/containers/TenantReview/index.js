@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import styles from './styles';
 
 import {connect} from 'react-redux';
@@ -18,71 +18,50 @@ class TenantReview extends Component {
   }
 
   render() {
+    const {user} = this.props;
+    const longAddress = user && user.address2 !== '' ? (
+        <View>
+          <Text style={styles.tenantDetailText}>{user.address2}</Text>
+        </View>)
+        : null;
+
     return (
         <View style={styles.container}>
           <StatusBar hidden={true}/>
           <InductionHeader/>
           <View style={styles.header}>
-            <Text style={styles.headerText}>Welcome home</Text>
+            <Text style={styles.headerText}>
+              Welcome home {user.apartment}. Is this your correct address?
+            </Text>
           </View>
-          <View style={styles.header}>
-            <Text style={styles.headerText}>{this.props.user.first_name}!</Text>
-          </View>
-          <View style={styles.subHeader}>
-            <Text style={styles.subHeaderText}>Please confirm your information.</Text>
-          </View>
-          <View style={styles.tenantDetails}>
-            <View style={styles.tenantDetailsRow}>
-              <View style={styles.tenantDetailColumnLeft}>
-                <Text style={styles.tenantDetailBoldText}>First name</Text>
+
+          <View style={styles.tenantAddressDetails}>
+            <View>
+              <View>
+                <Text style={styles.tenantDetailText}>{user.address1}</Text>
               </View>
-              <View style={styles.tenantDetailColumnRight}>
-                <Text style={styles.tenantDetailText}>{this.props.user.first_name}</Text>
-              </View>
-            </View>
-            <View style={styles.tenantDetailsRow}>
-              <View style={styles.tenantDetailColumnLeft}>
-                <Text style={styles.tenantDetailBoldText}>Last name</Text>
-              </View>
-              <View style={styles.tenantDetailColumnRight}>
-                <Text style={styles.tenantDetailText}>{this.props.user.last_name}</Text>
-              </View>
-            </View>
-            <View style={styles.tenantDetailsRow}>
-              <View style={styles.tenantDetailColumnLeft}>
-                <Text style={styles.tenantDetailBoldText}>Address</Text>
-              </View>
-              <View style={styles.tenantDetailColumnRight}>
-                <Text style={styles.tenantDetailText}>{this.props.user.address1}</Text>
-              </View>
-            </View>
-            <View style={styles.tenantDetailsRow}>
-              <View style={styles.tenantDetailColumnLeft}>
-                <Text style={styles.tenantDetailText}></Text>
-              </View>
-              <View style={styles.tenantDetailColumnRight}>
-                <Text style={styles.tenantDetailText}>{this.props.user.address2}</Text>
-              </View>
-            </View>
-            <View style={styles.tenantDetailsRow}>
-              <View style={styles.tenantDetailColumnLeft}>
-                <Text style={styles.tenantDetailText}></Text>
-              </View>
-              <View style={styles.tenantDetailColumnRight}>
-                <Text style={styles.tenantDetailText}>{this.props.user.city_state_zip}</Text>
+              {longAddress}
+              <View>
+                <Text style={styles.tenantDetailText}>{user.city_state_zip}</Text>
               </View>
             </View>
           </View>
-          <View style={styles.tenatDataValid}>
-            <Text style={styles.somethingWrongTextSmall}>Something is wrong.</Text>
+          <View style={styles.tenantAddressButtoms}>
+            <TouchableOpacity style={styles.tenantButton} >
+              <Text style={styles.tenantButtonText}>NO</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.tenantButton} onPress={this._onPressContinueButton}>
+              <Text style={styles.tenantButtonText}>YES</Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton}>
-            <Text style={styles.continueButtonText}>CONTINUE</Text>
-          </TouchableOpacity>
         </View>
     )
   }
 }
+
+TenantReview.propTypes = {
+  user: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (state) => {
   return {

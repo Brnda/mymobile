@@ -33,7 +33,9 @@ export default function native(platform) {
                        component={App}
                        title="App"
                        initial={true}/>
-                <Scene key="tenatReview" component={TenantReview} type={ActionConst.REPLACE}/>
+                <Scene key="tenatReview"
+                       component={TenantReview}
+                       type={ActionConst.REPLACE}/>
                 <Scene key="lastTenantQuestion"
                        component={TenantReviewLastQuestion}
                 />
