@@ -15,6 +15,7 @@ import configureStore from './lib/configureStore';
 import App from './containers/App/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
+import Enjoy from './components/Enjoy';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
@@ -34,8 +35,7 @@ export default function native(platform) {
                        title="App"
                        initial={true}/>
                 <Scene key="tenatReview"
-                       component={TenantReview}
-                       type={ActionConst.REPLACE}/>
+                       component={TenantReview}/>
                 <Scene key="lastTenantQuestion"
                        component={TenantReviewDirectory}/>
                 <Scene key="qrcodescreen"
@@ -43,7 +43,10 @@ export default function native(platform) {
                 <Scene key="textinvitecodescreen"
                        component={TextInviteCodeScreen}/>
                 <Scene key="home"
+                       type={ActionConst.REPLACE}
                        component={Home}/>
+                <Scene key="enjoy"
+                       component={Enjoy}/>
               </Scene>
             </Router>
           </Provider>

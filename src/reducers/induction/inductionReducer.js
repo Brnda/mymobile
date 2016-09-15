@@ -24,6 +24,26 @@ export const resetInviteError = () => {
   };
 };
 
+export const addNametoDirectory = (first_name, last_name) => {
+  return (dispatch, getState) => {
+    const state = getState();
+    const token = state.induction.get('SESSION_TOKEN');
+    fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/directory/update`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({token, show_full_name_in_directory: true, first_name, last_name})
+    })
+    .then((res) => res.json())
+    .then((json) => {
+      Actions.enjoy();
+    })
+    .catch((err) => {console.log(`Got an error ${err}`)})
+  };
+};
+
 export const checkInviteCode = (code) => {
   return (dispatch) => {
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/invitecode/verify`, {
@@ -41,12 +61,11 @@ export const checkInviteCode = (code) => {
           type: SEND_INVITATION,
           payload: {
             auth: json.auth,
-            user: json.user
+            user: json.user,
           }
         });
         Actions.tenatReview();
       } else {
-      console.log(`Invite ERROR`);
        dispatch({
         type: INVITE_ERROR,
         message: 'Token not valid.'

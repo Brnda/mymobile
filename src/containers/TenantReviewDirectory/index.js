@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {
     View,
     Text,
@@ -8,8 +8,11 @@ import {
     ScrollView,
     TouchableOpacity
 } from 'react-native';
-import styles from './styles'
-import InductionHeader from '../../components/InductionHeader'
+import styles from './styles';
+import InductionHeader from '../../components/InductionHeader';
+import {connect} from 'react-redux';
+import * as InductionState from '../../reducers/induction/inductionReducer';
+import {Actions} from 'react-native-router-flux';
 
 class TenantReviewDirectory extends Component {
   constructor(props) {
@@ -55,7 +58,12 @@ class TenantReviewDirectory extends Component {
   }
 
   _onPressContinueButton() {
-    //TODO: Wire this up to the home screen
+    const {dispatch, actions} = this.props;
+    dispatch(actions.addNametoDirectory(this.state.firstName, this.state.lastName));
+  }
+
+  _onPressSkipButton() {
+    Actions.home();
   }
 
   render() {
@@ -79,13 +87,13 @@ class TenantReviewDirectory extends Component {
                          placeholderTextColor="rgba(240, 255, 255,0.3)" style={styles.inviteTextInput}/>
             </View>
             {this.state.continue &&
-            <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton}>
+            <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton.bind(this)}>
               <Text style={styles.continueButtonText}>CONTINUE</Text>
             </TouchableOpacity>
             }
           </ScrollView>
           <View style={styles.tenantSkipButton}>
-            <TouchableOpacity style={styles.tenantButton} onPress={this._onPressContinueButton}>
+            <TouchableOpacity style={styles.tenantButton} onPress={this._onPressSkipButton.bind(this)}>
               <Text style={styles.tenantButtonText}>Skip</Text>
             </TouchableOpacity>
           </View>
@@ -94,4 +102,11 @@ class TenantReviewDirectory extends Component {
   }
 }
 
-export default TenantReviewDirectory;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {...InductionState},
+    dispatch
+  }
+}
+
+export default connect(null, mapDispatchToProps)(TenantReviewDirectory);
