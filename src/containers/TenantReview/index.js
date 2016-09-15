@@ -46,7 +46,7 @@ class TenantReview extends Component {
               </View>
             </View>
           </View>
-          <View style={styles.tenantAddressButtoms}>
+          <View style={styles.tenantAddressButtons}>
             <TouchableOpacity style={styles.tenantButton} >
               <Text style={styles.tenantButtonText}>NO</Text>
             </TouchableOpacity>
