@@ -16,7 +16,7 @@ import App from './containers/App/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Home from './containers/Home';
-import TenantReviewLastQuestion from './containers/TenantReviewLastQuestion';
+import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
 
 export default function native(platform) {
@@ -37,8 +37,7 @@ export default function native(platform) {
                        component={TenantReview}
                        type={ActionConst.REPLACE}/>
                 <Scene key="lastTenantQuestion"
-                       component={TenantReviewLastQuestion}
-                />
+                       component={TenantReviewDirectory}/>
                 <Scene key="qrcodescreen"
                        component={QRCodeScreen}/>
                 <Scene key="textinvitecodescreen"

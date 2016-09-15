@@ -31,9 +31,9 @@ class TextInviteCodeScreen extends Component {
 
   _onCodeEntered(text) {
     if (text.length > 0) {
-      this.setState({...this.state, continue: true, text});
+      this.setState({continue: true, text});
     } else {
-      this.setState({...this.state, continue: false, text});
+      this.setState({continue: false, text});
     }
   }
 

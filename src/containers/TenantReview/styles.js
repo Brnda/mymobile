@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  tenantAddressButtoms: {
+  tenantAddressButtons: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'flex-end',
