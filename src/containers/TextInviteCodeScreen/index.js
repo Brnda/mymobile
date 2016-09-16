@@ -47,7 +47,7 @@ class TextInviteCodeScreen extends Component {
           <TouchableOpacity style={styles.chevron} onPress={this._onPressBackButton}>
             <Image source={require('./img/left-chevron.png')} style={styles.chevronImg}/>
           </TouchableOpacity>
-          <InductionHeader style={StyleSheet.flatten([styles.logo])}/>
+          <InductionHeader style={styles.logo}/>
           <View style={styles.header}>
             <Text style={styles.headerText}>Enter your invite code</Text>
           </View>
