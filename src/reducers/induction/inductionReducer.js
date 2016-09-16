@@ -61,7 +61,7 @@ export const checkInviteCode = (code) => {
           type: SEND_INVITATION,
           payload: {
             auth: json.auth,
-            user: json.user,
+            user: json.user
           }
         });
         Actions.tenatReview();

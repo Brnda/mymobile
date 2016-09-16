@@ -9,7 +9,7 @@ import styles from './styles';
 import InductionHeader from '../../components/InductionHeader';
 import {Actions} from 'react-native-router-flux';
 
-class TenantReviewLastQuestion extends Component {
+class Enjoy extends Component {
   componentDidMount() {
     setTimeout(function(){ Actions.home(); }, 3000);
   }
@@ -27,5 +27,5 @@ class TenantReviewLastQuestion extends Component {
   }
 }
 
-export default TenantReviewLastQuestion;
+export default Enjoy;
 
