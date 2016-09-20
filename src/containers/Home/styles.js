@@ -6,6 +6,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     flexDirection: 'column',
   },
+  header: {
+    backgroundColor: 'yellow',
+    alignItems: 'center',
+    marginTop: 50
+  },
+  row: {
+    backgroundColor: 'red',
+    margin: 10,
+    flexDirection: 'row',
+    flex: 1
+  }
 });
 
 export default styles;
