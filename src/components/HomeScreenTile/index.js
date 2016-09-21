@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
 import styles from './styles';
 import {
   StyleSheet,
@@ -7,23 +7,25 @@ import {
   StatusBar
 } from 'react-native';
 
-class Enjoy extends Component {
+class HomeScreenTile extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.props.containerStyle]}>
         {this.props.imageName &&
-          <Image source={require('./img/' + this.props.imageName + '.png')}
-                                        style={[styles.logo, this.props.imageStyle]}/>
+        <Image source={require('./img/' + this.props.imageName + '.png')}
+               style={[styles.logo, this.props.imageStyle]}/>
         }
         <View style={styles.textView}>
           <Text style={styles.text}>{this.props.text}</Text>
         </View>
         {this.props.statusText &&
-          <View style={styles.statusTextView}>
-            <Text style={[style.statusText, this.props.statusTextStyle]}>{this.props.statusText}</Text>
-          </View>
+        <View style={styles.statusTextView}>
+          <Text style={[styles.statusText, this.props.statusTextStyle]}>{this.props.statusText}</Text>
+        </View>
         }
       </View>
     )
   }
 }
+
+export default HomeScreenTile;
