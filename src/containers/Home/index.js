@@ -1,23 +1,28 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './styles';
+import HomeScreenTile from '../../components/HomeScreenTile'
 
 export default Home = () => {
   return (
-      <View style={styles.container}>
-        <View style={styles.header}><Text>SPACES</Text></View>
-        <View style={styles.row}>
-          <View style={{backgroundColor: 'blue', flex: 1, margin: 20, alignItems: 'center'}}><Text>MAIN ENTRANCE</Text></View>
-          <View style={{backgroundColor: 'green', flex: 1, margin: 20, alignItems: 'center'}}><Text>MY FLOOR</Text></View>
-        </View>
-        <View style={styles.row}>
-          <View style={{backgroundColor: 'blue', flex: 1, margin: 20, alignItems: 'center'}}><Text>LAUNDRY</Text></View>
-          <View style={{backgroundColor: 'green', flex: 1, margin: 20, alignItems: 'center'}}><Text>GYM</Text></View>
-        </View>
-        <View style={styles.row}>
-          <View style={{backgroundColor: 'blue', flex: 1, margin: 20, alignItems: 'center'}}><Text>POOL</Text></View>
-          <View style={{backgroundColor: 'green', flex: 1, margin: 20, alignItems: 'center'}}><Text>GARAGE</Text></View>
-        </View>
+    <View style={styles.container}>
+      <View style={styles.header}><Text>SPACES</Text></View>
+      <View style={styles.row}>
+        <HomeScreenTile text="MAIN ENTRANCE" containerStyle={{backgroundColor: '#ff0'}} />
+        <HomeScreenTile text="MY FLOOR" containerStyle={{backgroundColor: '#0f0'}} />
       </View>
+      <View style={styles.row}>
+        <HomeScreenTile text="LAUNDRY" containerStyle={{backgroundColor: '#ff0'}} />
+        <HomeScreenTile text="GYM" containerStyle={{backgroundColor: '#0f0'}} />
+      </View>
+      <View style={styles.row}>
+        <HomeScreenTile
+          text="POOL"
+          containerStyle={{backgroundColor: '#ff0'}}
+          statusText="Status Unavailable"
+          statusTextStyle={{color: '#ccc'}} />
+        <HomeScreenTile text="GARAGE" containerStyle={{backgroundColor: '#0f0'}} />
+      </View>
+    </View>
   );
 }
