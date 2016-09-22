@@ -24,14 +24,14 @@ export default function native(platform) {
 
   let Owal = React.createClass({
     render() {
-      const store = configureStore()
+      const store = configureStore();
       // setup the router table with App selected as the initial component
       return (
           <Provider store={store}>
             <Router hideNavBar={true}>
               <Scene key="root">
                 <Scene key="app"
-                       component={App}
+                       component={Home}
                        title="App"
                        initial={true}/>
                 <Scene key="tenatReview"
