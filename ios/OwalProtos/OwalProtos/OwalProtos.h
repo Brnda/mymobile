@@ -1,8 +1,0 @@
-#import "proto/Camera.pbobjc.h"
-#import "proto/Clip.pbobjc.h"
-#import "proto/Credentials.pbobjc.h"
-#import "proto/Domain.pbobjc.h"
-#import "proto/Incident.pbobjc.h"
-#import "proto/Service.pbobjc.h"
-#import "proto/Types.pbobjc.h"
-#import "proto/Users.pbobjc.h"
