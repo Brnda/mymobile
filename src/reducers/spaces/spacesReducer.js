@@ -50,7 +50,7 @@ const defaultSpacesSet = {
     status_text: "No Data"
   },
   garage: {
-    name: "Garage",
+    name: "Garage - please wait",
     enabled: false,
     icon_name: "garage",
     has_status: true,
@@ -72,7 +72,7 @@ export const fetchSpacesRequest = () => {
 export const fetchSpacesResponse = (json) => {
   return {
     type: FETCH_SPACES_RESPONSE,
-    json
+    ...json
   }
 };
 
