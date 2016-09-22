@@ -28,9 +28,6 @@
 		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
 		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
-		6612F5C31D413DF0006E08AB /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5C21D413DF0006E08AB /* ProtoWrapper.m */; };
-		6612F5C41D413DF0006E08AB /* ProtoWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612F5C21D413DF0006E08AB /* ProtoWrapper.m */; };
-		6612F5D81D41410A006E08AB /* libOwalProtos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612F5B51D413DBD006E08AB /* libOwalProtos.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -105,13 +102,6 @@
 			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
 			remoteInfo = RCTCamera;
 		};
-		6612F5B41D413DBD006E08AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6612F5A41D413DBC006E08AB;
-			remoteInfo = OwalProtos;
-		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -155,9 +145,6 @@
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
 		2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComponent.m; sourceTree = "<group>"; };
 		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
-		6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OwalProtos.xcodeproj; path = OwalProtos/OwalProtos.xcodeproj; sourceTree = "<group>"; };
-		6612F5C11D413DF0006E08AB /* ProtoWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProtoWrapper.h; path = owalMobile/ProtoWrapper.h; sourceTree = "<group>"; };
-		6612F5C21D413DF0006E08AB /* ProtoWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProtoWrapper.m; path = owalMobile/ProtoWrapper.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */,
-				6612F5D81D41410A006E08AB /* libOwalProtos.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -278,8 +264,6 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */,
 				2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */,
-				6612F5C11D413DF0006E08AB /* ProtoWrapper.h */,
-				6612F5C21D413DF0006E08AB /* ProtoWrapper.m */,
 			);
 			name = owalMobile;
 			sourceTree = "<group>";
@@ -311,14 +295,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6612F5B11D413DBC006E08AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6612F5B51D413DBD006E08AB /* libOwalProtos.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */,
-				6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -445,10 +420,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 6612F5B11D413DBC006E08AB /* Products */;
-					ProjectRef = 6612F5B01D413DBC006E08AB /* OwalProtos.xcodeproj */;
-				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -566,13 +537,6 @@
 			remoteRef = 2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6612F5B51D413DBD006E08AB /* libOwalProtos.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOwalProtos.a;
-			remoteRef = 6612F5B41D413DBD006E08AB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -634,7 +598,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6612F5C41D413DF0006E08AB /* ProtoWrapper.m in Sources */,
 				00E356F31AD99517003FC87E /* owalMobileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,7 +608,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */,
-				6612F5C31D413DF0006E08AB /* ProtoWrapper.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -805,9 +767,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/OwalProtos/OwalProtos",
-					"$(SRCROOT)/../../protobuf/objectivec/",
-					"$(SRCROOT)/OwalProtos/protos",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -848,9 +807,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/OwalProtos/OwalProtos",
-					"$(SRCROOT)/../../protobuf/objectivec/",
-					"$(SRCROOT)/OwalProtos/protos",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
