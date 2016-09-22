@@ -15,22 +15,24 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}><Text>SPACES { this.props.fetching ? " READY" : " LOADING"} </Text></View>
+        <View style={styles.header}><Text>SPACES { this.props.fetching ? " LOADING" : " READY"} </Text></View>
         <View style={styles.row}>
-          <HomeScreenTile text="MAIN ENTRANCE" containerStyle={{backgroundColor: '#ff0'}}/>
-          <HomeScreenTile text="MY FLOOR" containerStyle={{backgroundColor: '#0f0'}}/>
+          <HomeScreenTile
+            text={this.props.spaces.main_entrance.name}
+            containerStyle={{backgroundColor: '#ff0'}}/>
+          <HomeScreenTile text={this.props.spaces.my_floor.name} containerStyle={{backgroundColor: '#0f0'}}/>
         </View>
         <View style={styles.row}>
-          <HomeScreenTile text="LAUNDRY" containerStyle={{backgroundColor: '#ff0'}}/>
-          <HomeScreenTile text="GYM" containerStyle={{backgroundColor: '#0f0'}}/>
+          <HomeScreenTile text={this.props.spaces.laundry.name} containerStyle={{backgroundColor: '#ff0'}}/>
+          <HomeScreenTile text={this.props.spaces.gym.name} containerStyle={{backgroundColor: '#0f0'}}/>
         </View>
         <View style={styles.row}>
           <HomeScreenTile
-            text="POOL"
+            text={this.props.spaces.pool.name}
             containerStyle={{backgroundColor: '#ff0'}}
             statusText="Status Unavailable"
             statusTextStyle={{color: '#ccc'}}/>
-          <HomeScreenTile text="GARAGE" containerStyle={{backgroundColor: '#0f0'}}/>
+          <HomeScreenTile text={this.props.spaces.garage.name} containerStyle={{backgroundColor: '#0f0'}}/>
         </View>
       </View>
     );
@@ -44,7 +46,8 @@ Home.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    fetching: state.spaces.get('FETCHING')
+    fetching: state.spaces.get('FETCHING'),
+    spaces: state.spaces.get('SPACES')
   }
 };
 
