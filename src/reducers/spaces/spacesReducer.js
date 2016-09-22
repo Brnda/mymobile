@@ -2,6 +2,7 @@ import {Map} from 'immutable';
 import {Actions} from 'react-native-router-flux';
 import APP_CONST from '../../lib/constants'
 
+// Actions
 export const FETCH_SPACES_REQUEST = 'HomeScreenState/FETCH_SPACES_REQUEST';
 export const FETCH_SPACES_RESPONSE = 'HomeScreenState/FETCH_SPACES_RESPONSE';
 
@@ -60,11 +61,8 @@ const defaultSpacesSet = {
   }
 };
 
-const initialState = Map({
-  'FETCHING': false,
-  'SPACES': defaultSpacesSet
-});
 
+// Action creators
 export const fetchSpacesRequest = () => {
   return {
     type: FETCH_SPACES_REQUEST
@@ -77,6 +75,13 @@ export const fetchSpacesResponse = (json) => {
     json
   }
 };
+
+
+// Reducer
+const initialState = Map({
+  'FETCHING': false,
+  'SPACES': defaultSpacesSet
+});
 
 export const updateSpaces = () => {
   return (dispatch, getState) => {

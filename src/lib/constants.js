@@ -9,4 +9,5 @@ const APP_CONST_LOCALDEV = {
   Port: '3030'
 };
 
-export default APP_CONST_PROD;
+// DO NOT SUBMIT
+export default APP_CONST_LOCALDEV;

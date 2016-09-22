@@ -8,8 +8,7 @@ import {connect} from 'react-redux';
 class Home extends Component {
 
   componentWillMount() {
-    const {dispatch} = this.props;
-    dispatch(spacesReducer.updateSpaces());
+    this.props.updateSpaces();
     console.log("Dispatched updateSpaces");
   }
 
@@ -49,4 +48,12 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateSpaces: () => {
+      dispatch(spacesReducer.updateSpaces())
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
