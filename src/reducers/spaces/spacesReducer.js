@@ -81,7 +81,9 @@ export const fetchSpacesResponse = (json) => {
 export const updateSpaces = () => {
   return (dispatch, getState) => {
     const state = getState();
-    const token = state.induction.get('SESSION_TOKEN');
+    //const token = state.induction.get('SESSION_TOKEN');
+    // DO NOT SUBMIT!
+    const token = "ntwpFLrUBcyMRpDEr1AefhXAwZIhydnn";
     dispatch(fetchSpacesRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/space/list`, {
       method: 'POST',
