@@ -4,13 +4,21 @@ import {
   StyleSheet,
   View,
   Text,
-  StatusBar
+  StatusBar,
+  TouchableOpacity
 } from 'react-native';
 
 class HomeScreenTile extends Component {
+
+  _onSelect() {
+    console.log("Selected spaceId: " + this.props.spaceId);
+    this.props.onSelect(this.props.spaceId);
+  }
+
   render() {
+    console.log("rendering SpaceID: " + this.props.spaceId);
     return (
-      <View style={[styles.container, this.props.containerStyle]}>
+      <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={this._onSelect.bind(this)}>
         {this.props.imageName &&
         <Image source={require('./img/' + this.props.imageName + '.png')}
                style={[styles.logo, this.props.imageStyle]}/>
@@ -23,7 +31,7 @@ class HomeScreenTile extends Component {
           <Text style={[styles.statusText, this.props.statusTextStyle]}>{this.props.statusText}</Text>
         </View>
         }
-      </View>
+      </TouchableOpacity>
     )
   }
 }

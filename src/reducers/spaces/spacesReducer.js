@@ -6,6 +6,11 @@ import APP_CONST from '../../lib/constants'
 export const FETCH_SPACES_REQUEST = 'HomeScreenState/FETCH_SPACES_REQUEST';
 export const FETCH_SPACES_RESPONSE = 'HomeScreenState/FETCH_SPACES_RESPONSE';
 
+// Due to a bug in react-native-router-flux, props cannot be passed in a Route Action.
+// So, we must set the chosen scene in the global state.
+// See https://github.com/aksonov/react-native-router-flux/issues/167
+export const SPACE_SELECTED = 'HomeScreenState/SPACE_SELECTED';
+
 const defaultSpacesSet = {
   main_entrance: {
     name: "Main Entrance",
@@ -76,11 +81,18 @@ export const fetchSpacesResponse = (json) => {
   }
 };
 
+export const selectSpace = (spaceId) => {
+  return {
+    type: SPACE_SELECTED,
+    spaceId
+  }
+};
 
 // Reducer
 const initialState = Map({
   'FETCHING': false,
-  'SPACES': defaultSpacesSet
+  'SPACES': defaultSpacesSet,
+  'SPACE_ID': null
 });
 
 export const updateSpaces = () => {
@@ -108,14 +120,17 @@ export const updateSpaces = () => {
 };
 
 export default function spaces(state = initialState, action) {
-  console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
+  //console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
   switch (action.type) {
     case FETCH_SPACES_REQUEST:
       console.log("Fetching is now True");
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
       console.log("Fetching is now False");
+      console.log("Main space ID: " + action.spaces.main_entrance._id);
       return state.set('SPACES', action.spaces).set('FETCHING', false);
+    case SPACE_SELECTED:
+      return state.set('SPACE_ID', action.spaceId);
     default:
       console.log("!! UNKNOWN ACTION TYPE " + action.type);
   }

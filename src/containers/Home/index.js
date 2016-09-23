@@ -4,6 +4,7 @@ import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
 import * as spacesReducer from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
+import {Actions} from 'react-native-router-flux';
 
 class Home extends Component {
 
@@ -19,7 +20,9 @@ class Home extends Component {
         <View style={styles.row}>
           <HomeScreenTile
             text={this.props.spaces.main_entrance.name}
-            containerStyle={{backgroundColor: '#ff0'}}/>
+            containerStyle={{backgroundColor: '#ff0'}}
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.main_entrance._id}/>
           <HomeScreenTile text={this.props.spaces.my_floor.name} containerStyle={{backgroundColor: '#0f0'}}/>
         </View>
         <View style={styles.row}>
@@ -55,6 +58,11 @@ const mapDispatchToProps = (dispatch) => {
   return {
     updateSpaces: () => {
       dispatch(spacesReducer.updateSpaces())
+    },
+    selectSpace: (spaceId) => {
+      console.log("dispatching spaceReducer.selectSpace(" + spaceId + ")");
+      dispatch(spacesReducer.selectSpace(spaceId));
+      Actions.viewVideo();
     }
   }
 };

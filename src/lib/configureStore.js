@@ -13,8 +13,8 @@ import reducer from '../reducers';
  * Like the name...
  */ 
 const createStoreWithMiddleware = applyMiddleware(
-  thunk,
-  logger()
+  thunk//,
+  //logger()
 )(createStore);
 
 /**
