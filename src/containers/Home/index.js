@@ -22,7 +22,7 @@ class Home extends Component {
             text={this.props.spaces.main_entrance.name}
             containerStyle={{backgroundColor: '#ff0'}}
             onSelect={this.props.selectSpace}
-            spaceId={this.props.spaces.main_entrance._id}/>
+            spaceId={"main_entrance"}/>
           <HomeScreenTile text={this.props.spaces.my_floor.name} containerStyle={{backgroundColor: '#0f0'}}/>
         </View>
         <View style={styles.row}>

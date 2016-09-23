@@ -11,6 +11,7 @@ import com.facebook.react.shell.MainReactPackage;
 
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.eguma.barcodescanner.BarcodeScannerPackage;
+import com.burnweb.rnsendintent.RNSendIntentPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new AnExampleReactPackage(),
           new RCTCameraPackage(),
-          new BarcodeScannerPackage()
+          new BarcodeScannerPackage(),
+          new RNSendIntentPackage()
       );
     }
   };
