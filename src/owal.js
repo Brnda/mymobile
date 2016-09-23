@@ -48,7 +48,7 @@ export default function native(platform) {
                        component={Home}/>
                 <Scene key="enjoy"
                        component={Enjoy}/>
-                <Scene key="viewvideo"
+                <Scene key="viewVideo"
                        component={ViewVideo}/>
               </Scene>
             </Router>
