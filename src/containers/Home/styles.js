@@ -7,9 +7,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   header: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
     alignItems: 'center',
     marginTop: 50
+  },
+  headerText: {
+    fontSize: 30
   },
   row: {
     backgroundColor: 'white',
