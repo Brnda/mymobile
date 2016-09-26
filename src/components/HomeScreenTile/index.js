@@ -5,8 +5,21 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 } from 'react-native';
+
+// SILLY REACT!
+// WNF-WAI https://github.com/facebook/react-native/issues/2481
+// Workaround #2 from http://stackoverflow.com/questions/33907218/react-native-use-variable-for-image-file
+var icons = {
+  buildingentrance: require('./../../icons/buildingentrance.png'),
+  garage: require('./../../icons/garage.png'),
+  gym: require('./../../icons/gym.png'),
+  laundry: require('./../../icons/laundry.png'),
+  myfloor: require('./../../icons/myfloor.png'),
+  pool: require('./../../icons/pool.png')
+};
 
 class HomeScreenTile extends Component {
 
@@ -14,14 +27,14 @@ class HomeScreenTile extends Component {
     console.log("Selected spaceId: " + this.props.spaceId);
     this.props.onSelect(this.props.spaceId);
   }
-
+/**/
   render() {
     console.log("rendering SpaceID: " + this.props.spaceId);
     return (
       <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={this._onSelect.bind(this)}>
-        {this.props.imageName &&
-        <Image source={require('./img/' + this.props.imageName + '.png')}
-               style={[styles.logo, this.props.imageStyle]}/>
+        {this.props.iconName &&
+        <Image source={icons[this.props.iconName]}
+               style={styles.icon}/>
         }
         <View style={styles.textView}>
           <Text style={styles.text}>{this.props.text}</Text>

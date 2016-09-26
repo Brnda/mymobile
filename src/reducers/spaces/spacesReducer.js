@@ -15,13 +15,13 @@ const defaultSpacesSet = {
   main_entrance: {
     name: "Main Entrance",
     enabled: false,
-    icon_name: "main_entrance",
+    icon_name: "buildingentrance",
     has_status: false
   },
   my_floor: {
     name: "My Floor",
     enabled: false,
-    icon_name: "my_floor",
+    icon_name: "myfloor",
     has_status: false,
   },
   laundry: {

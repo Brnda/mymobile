@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginTop: 50
   },
   row: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     margin: 10,
     flexDirection: 'row',
     flex: 1
