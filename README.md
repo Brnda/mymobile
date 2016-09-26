@@ -12,8 +12,6 @@ How to run the application
 1- Clone the repository
 ```
 git clone https://github.com/owal/mobile.git owal-mobile
-git clone https://github.com/owal/owal.git owal
-git clone https://github.com/google/protobuf
 cd owal
 git fetch; git submodule update --init
 ```
@@ -23,44 +21,23 @@ git fetch; git submodule update --init
 cd <root-folder>/ && npm install
 ```
 
-3- Install the FacebookSDK for iOS
+3- Run the application in the simulator
 
-Download FB sdk here: ***version: 4.13.1***
-
-https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip
-
-Make sure that you put it under ~/Documents/<FB-FOLDER> and then update the Build Framework path on Xcode.
-
-4- Install RNPM and React Native sdk bridge
 ```
-npm install rnpm -g
-
-rnpm install react-native-fbsdk
+react-native run-ios
 ```
 
-5- Install the Protocol Buffer compiler
-```
-cd owal/third_party/protobuf/
-./autogen.sh
-./configure
-make
-make install
-```
+To view logs:
 
-6- Run the application in the simulator
-
-Open the .xcodeproj file under the root /ios folder and then run as you would any other Xcode project in the simulator.
+```
+react-native logs-ios
+```
 
 ----------
 #### <i class="icon-file"></i> Android
 1- Clone the repository
 ```
 git clone https://github.com/owal/mobile.git owal-mobile
-```
-
-Also clone the main repository; we need the protocol buffers from there
-```
-git clone https://github.com/owal/owal.git owal
 ```
 
 2- Install all the dependencies
