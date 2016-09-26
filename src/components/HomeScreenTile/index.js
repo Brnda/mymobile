@@ -44,6 +44,8 @@ class HomeScreenTile extends Component {
           <Text style={[styles.statusText, this.props.statusTextStyle]}>{this.props.statusText}</Text>
         </View>
         }
+        <View style={{height: 50}} />
+        <View style={styles.divider} />
       </TouchableOpacity>
     )
   }

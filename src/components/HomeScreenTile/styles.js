@@ -14,6 +14,11 @@ const styles = StyleSheet.create({
   icon: {
     height: 80,
     width: 80
+  },
+  divider: {
+    height: 1,
+    width: 160,
+    backgroundColor: 'black'
   }
 });
 
