@@ -16,7 +16,7 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}><Text>SPACES { this.props.fetching ? " LOADING" : " READY"} </Text></View>
+        <View style={styles.header}><Text style={styles.headerText}>SPACES { this.props.fetching ? " LOADING" : ""} </Text></View>
         <View style={styles.row}>
           <HomeScreenTile
             text={this.props.spaces.main_entrance.name}
