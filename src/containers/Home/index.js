@@ -10,7 +10,6 @@ class Home extends Component {
 
   componentWillMount() {
     this.props.updateSpaces();
-    console.log("Dispatched updateSpaces");
   }
 
   render() {
@@ -71,7 +70,7 @@ class Home extends Component {
 
 
 Home.propTypes = {
-  fetching: PropTypes.bool
+  fetching: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -87,7 +86,6 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(spacesReducer.updateSpaces())
     },
     selectSpace: (spaceId) => {
-      console.log("dispatching spaceReducer.selectSpace(" + spaceId + ")");
       dispatch(spacesReducer.selectSpace(spaceId));
       Actions.viewVideo();
     }

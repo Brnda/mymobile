@@ -112,27 +112,21 @@ export const updateSpaces = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log("Spaces updated!");
         dispatch(fetchSpacesResponse(json));
       })
-      .catch((err) => {console.log(`Got an error ${err}`)})
+      .catch((err) => {console.error(`Got an error ${err}`)})
   };
 };
 
 export default function spaces(state = initialState, action) {
-  //console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
   switch (action.type) {
     case FETCH_SPACES_REQUEST:
-      console.log("Fetching is now True");
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
-      console.log("Fetching is now False");
-      console.log("Main space ID: " + action.spaces.main_entrance._id);
       return state.set('SPACES', action.spaces).set('FETCHING', false);
     case SPACE_SELECTED:
       return state.set('SPACE_ID', action.spaceId);
     default:
-      console.log("!! UNKNOWN ACTION TYPE " + action.type);
+      return state;
   }
-  return state;
 }

@@ -13,7 +13,7 @@ import * as Progress from 'react-native-progress';
 // SILLY REACT!
 // WNF-WAI https://github.com/facebook/react-native/issues/2481
 // Workaround #2 from http://stackoverflow.com/questions/33907218/react-native-use-variable-for-image-file
-var icons = {
+const icons = {
   buildingentrance: require('./../../icons/buildingentrance.png'),
   garage: require('./../../icons/garage.png'),
   gym: require('./../../icons/gym.png'),
@@ -25,12 +25,10 @@ var icons = {
 class HomeScreenTile extends Component {
 
   _onSelect() {
-    console.log("Selected spaceId: " + this.props.spaceId);
     this.props.onSelect(this.props.spaceId);
   }
-/**/
+
   render() {
-    console.log("rendering SpaceID: " + this.props.spaceId);
     let spacerHeight = 50;
     if (((this.props.statusBarTotal && this.props.statusBarTotal > 0) || this.props.fetching)) {
       spacerHeight = 22;
