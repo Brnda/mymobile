@@ -20,22 +20,42 @@ class Home extends Component {
         <View style={styles.row}>
           <HomeScreenTile
             text={this.props.spaces.main_entrance.name}
-            containerStyle={{backgroundColor: '#ff0'}}
+            containerStyle={{}}
             onSelect={this.props.selectSpace}
-            spaceId={this.props.spaces.main_entrance._id}/>
-          <HomeScreenTile text={this.props.spaces.my_floor.name} containerStyle={{backgroundColor: '#0f0'}}/>
+            spaceId={this.props.spaces.main_entrance._id}
+            iconName={this.props.spaces.main_entrance.icon_name}
+          />
+          <HomeScreenTile
+            text={this.props.spaces.my_floor.name}
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.my_floor._id}
+            iconName={this.props.spaces.my_floor.icon_name}
+          />
         </View>
         <View style={styles.row}>
-          <HomeScreenTile text={this.props.spaces.laundry.name} containerStyle={{backgroundColor: '#ff0'}}/>
-          <HomeScreenTile text={this.props.spaces.gym.name} containerStyle={{backgroundColor: '#0f0'}}/>
+          <HomeScreenTile
+            text={this.props.spaces.laundry.name}
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.laundry._id}
+            iconName={this.props.spaces.laundry.icon_name}
+          />
+          <HomeScreenTile
+            text={this.props.spaces.gym.name}
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.gym._id}
+            iconName={this.props.spaces.gym.icon_name}/>
         </View>
         <View style={styles.row}>
           <HomeScreenTile
             text={this.props.spaces.pool.name}
-            containerStyle={{backgroundColor: '#ff0'}}
-            statusText="Status Unavailable"
-            statusTextStyle={{color: '#ccc'}}/>
-          <HomeScreenTile text={this.props.spaces.garage.name} containerStyle={{backgroundColor: '#0f0'}}/>
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.pool._id}
+            iconName={this.props.spaces.pool.icon_name}/>
+          <HomeScreenTile
+            text={this.props.spaces.garage.name}
+            onSelect={this.props.selectSpace}
+            spaceId={this.props.spaces.garage._id}
+            iconName={this.props.spaces.garage.icon_name}/>
         </View>
       </View>
     );
