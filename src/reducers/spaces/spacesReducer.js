@@ -55,7 +55,7 @@ const defaultSpacesSet = {
     status_text: "No Data"
   },
   garage: {
-    name: "Garage - please wait",
+    name: "Garage",
     enabled: false,
     icon_name: "garage",
     has_status: true,
