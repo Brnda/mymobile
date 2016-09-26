@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
+import * as Progress from 'react-native-progress';
 
 // SILLY REACT!
 // WNF-WAI https://github.com/facebook/react-native/issues/2481
@@ -39,6 +40,14 @@ class HomeScreenTile extends Component {
         <View style={styles.textView}>
           <Text style={styles.text}>{this.props.text}</Text>
         </View>
+
+        {((this.props.statusBarTotal && this.props.statusBarTotal > 0) || this.props.fetching) &&
+          <Progress.Bar
+            progress={(this.props.statusBarFilled / this.props.statusBarTotal)}
+            width={120}
+            indeterminate={this.props.fetching}
+          />
+        }
         {this.props.statusText &&
         <View style={styles.statusTextView}>
           <Text style={[styles.statusText, this.props.statusTextStyle]}>{this.props.statusText}</Text>

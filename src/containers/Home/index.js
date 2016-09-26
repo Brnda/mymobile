@@ -38,12 +38,19 @@ class Home extends Component {
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.laundry._id}
             iconName={this.props.spaces.laundry.icon_name}
+            statusText={this.props.spaces.laundry.status_text}
+            statusColor={this.props.spaces.laundry.status_color}
+            statusBarFilled={this.props.spaces.laundry.status_bar_filled}
+            statusBarTotal={this.props.spaces.laundry.status_bar_total}
+            fetching={this.props.fetching}
           />
           <HomeScreenTile
             text={this.props.spaces.gym.name}
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.gym._id}
-            iconName={this.props.spaces.gym.icon_name}/>
+            iconName={this.props.spaces.gym.icon_name}
+            statusText={this.props.spaces.gym.status_text}
+          status/>
         </View>
         <View style={styles.row}>
           <HomeScreenTile
