@@ -21,7 +21,7 @@ class Home extends Component {
             text={this.props.spaces.main_entrance.name}
             containerStyle={{}}
             onSelect={this.props.selectSpace}
-            spaceId={this.props.spaces.main_entrance._id}
+            spaceId={this.props.spaces.main_entrance.label}
             iconName={this.props.spaces.main_entrance.icon_name}
           />
           <HomeScreenTile
@@ -35,7 +35,7 @@ class Home extends Component {
           <HomeScreenTile
             text={this.props.spaces.laundry.name}
             onSelect={this.props.selectSpace}
-            spaceId={this.props.spaces.laundry._id}
+            spaceId={this.props.spaces.laundry.label}
             iconName={this.props.spaces.laundry.icon_name}
             statusText={this.props.spaces.laundry.status_text}
             statusColor={this.props.spaces.laundry.status_color}
