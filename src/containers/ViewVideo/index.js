@@ -4,18 +4,12 @@ import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import AndroidNativeVideo from '../../components/AndroidNativeVideo';
+import * as Progress from 'react-native-progress';
 
 class ViewVideo extends Component {
 
   getCameraIDs() {
-    let spaceId = this.props.spaceId;
-    let spaces = this.props.spaces;
-    console.log("spaces=" + JSON.stringify(this.props.spaces));
-    console.log("spaceId=" + spaceId);
-    let space = spaces[spaceId];
-    let cameraIDs = space.camera_ids;
-    return cameraIDs;
-//    return this.props.spaces[this.props.spaceId].camera_ids;
+    return this.props.spaces[this.props.spaceId].camera_ids;
   }
 
   componentWillMount() {
@@ -29,22 +23,26 @@ class ViewVideo extends Component {
     let spinner;
     let video;
     if (this.props.getting) {
-      spinner = <Text>Please wait...</Text>;
+      spinner = <Progress.Bar indeterminate={true} style={styles.progressView}/>
     } else {
       if (this.props.camera) {
         const uri = this.props.camera.cameras[0].streams[0];
         if (uri) {
-          console.log("Loadingi video! uri=" + uri);
           video = <AndroidNativeVideo src={uri} style={styles.nativeVideoView} />
         }
       }
     }
+    /*
+     */
     return (
       <View style={styles.container}>
-        {spinner}
-        <Text>Video!</Text>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>Video!</Text>
+        </View>
+
         <View style={styles.videoContainer}>
-        {video}
+          {spinner}
+          {video}
         </View>
       </View>
     )
