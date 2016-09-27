@@ -22,6 +22,7 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 ios/owalprotos/
+ios/exportOptions.plist
 
 # Android/IJ
 #
@@ -39,7 +40,7 @@ npm-debug.log
 buck-out/
 \.buckd/
 android/app/libs
-android/keystores/debug.keystore
+android/keystores
 
 # Logs
 logs/*.log
