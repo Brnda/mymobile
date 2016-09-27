@@ -12,25 +12,16 @@ class ViewVideo extends Component {
   }
 
   componentWillMount() {
-    console.log("ViewVideo will mount!");
     if (this.getCameraIDs().length > 0) {
       let firstCameraID = this.getCameraIDs()[0];
-      console.log("First camera ID: " + firstCameraID);
       this.props.getCamera(firstCameraID);
-    }
-    else {
-      console.log("No cameras :(");
     }
   }
 
   componentDidUpdate() {
-    console.log("Component did receive props");
-    console.log("Camera: " + this.props.camera);
     if (this.props.camera) {
-      console.log("Component has camera");
       const uri = this.props.camera.cameras[0].streams[0];
       if (uri) {
-        console.log("Component has URI");
         SendIntent.sendRawIntent("android.intent.action.VIEW", uri);
       }
     }

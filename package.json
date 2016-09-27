@@ -19,8 +19,11 @@
     "react-native-fbsdk": "^0.2.2",
     "react-native-progress": "^3.1.0",
     "react-native-router-flux": "^3.31.2",
+<<<<<<< 0192cd0877355570d9b3e3e460713ecc67a8ac62
     "react-native-svg-uri": "0.0.3",
     "react-native-send-intent": "^1.0.13",
+=======
+>>>>>>> partial native package
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0"

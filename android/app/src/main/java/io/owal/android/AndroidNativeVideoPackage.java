@@ -12,28 +12,24 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class AndroidNativeVideoViewerPackage implements ReactPackage {
-
-  private Activity mActivity;
-
-  public AndroidNativeVideoViewerPackage(Activity activity) {
-    this.mActivity = activity;
-  }
+public class AndroidNativeVideoPackage implements ReactPackage {
 
   @Override
   public List<NativeModule>
   createNativeModules(ReactApplicationContext reactContext) {
     return Collections.emptyList();
   }
+
   @Override
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
+
   @Override
   public List<ViewManager>
   createViewManagers(ReactApplicationContext reactContext) {
     return Arrays.<ViewManager>asList(
-        new AndroidNativeVideoViewerManager(mActivity)
+        new AndroidNativeVideoManager()
     );
   }
 }
