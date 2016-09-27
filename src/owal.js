@@ -19,6 +19,7 @@ import Enjoy from './components/Enjoy';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
+import ViewVideo from './containers/ViewVideo';
 
 export default function native(platform) {
 
@@ -47,6 +48,8 @@ export default function native(platform) {
                        component={Home}/>
                 <Scene key="enjoy"
                        component={Enjoy}/>
+                <Scene key="viewVideo"
+                       component={ViewVideo}/>
               </Scene>
             </Router>
           </Provider>
