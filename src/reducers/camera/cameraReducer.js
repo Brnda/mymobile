@@ -44,10 +44,9 @@ export const getCamera = (camera_id) => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log("Camera gotten!");
         dispatch(getCameraResponse(json));
       })
-      .catch((err) => {console.log(`Got an error ${err}`)})
+      .catch((err) => {console.error(`Got an error ${err}`)})
   };
 };
 
@@ -55,14 +54,10 @@ export default function spaces(state = initialState, action) {
   //console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
   switch (action.type) {
     case GET_CAMERA_REQUEST:
-      console.log("Getting is now True");
       return state.set('GETTING', true);
     case GET_CAMERA_RESPONSE:
-      console.log("Getting is now False");
-      console.log("Got camera info: " + action.response);
       return state.set('CAMERA', action.response).set('GETTING', false);
     default:
-      console.log("!! UNKNOWN ACTION TYPE " + action.type);
+      return state;
   }
-  return state;
 }
