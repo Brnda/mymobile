@@ -123,7 +123,6 @@ export default function spaces(state = initialState, action) {
     case FETCH_SPACES_REQUEST:
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
-      console.log('SPACES is being set to: ' + JSON.stringify(action.spaces, null, 2));
       return state.set('SPACES', action.spaces).set('FETCHING', false);
     case SPACE_SELECTED:
       return state.set('SPACE_ID', action.spaceId);
