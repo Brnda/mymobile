@@ -3,12 +3,19 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
-import SendIntent from 'react-native-send-intent';
+import AndroidNativeVideo from '../../components/AndroidNativeVideo';
 
 class ViewVideo extends Component {
 
   getCameraIDs() {
-    return this.props.spaces[this.props.spaceId].camera_ids;
+    let spaceId = this.props.spaceId;
+    let spaces = this.props.spaces;
+    console.log("spaces=" + JSON.stringify(this.props.spaces));
+    console.log("spaceId=" + spaceId);
+    let space = spaces[spaceId];
+    let cameraIDs = space.camera_ids;
+    return cameraIDs;
+//    return this.props.spaces[this.props.spaceId].camera_ids;
   }
 
   componentWillMount() {
@@ -18,35 +25,27 @@ class ViewVideo extends Component {
     }
   }
 
-  componentDidUpdate() {
-    if (this.props.camera) {
-      const uri = this.props.camera.cameras[0].streams[0];
-      if (uri) {
-        SendIntent.sendRawIntent("android.intent.action.VIEW", uri);
-      }
-    }
-  }
-
   render() {
     let spinner;
     let video;
     if (this.props.getting) {
       spinner = <Text>Please wait...</Text>;
     } else {
-      if (!this.props.camera) {
-        console.log("Wah");
-        video = <Text>wah</Text>
-      } else {
-        video = <Text>{JSON.stringify(this.props.camera, null, 2)}</Text>
+      if (this.props.camera) {
+        const uri = this.props.camera.cameras[0].streams[0];
+        if (uri) {
+          console.log("Loadingi video! uri=" + uri);
+          video = <AndroidNativeVideo src={uri} style={styles.nativeVideoView} />
+        }
       }
     }
     return (
       <View style={styles.container}>
         {spinner}
         <Text>Video!</Text>
-
-        <Text>{JSON.stringify(this.getCameraIDs(), null, 2)}</Text>
+        <View style={styles.videoContainer}>
         {video}
+        </View>
       </View>
     )
   }
