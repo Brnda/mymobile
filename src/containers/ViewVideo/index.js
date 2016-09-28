@@ -22,15 +22,9 @@ class ViewVideo extends Component {
   render() {
     let spinner;
     let video;
-    if (this.props.getting) {
-      spinner = <Progress.Bar indeterminate={true} style={styles.progressView}/>
-    } else {
-      if (this.props.camera) {
-        const uri = this.props.camera.cameras[0].streams[0];
-        if (uri) {
-          video = <AndroidNativeVideo src={uri} style={styles.nativeVideoView} />
-        }
-      }
+    let uri;
+    if (!this.props.getting && this.props.camera) {
+      uri = this.props.camera.cameras[0].streams[0];
     }
     /*
      */
@@ -41,8 +35,12 @@ class ViewVideo extends Component {
         </View>
 
         <View style={styles.videoContainer}>
-          {spinner}
-          {video}
+          {this.props.getting &&
+            <Progress.Bar indeterminate={true} style={styles.progressView}/>
+          }
+          {uri &&
+            <AndroidNativeVideo src={uri} style={styles.nativeVideoView}/>
+          }
         </View>
       </View>
     )
