@@ -1,7 +1,6 @@
 package io.owal.android;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.facebook.react.ReactApplication;
 import com.horcrux.svg.RNSvgPackage;
@@ -31,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
             new RNSvgPackage(),
           new AnExampleReactPackage(),
           new RCTCameraPackage(),
-          new BarcodeScannerPackage()
+          new BarcodeScannerPackage(),
+          new AndroidNativeVideoPackage()
       );
     }
   };
