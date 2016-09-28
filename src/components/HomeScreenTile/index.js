@@ -9,17 +9,18 @@ import {
   Image
 } from 'react-native';
 import * as Progress from 'react-native-progress';
+import SvgUri from 'react-native-svg-uri';
 
 // SILLY REACT!
 // WNF-WAI https://github.com/facebook/react-native/issues/2481
 // Workaround #2 from http://stackoverflow.com/questions/33907218/react-native-use-variable-for-image-file
 const icons = {
-  buildingentrance: require('./../../icons/buildingentrance.png'),
-  garage: require('./../../icons/garage.png'),
-  gym: require('./../../icons/gym.png'),
-  laundry: require('./../../icons/laundry.png'),
-  myfloor: require('./../../icons/myfloor.png'),
-  pool: require('./../../icons/pool.png')
+  buildingentrance: require('./../../icons/buildingentrance.svg'),
+  garage: require('./../../icons/garage.svg'),
+  gym: require('./../../icons/gym.svg'),
+  laundry: require('./../../icons/laundry.svg'),
+  myfloor: require('./../../icons/myfloor.svg'),
+  pool: require('./../../icons/pool.svg')
 };
 
 class HomeScreenTile extends Component {
@@ -36,7 +37,7 @@ class HomeScreenTile extends Component {
     return (
       <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={this._onSelect.bind(this)}>
         {this.props.iconName &&
-        <Image source={icons[this.props.iconName]}
+        <SvgUri width="80" height="80" source={icons[this.props.iconName]}
                style={styles.icon}/>
         }
         <View style={styles.textView}>
