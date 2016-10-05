@@ -9,4 +9,6 @@ const APP_CONST_LOCALDEV = {
   Port: '3030'
 };
 
+export const STORAGE_KEY = '@AsyncStorage:skipInduction';
+
 export default APP_CONST_PROD;
