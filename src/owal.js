@@ -13,14 +13,14 @@ import {
 } from 'react-native-router-flux';
 import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
-import Induction from './containers/App/index';
+import Induction from './containers/Induction/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Enjoy from './components/Enjoy';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
-import {STORAGE_KEY} from './lib/constants';
+import {SKIP_INDUCTION_KEY} from './lib/constants';
 import {Actions} from 'react-native-router-flux';
 
 export default function native(platform) {
@@ -32,7 +32,7 @@ export default function native(platform) {
 
     _loadInitialState = async () => {
       try {
-        var value = await AsyncStorage.getItem(STORAGE_KEY);
+        var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
         if (value == null  || value !== "true") {
           Actions.app();
         } else {
@@ -45,7 +45,7 @@ export default function native(platform) {
 
     render() {
       const store = configureStore();
-      // setup the router table with App selected as the initial component
+      // setup the router table with Induction selected as the initial component
       return (
           <Provider store={store}>
             <Router hideNavBar={true}>

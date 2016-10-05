@@ -9,12 +9,12 @@ import {
 import styles from './styles';
 import InductionHeader from '../../components/InductionHeader';
 import {Actions} from 'react-native-router-flux';
-import {STORAGE_KEY} from '../../lib/constants';
+import {SKIP_INDUCTION_KEY} from '../../lib/constants';
 
 class Enjoy extends Component {
    async _setCompletionFlag() {
     try {
-      await AsyncStorage.setItem(STORAGE_KEY, "true");
+      await AsyncStorage.setItem(SKIP_INDUCTION_KEY, "true");
     } catch (error) {
       console.error(`We could not update the Persistant store.`);
     }
