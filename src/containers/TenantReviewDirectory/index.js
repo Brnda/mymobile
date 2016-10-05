@@ -70,7 +70,7 @@ class TenantReviewDirectory extends Component {
     return (
         <View style={styles.container}>
           <ScrollView style={{flex: 3}} scrollEnabled={this.state.scroll}
-            ref={(scroller) => this._scroller = scroller}>
+            ref={(scroller) => this._scroller = scroller} keyboardShouldPersistTaps={true}>
             <InductionHeader/>
             <View style={styles.header}>
               <Text style={styles.headerText}>

@@ -15,10 +15,10 @@ import {
 } from 'react-native';
 
 /**
- * ## App class
+ * ## Induction class
  *
  */
-class App extends Component {
+class Induction extends Component {
 
   render() {
     return (
@@ -43,4 +43,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(Induction);

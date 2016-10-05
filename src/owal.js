@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     AppRegistry,
     Navigator,
     View,
+    AsyncStorage,
     Text
 } from 'react-native';
 import {
@@ -12,29 +13,47 @@ import {
 } from 'react-native-router-flux';
 import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
-import App from './containers/App/index';
+import Induction from './containers/Induction/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Enjoy from './components/Enjoy';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
+import {SKIP_INDUCTION_KEY} from './lib/constants';
+import {Actions} from 'react-native-router-flux';
 import ViewVideo from './containers/ViewVideo';
 
 export default function native(platform) {
 
-  let Owal = React.createClass({
+  class Owal extends Component {
+    componentDidMount() {
+      this._loadInitialState().done();
+    }
+
+    _loadInitialState = async () => {
+      try {
+        var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
+        if (value == null  || value !== "true") {
+          Actions.app();
+        } else {
+          Actions.home();
+        }
+      } catch (error) {
+        console.error(`Could not use Persistance store.`);
+      }
+    };
+
     render() {
       const store = configureStore();
-      // setup the router table with App selected as the initial component
+      // setup the router table with Induction selected as the initial component
       return (
           <Provider store={store}>
             <Router hideNavBar={true}>
               <Scene key="root">
                 <Scene key="app"
-                       component={Home}
-                       title="App"
-                       initial={true}/>
+                       type={ActionConst.REPLACE}
+                       component={Induction}/>
                 <Scene key="tenatReview"
                        component={TenantReview}/>
                 <Scene key="lastTenantQuestion"
@@ -55,7 +74,7 @@ export default function native(platform) {
           </Provider>
       )
     }
-  });
+  };
 
   AppRegistry.registerComponent('owalMobile', () => Owal)
 }
