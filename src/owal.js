@@ -22,6 +22,7 @@ import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
 import {SKIP_INDUCTION_KEY} from './lib/constants';
 import {Actions} from 'react-native-router-flux';
+import ViewVideo from './containers/ViewVideo';
 
 export default function native(platform) {
 
@@ -66,6 +67,8 @@ export default function native(platform) {
                        component={Home}/>
                 <Scene key="enjoy"
                        component={Enjoy}/>
+                <Scene key="viewVideo"
+                       component={ViewVideo}/>
               </Scene>
             </Router>
           </Provider>

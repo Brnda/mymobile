@@ -11,4 +11,7 @@ const APP_CONST_LOCALDEV = {
 
 export const SKIP_INDUCTION_KEY = '@AsyncStorage:skipInduction';
 
+// DO NOT SUBMIT IF UNCOMMENTED
+//export default APP_CONST_LOCALDEV;
+
 export default APP_CONST_PROD;

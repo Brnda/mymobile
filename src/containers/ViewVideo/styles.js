@@ -5,19 +5,22 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFF',
     flexDirection: 'column',
+    justifyContent: 'center'
   },
-  header: {
-    backgroundColor: 'white',
-    alignItems: 'center',
-    marginTop: 50
-  },
-  headerText: {
+  titleText: {
     fontSize: 30
   },
-  row: {
-    backgroundColor: 'white',
-    margin: 10,
+  spinner: {
+    height: 300,
+    width: 300,
+    alignSelf: 'center'
+  },
+  videoContainer: {
     flexDirection: 'row',
+    flex: 1
+  },
+  nativeVideoView: {
+    height: 270,
     flex: 1
   }
 });

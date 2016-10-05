@@ -52,7 +52,7 @@ class TextInviteCodeScreen extends Component {
             <Text style={styles.headerText}>Enter your invite code</Text>
           </View>
           <View style={styles.containerInputText}>
-            <TextInput ref="inviteCode" style={styles.inviteTextInput} onChangeText={this._onCodeEntered.bind(this)}/>
+            <TextInput autoCapitalize='characters' ref="inviteCode" style={styles.inviteTextInput} onChangeText={this._onCodeEntered.bind(this)}/>
           </View>
           {this.state.continue &&
           <TouchableOpacity style={styles.continueButton} onPress={this._onPressContinueButton.bind(this)}>
