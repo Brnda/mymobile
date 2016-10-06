@@ -497,7 +497,6 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-
 					ProductGroup = 2D9FADC11DA6D6CE008DE0D9 /* Products */;
 					ProjectRef = 3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */;
 				},
