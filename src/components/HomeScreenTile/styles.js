@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
   textView: {},
   icon: {
     height: 80,
-    width: 80
+    width: 80,
+    resizeMode: 'contain'
   },
   divider: {
     height: 1,
