@@ -1,5 +1,4 @@
 import {Map} from 'immutable';
-import {Actions} from 'react-native-router-flux';
 import APP_CONST from '../../lib/constants'
 
 // Actions
@@ -75,16 +74,17 @@ export const fetchSpacesRequest = () => {
 };
 
 export const fetchSpacesResponse = (json) => {
+  console.log(`json is ${JSON.stringify(json)}`);
   return {
     type: FETCH_SPACES_RESPONSE,
-    ...json
+    payload: json
   }
 };
 
 export const selectSpace = (spaceId) => {
   return {
     type: SPACE_SELECTED,
-    spaceId
+    payload: spaceId
   }
 };
 
@@ -98,9 +98,8 @@ const initialState = Map({
 export const updateSpaces = () => {
   return (dispatch, getState) => {
     const state = getState();
-    //const token = state.induction.get('SESSION_TOKEN');
-    // DO NOT SUBMIT!
-    const token = "ntwpFLrUBcyMRpDEr1AefhXAwZIhydnn";
+    const token = state.induction.get('SESSION_TOKEN');
+
     dispatch(fetchSpacesRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/space/list`, {
       method: 'POST',
@@ -123,9 +122,9 @@ export default function spaces(state = initialState, action) {
     case FETCH_SPACES_REQUEST:
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
-      return state.set('SPACES', action.spaces).set('FETCHING', false);
+      return state.set('SPACES', action.payload.spaces).set('FETCHING', false);
     case SPACE_SELECTED:
-      return state.set('SPACE_ID', action.spaceId);
+      return state.set('SPACE_ID', action.payload.spaceId);
     default:
       return state;
   }
