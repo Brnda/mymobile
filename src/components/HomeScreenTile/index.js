@@ -23,7 +23,7 @@ class HomeScreenTile extends Component {
     }
     return (
       <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={this._onSelect.bind(this)}>
-        {this.props.iconName &&
+        {this.props.icon &&
           <Image source={this.props.icon} style={styles.icon}/>
         }
         <View style={styles.textView}>

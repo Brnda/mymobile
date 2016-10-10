@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 
 const icons = {
-  buildingEntrance: require('./../../icons/building.png'),
+  buildingentrance: require('./../../icons/building.png'),
   garage: require('./../../icons/garage.png'),
   gym: require('./../../icons/gym.png'),
   laundry: require('./../../icons/laundry.png'),
@@ -45,7 +45,7 @@ class Home extends Component {
             text={this.props.spaces.laundry.name}
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.laundry.label}
-            icon={icon[this.props.spaces.laundry.icon_name]}
+            icon={icons[this.props.spaces.laundry.icon_name]}
             statusText={this.props.spaces.laundry.status_text}
             statusColor={this.props.spaces.laundry.status_color}
             statusBarFilled={this.props.spaces.laundry.status_bar_filled}
@@ -56,7 +56,7 @@ class Home extends Component {
             text={this.props.spaces.gym.name}
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.gym._id}
-            icon={icon[this.props.spaces.gym.icon_name]}
+            icon={icons[this.props.spaces.gym.icon_name]}
             statusText={this.props.spaces.gym.status_text}
           status/>
         </View>
@@ -65,12 +65,12 @@ class Home extends Component {
             text={this.props.spaces.pool.name}
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.pool._id}
-            icon={icon[this.props.spaces.pool.icon_name]}/>
+            icon={icons[this.props.spaces.pool.icon_name]}/>
           <HomeScreenTile
             text={this.props.spaces.garage.name}
             onSelect={this.props.selectSpace}
             spaceId={this.props.spaces.garage._id}
-            icon={icon[this.props.spaces.garage.icon_name]}/>
+            icon={icons[this.props.spaces.garage.icon_name]}/>
         </View>
       </View>
     );
