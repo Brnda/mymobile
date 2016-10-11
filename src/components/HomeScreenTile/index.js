@@ -10,18 +10,6 @@ import {
 } from 'react-native';
 import * as Progress from 'react-native-progress';
 
-// SILLY REACT!
-// WNF-WAI https://github.com/facebook/react-native/issues/2481
-// Workaround #2 from http://stackoverflow.com/questions/33907218/react-native-use-variable-for-image-file
-const icons = {
-  buildingentrance: require('./../../icons/building.png'),
-  garage: require('./../../icons/garage.png'),
-  gym: require('./../../icons/gym.png'),
-  laundry: require('./../../icons/laundry.png'),
-  myfloor: require('./../../icons/myfloor.png'),
-  pool: require('./../../icons/pool.png')
-};
-
 class HomeScreenTile extends Component {
 
   _onSelect() {
@@ -35,9 +23,8 @@ class HomeScreenTile extends Component {
     }
     return (
       <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={this._onSelect.bind(this)}>
-        {this.props.iconName &&
-        <Image source={icons[this.props.iconName]}
-               style={styles.icon}/>
+        {this.props.icon &&
+          <Image source={this.props.icon} style={styles.icon}/>
         }
         <View style={styles.textView}>
           <Text style={styles.text}>{this.props.text}</Text>

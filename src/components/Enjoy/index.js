@@ -21,7 +21,7 @@ class Enjoy extends Component {
   }
   componentDidMount() {
     this._setCompletionFlag();
-    setTimeout(function(){ Actions.home(); }, 3000);
+    setTimeout(function(){ Actions.main(); }, 2000);
   }
 
   render() {
