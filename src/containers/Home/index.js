@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 
 const icons = {
-  buildingentrance: require('./../../icons/building.png'),
+  buildingEntrance: require('./../../icons/building.png'),
   garage: require('./../../icons/garage.png'),
   gym: require('./../../icons/gym.png'),
   laundry: require('./../../icons/laundry.png'),
