@@ -26,8 +26,8 @@ class ViewVideo extends Component {
     let spinner;
     let video;
     let uri;
-    if (!this.props.getting && this.props.camera) {
-      if (this.props.camera.cameras.length > 0 && this.props.camera.cameras[0].streams.length > 0) {
+    if (!this.props.getting && this.props.camera && this.props.camera.hasOwnProperty('cameras')) {
+      if (this.props.camera.cameras.length > 0 && this.props.camera.cameras[0].hasOwnProperty('streams') && this.props.camera.cameras[0].streams.length > 0) {
         uri = this.props.camera.cameras[0].streams[0];
       }
     }
