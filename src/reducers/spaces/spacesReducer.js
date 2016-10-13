@@ -84,7 +84,7 @@ export const fetchSpacesResponse = (json) => {
 export const selectSpace = (spaceId) => {
   return {
     type: SPACE_SELECTED,
-    payload: spaceId
+    payload: {spaceId}
   }
 };
 
