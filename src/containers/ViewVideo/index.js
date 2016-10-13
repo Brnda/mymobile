@@ -9,11 +9,14 @@ import * as Progress from 'react-native-progress';
 class ViewVideo extends Component {
 
   getCameraIDs() {
-    return this.props.spaces[this.props.spaceId].camera_ids;
+    if (this.props.hasOwnProperty('spaceId') && typeof this.props.spaceId !== 'undefined' && this.props.hasOwnProperty('spaces') && typeof this.props.hasOwnProperty('spaces') !== 'undefined' && this.props.spaces.hasOwnProperty(this.props.spaceId)) {
+      return this.props.spaces[this.props.spaceId].camera_ids;
+    }
+    return null;
   }
 
   componentWillMount() {
-    if (this.getCameraIDs().length > 0) {
+    if (this.getCameraIDs() && this.getCameraIDs().length > 0) {
       let firstCameraID = this.getCameraIDs()[0];
       this.props.getCamera(firstCameraID);
     }
@@ -24,7 +27,9 @@ class ViewVideo extends Component {
     let video;
     let uri;
     if (!this.props.getting && this.props.camera) {
-      uri = this.props.camera.cameras[0].streams[0];
+      if (this.props.camera.cameras.length > 0 && this.props.camera.cameras[0].streams.length > 0) {
+        uri = this.props.camera.cameras[0].streams[0];
+      }
     }
     /*
      */
