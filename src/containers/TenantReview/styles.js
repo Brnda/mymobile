@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
   tenantButtonText: {
     alignSelf: 'center',
     color: 'white',
-    padding: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
     fontFamily: 'DINPro-Bold',
   }
 });

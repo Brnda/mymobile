@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
   tenantButtonText: {
     alignSelf: 'center',
     color: 'white',
-    padding: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
     fontFamily: 'DINPro',
     textDecorationLine: "underline",
     lineHeight: 20
@@ -62,7 +63,8 @@ const styles = StyleSheet.create({
 
   continueButtonText: {
     color: 'white',
-    padding: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
     fontFamily: 'DINPro-Bold',
   },
 });
