@@ -23,25 +23,28 @@ import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
 import {SKIP_INDUCTION_KEY} from './lib/constants';
 import {Actions} from 'react-native-router-flux';
 import ViewVideo from './containers/ViewVideo';
+import TabIconBuilding from './components/TabIconBuilding';
+import TabIconMessage from './components/TabIconMessage';
+import TabIconProfile from './components/TabIconProfile';
 
 export default function native(platform) {
 
   class Owal extends Component {
     componentDidMount() {
-      this._loadInitialState().done();
+      //this._loadInitialState().done();
     }
 
     _loadInitialState = async () => {
-      try {
-        var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-        if (value == null  || value !== "true") {
-          Actions.app();
-        } else {
-          Actions.home();
-        }
-      } catch (error) {
-        console.error(`Could not use Persistance store.`);
-      }
+      // try {
+        // var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
+        // if (value == null  || value !== "true") {
+        //   Actions.app();
+        // } else {
+          Actions.enjoy();
+      //   }
+      // } catch (error) {
+      //   console.error(`Could not use Persistance store.`);
+      // }
     };
 
     render() {
@@ -62,11 +65,13 @@ export default function native(platform) {
                        component={QRCodeScreen}/>
                 <Scene key="textinvitecodescreen"
                        component={TextInviteCodeScreen}/>
-                <Scene key="home"
-                       type={ActionConst.REPLACE}
-                       component={Home}/>
+                <Scene key="main" tabs={true} style={{backgroundColor: 'grey'}}>
+                  <Scene key="home" component={Home} title="Tab #1" icon={TabIconBuilding} />
+                  <Scene key="tab2" component={Enjoy} title="Tab #2" icon={TabIconMessage} />
+                  <Scene key="tab3" component={Enjoy} title="Tab #3" icon={TabIconProfile} />
+                </Scene>
                 <Scene key="enjoy"
-                       component={Enjoy}/>
+                       component={Enjoy} initial={true}/>
                 <Scene key="viewVideo"
                        component={ViewVideo}/>
               </Scene>

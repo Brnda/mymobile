@@ -10,6 +10,7 @@ import styles from './styles';
 import InductionHeader from '../../components/InductionHeader';
 import {Actions} from 'react-native-router-flux';
 import {SKIP_INDUCTION_KEY} from '../../lib/constants';
+import VideoController from '../MapView';
 
 class Enjoy extends Component {
    async _setCompletionFlag() {
@@ -20,18 +21,15 @@ class Enjoy extends Component {
     }
   }
   componentDidMount() {
-    this._setCompletionFlag();
-    setTimeout(function(){ Actions.home(); }, 3000);
+    // this._setCompletionFlag();
+    // setTimeout(function(){ Actions.main(); }, 2000);
   }
 
   render() {
+    console.log(`MapView is ${JSON.stringify(VideoController)}`)
     return (
         <View style={styles.container}>
-          <StatusBar hidden={true}/>
-          <InductionHeader style={styles.logo}/>
-          <View style={styles.header}>
-            <Text style={styles.headerText}>Enjoy!</Text>
-          </View>
+          <VideoController/>
         </View>
     )
   }
