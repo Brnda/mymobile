@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
 
   continueButtonText: {
     color: 'white',
-    padding: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
     fontFamily: 'DINPro-Bold',
   },
   chevron: {
