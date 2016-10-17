@@ -30,9 +30,8 @@ const initialState = Map({
 export const getCamera = (camera_id) => {
   return (dispatch, getState) => {
     const state = getState();
-    //const token = state.induction.get('SESSION_TOKEN');
-    // DO NOT SUBMIT!
-    const token = "ntwpFLrUBcyMRpDEr1AefhXAwZIhydnn";
+    const token = state.induction.get('SESSION_TOKEN');
+
     dispatch(getCameraRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/camera/get`, {
       method: 'POST',
