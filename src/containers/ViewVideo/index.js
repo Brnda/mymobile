@@ -40,16 +40,6 @@ class ViewVideo extends Component {
     )
   }
 }
-/*
-
- {this.props.getting &&
- <ActivityIndicator size="large" style={styles.activityIndicator}/>
- }
- {uri &&
- <AndroidNativeVideo src={uri} style={styles.nativeVideoView}/>
- }
- */
-
 
 ViewVideo.propTypes = {
   spaceId: PropTypes.string.isRequired,
