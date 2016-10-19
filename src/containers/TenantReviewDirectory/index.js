@@ -63,7 +63,7 @@ class TenantReviewDirectory extends Component {
   }
 
   _onPressSkipButton() {
-    Actions.home();
+    Actions.main();
   }
 
   render() {

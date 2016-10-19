@@ -40,7 +40,7 @@ export default function native(platform) {
         if (value == null  || value !== "true") {
           Actions.app();
         } else {
-          Actions.home();
+          Actions.main();
         }
       } catch (error) {
         console.error(`Could not use Persistance store.`);
