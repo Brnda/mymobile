@@ -22,6 +22,14 @@ const styles = StyleSheet.create({
   nativeVideoView: {
     height: 270,
     flex: 1
+  },
+  activityIndicator: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+    height: 80,
+    flex: 1,
+    flexDirection: 'row',
   }
 });
 

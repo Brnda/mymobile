@@ -1,10 +1,9 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ActivityIndicator} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import AndroidNativeVideo from '../../components/AndroidNativeVideo';
-import * as Progress from 'react-native-progress';
 
 class ViewVideo extends Component {
 
@@ -40,18 +39,12 @@ class ViewVideo extends Component {
         </View>
 
         <View style={styles.videoContainer}>
-          {this.props.getting &&
-            <Progress.Bar indeterminate={true} style={styles.progressView}/>
-          }
-          {uri &&
-            <AndroidNativeVideo src={uri} style={styles.nativeVideoView}/>
-          }
+          <ActivityIndicator size="large" style={styles.activityIndicator}/>
         </View>
       </View>
     )
   }
 }
-
 
 ViewVideo.propTypes = {
   spaceId: PropTypes.string.isRequired,
