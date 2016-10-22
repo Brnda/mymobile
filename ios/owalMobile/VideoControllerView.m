@@ -40,7 +40,7 @@
     _playerController = [[VKPlayerController alloc] initWithURLString:_urlString];
 
     _playerController.decoderOptions = _options;
-//    _playerController.delegate = self;
+//  --->>>> HERE THIS DOES NOT WORK  _playerController.delegate = self;
     self.username = @"";
     self.secret = @"";
     return self;
