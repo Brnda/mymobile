@@ -18,7 +18,8 @@ const icons = {
 class Home extends Component {
 
   componentWillMount() {
-    this.props.updateSpaces();
+    console.log(`the props ${this.props.token} `);
+    this.props.updateSpaces(this.props.token);
   }
 
   render() {
@@ -77,7 +78,6 @@ class Home extends Component {
   }
 }
 
-
 Home.propTypes = {
   fetching: PropTypes.bool.isRequired
 };
@@ -91,8 +91,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateSpaces: () => {
-      dispatch(spacesReducer.updateSpaces())
+    updateSpaces: (token) => {
+      dispatch(spacesReducer.updateSpaces(token))
     },
     selectSpace: (spaceId) => {
       dispatch(spacesReducer.selectSpace(spaceId));

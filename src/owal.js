@@ -20,9 +20,10 @@ import Enjoy from './components/Enjoy';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
-import {SKIP_INDUCTION_KEY} from './lib/constants';
+import {SKIP_INDUCTION_KEY, USER_TOKEN} from './lib/constants';
 import {Actions} from 'react-native-router-flux';
 import ViewVideo from './containers/ViewVideo';
+import MyFloorView from './containers/MyFloorView';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
@@ -31,20 +32,23 @@ export default function native(platform) {
 
   class Owal extends Component {
     componentDidMount() {
-      //this._loadInitialState().done();
+      this._loadInitialState().done();
     }
 
     _loadInitialState = async () => {
-      // try {
-        // var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-        // if (value == null  || value !== "true") {
-        //   Actions.app();
-        // } else {
-          Actions.enjoy();
-      //   }
-      // } catch (error) {
-      //   console.error(`Could not use Persistance store.`);
-      // }
+      try {
+        const value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
+        console.log(`value ${value}`);
+        if (value == null  || value !== "true") {
+          Actions.app();
+        } else {
+          const token = await AsyncStorage.getItem(USER_TOKEN);
+          console.log(`token is ${token}`);
+          Actions.main({token});
+        }
+      } catch (error) {
+        console.error(`Could not use Persistance store.`);
+      }
     };
 
     render() {
@@ -71,9 +75,9 @@ export default function native(platform) {
                   <Scene key="tab3" component={Enjoy} title="Tab #3" icon={TabIconProfile} />
                 </Scene>
                 <Scene key="enjoy"
-                       component={Enjoy} initial={true}/>
+                       component={Enjoy}/>
                 <Scene key="viewVideo"
-                       component={ViewVideo}/>
+                       component={MyFloorView}/>
               </Scene>
             </Router>
           </Provider>
