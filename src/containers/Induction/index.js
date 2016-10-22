@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 import styles from './styles';
 import CodeInputSelector from '../../components/CodeInputSelector';
 import InductionHeader from '../../components/InductionHeader';
+import Orientation from 'react-native-orientation';
 
 import {
     View,
@@ -19,6 +20,10 @@ import {
  *
  */
 class Induction extends Component {
+
+  componentWillMount() {
+    Orientation.lockToPortrait();
+  }
 
   render() {
     return (
