@@ -37,13 +37,12 @@ export default function native(platform) {
 
     _loadInitialState = async () => {
       try {
+
         const value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-        console.log(`value ${value}`);
         if (value == null  || value !== "true") {
           Actions.app();
         } else {
           const token = await AsyncStorage.getItem(USER_TOKEN);
-          console.log(`token is ${token}`);
           Actions.main({token});
         }
       } catch (error) {

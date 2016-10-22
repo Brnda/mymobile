@@ -11,10 +11,16 @@ import {
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import InductionHeader from '../../components/InductionHeader';
+import Orientation from 'react-native-orientation';
 
 class TenantReview extends Component {
+
   _onPressContinueButton() {
     Actions.lastTenantQuestion();
+  }
+
+  componentWillMount() {
+    Orientation.lockToPortrait();
   }
 
   render() {
