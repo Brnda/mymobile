@@ -70,8 +70,8 @@ export default function native(platform) {
                        component={TextInviteCodeScreen}/>
                 <Scene key="main" tabs={true} style={{backgroundColor: 'grey'}}>
                   <Scene key="home" component={Home} title="Tab #1" icon={TabIconBuilding} />
-                  <Scene key="tab2" component={Enjoy} title="Tab #2" icon={TabIconMessage} />
-                  <Scene key="tab3" component={Enjoy} title="Tab #3" icon={TabIconProfile} />
+                  <Scene key="tab2" component={PlaceHolder} title="Tab #2" icon={TabIconMessage} />
+                  <Scene key="tab3" component={PlaceHolder} title="Tab #3" icon={TabIconProfile} />
                 </Scene>
                 <Scene key="enjoy"
                        component={Enjoy}/>
@@ -86,3 +86,6 @@ export default function native(platform) {
 
   AppRegistry.registerComponent('owalMobile', () => Owal)
 }
+
+// TODO: Please remove when we have the real screens in place.
+const PlaceHolder = () => <View><Text>Place Holder</Text></View>

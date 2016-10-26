@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
-import VideoController from '../../components/MapView';
+import VideoController from '../../components/VideoController';
 
 class MyFloor extends Component {
   render() {

@@ -38,11 +38,12 @@
     _urlString = urlString;
     _options = options;
     _playerController = [[VKPlayerController alloc] initWithURLString:_urlString];
-
+    _barTitle = @"My Floor";
     _playerController.decoderOptions = _options;
-//  --->>>> HERE THIS DOES NOT WORK  _playerController.delegate = self;
+//  _playerController.delegate = self;
     self.username = @"";
     self.secret = @"";
+    self.view.backgroundColor = [UIColor redColor];
     return self;
   }
   return nil;
@@ -89,7 +90,7 @@
   _playerController.secret = _secret;
   UIView *playerView = _playerController.view;
   playerView.translatesAutoresizingMaskIntoConstraints = NO;
-  _playerController.containerVc = self;
+  //_playerController.containerVc = self;
   [_playerController setFullScreen:YES];
   [self.view addSubview:playerView];
   
