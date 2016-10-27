@@ -68,7 +68,7 @@ export default function native(platform) {
                        component={QRCodeScreen}/>
                 <Scene key="textinvitecodescreen"
                        component={TextInviteCodeScreen}/>
-                <Scene key="main" tabs={true} style={{backgroundColor: 'grey'}}>
+                <Scene key="main" tabs={true} style={{backgroundColor: '#262626'}}>
                   <Scene key="home" component={Home} title="Tab #1" icon={TabIconBuilding} />
                   <Scene key="tab2" component={PlaceHolder} title="Tab #2" icon={TabIconMessage} />
                   <Scene key="tab3" component={PlaceHolder} title="Tab #3" icon={TabIconProfile} />

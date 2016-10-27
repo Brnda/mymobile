@@ -192,7 +192,6 @@
 		2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventNotificationCenter.m; path = owalMobile/EventNotificationCenter.m; sourceTree = "<group>"; };
 		2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerManager.h; path = owalMobile/VideoControllerManager.h; sourceTree = "<group>"; };
 		2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerManager.m; path = owalMobile/VideoControllerManager.m; sourceTree = "<group>"; };
-		2D35E8ED1DB14B85009A5FF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerView.h; path = owalMobile/VideoControllerView.h; sourceTree = "<group>"; };
 		2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerView.m; path = owalMobile/VideoControllerView.m; sourceTree = "<group>"; };
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
@@ -617,7 +616,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				2D35E8ED1DB14B85009A5FF2 /* MapKit.framework */,
 				2D8F16C91DAD650B00400ED9 /* GLKit.framework */,
 				2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */,
 				2D8F16C51DAD64F100400ED9 /* CoreVideo.framework */,
