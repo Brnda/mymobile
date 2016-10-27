@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -25,6 +26,7 @@
 		2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */; };
 		2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */; };
 		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
+		2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */; };
 		2D35E8DE1DADDBA8009A5FF2 /* VideoControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */; };
 		2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
@@ -186,6 +188,8 @@
 		2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
 		2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Italic.otf"; sourceTree = "<group>"; };
 		2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
+		2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventNotificationCenter.h; path = owalMobile/EventNotificationCenter.h; sourceTree = "<group>"; };
+		2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventNotificationCenter.m; path = owalMobile/EventNotificationCenter.m; sourceTree = "<group>"; };
 		2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerManager.h; path = owalMobile/VideoControllerManager.h; sourceTree = "<group>"; };
 		2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerManager.m; path = owalMobile/VideoControllerManager.m; sourceTree = "<group>"; };
 		2D35E8ED1DB14B85009A5FF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -396,6 +400,8 @@
 				2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */,
 				2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */,
 				2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */,
+				2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */,
+				2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */,
 			);
 			name = owalMobile;
 			sourceTree = "<group>";
@@ -929,6 +935,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */,
 				2D8F16A81DAD635000400ED9 /* VKPlayerControllerBase.m in Sources */,
+				2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */,
 				2D8F16A61DAD635000400ED9 /* VKFullscreenContainer.m in Sources */,
 				2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
@@ -971,9 +978,7 @@
 				INFOPLIST_FILE = owalMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
 			};
@@ -987,9 +992,7 @@
 				INFOPLIST_FILE = owalMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
 			};
