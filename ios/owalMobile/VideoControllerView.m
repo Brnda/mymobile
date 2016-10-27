@@ -38,12 +38,12 @@
     _urlString = urlString;
     _options = options;
     _playerController = [[VKPlayerController alloc] initWithURLString:_urlString];
-    _barTitle = @"My Floor";
+    
+    _playerController.barTitle = @"My Floor";
     _playerController.decoderOptions = _options;
 //  _playerController.delegate = self;
     self.username = @"";
     self.secret = @"";
-    self.view.backgroundColor = [UIColor redColor];
     return self;
   }
   return nil;

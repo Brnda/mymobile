@@ -1158,6 +1158,7 @@ retry:
                     [[NSNotificationCenter defaultCenter] postNotificationName:kVKPlayerDidExitFullscreenNotification object:self userInfo:nil];
                 });
              [EventNotificationCenter emitEventWithName:@"" andPayload:@{}];
+              [self stop];
              
             }
         }
