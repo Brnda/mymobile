@@ -1223,7 +1223,7 @@ retry:
         _labelBarEmbedded.text = _labelBarTitle.text;
 
         [self startElapsedTimer];
-        [self setPanelButtonsEnabled:YES];
+        [self setPanelButtonsEnabled:NO]; //OWAL: Disable the play control and seek for live streaming.
     } else if (state == kVKDecoderStateBuffering) {
         VKLog(kVKLogLevelStateChanges, @"Buffering now...");
     } else if (state == kVKDecoderStatePlaying) {
