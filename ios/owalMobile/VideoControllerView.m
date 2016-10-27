@@ -41,6 +41,7 @@
     
     _playerController.barTitle = @"My Floor";
     _playerController.decoderOptions = _options;
+    
 //  _playerController.delegate = self;
     self.username = @"";
     self.secret = @"";
