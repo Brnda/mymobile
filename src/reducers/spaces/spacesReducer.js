@@ -74,7 +74,6 @@ export const fetchSpacesRequest = () => {
 };
 
 export const fetchSpacesResponse = (json) => {
-  console.log(`json is ${JSON.stringify(json)}`);
   return {
     type: FETCH_SPACES_RESPONSE,
     payload: json
