@@ -50,7 +50,6 @@ export const getCamera = (camera_id) => {
 };
 
 export default function spaces(state = initialState, action) {
-  //console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
   switch (action.type) {
     case GET_CAMERA_REQUEST:
       return state.set('GETTING', true);

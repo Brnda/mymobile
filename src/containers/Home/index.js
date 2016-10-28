@@ -1,11 +1,12 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, AsyncStorage} from 'react-native';
 import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
 import * as spacesReducer from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 import Orientation from 'react-native-orientation';
+import {USER_TOKEN} from '../../lib/constants';
 
 const icons = {
   buildingEntrance: require('./../../icons/building.png'),
@@ -20,7 +21,9 @@ class Home extends Component {
 
   componentWillMount() {
     Orientation.lockToPortrait();
-    this.props.updateSpaces(this.props.token);
+    AsyncStorage.getItem(USER_TOKEN).then((token) => {
+      this.props.updateSpaces(token);
+    });
   }
 
   render() {

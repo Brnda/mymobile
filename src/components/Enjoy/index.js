@@ -4,33 +4,17 @@ import {
     View,
     Text,
     StatusBar,
-    AsyncStorage
 } from 'react-native';
-import {connect} from 'react-redux';
 import styles from './styles';
 import InductionHeader from '../../components/InductionHeader';
 import {Actions} from 'react-native-router-flux';
-import {SKIP_INDUCTION_KEY, USER_TOKEN} from '../../lib/constants';
 import Orientation from 'react-native-orientation';
 
 class Enjoy extends Component {
 
-   async _setCompletionFlag() {
-    try {
-      await AsyncStorage.setItem(SKIP_INDUCTION_KEY, "true");
-      await AsyncStorage.setItem(USER_TOKEN, this.props.token);
-    } catch (error) {
-      console.error(`We could not update the Persistant store.`);
-    }
-
-     const value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-     console.log(`<>value has been set${value}`);
-  }
-
   componentDidMount() {
     Orientation.lockToPortrait();
 
-    this._setCompletionFlag();
     setTimeout(function(){ Actions.main(); }, 2000);
   }
 
@@ -47,11 +31,5 @@ class Enjoy extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    token: state.induction.get('SESSION_TOKEN')
-  }
-}
-
-export default connect(mapStateToProps)(Enjoy);
+export default Enjoy;
 
