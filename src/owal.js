@@ -4,12 +4,13 @@ import {
     Navigator,
     View,
     AsyncStorage,
-    Text
+    Text,
+    TouchableHighlight
 } from 'react-native';
 import {
     Router,
     Scene,
-    ActionConst
+    ActionConst,
 } from 'react-native-router-flux';
 import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
@@ -17,12 +18,10 @@ import Induction from './containers/Induction/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Enjoy from './components/Enjoy';
+import InitialScreen from './components/InitialScreen';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
-import {SKIP_INDUCTION_KEY, USER_TOKEN} from './lib/constants';
-import {Actions} from 'react-native-router-flux';
-import ViewVideo from './containers/ViewVideo';
 import MyFloorView from './containers/MyFloorView';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
@@ -31,24 +30,9 @@ import TabIconProfile from './components/TabIconProfile';
 export default function native(platform) {
 
   class Owal extends Component {
-    componentDidMount() {
-      this._loadInitialState().done();
+    componentWillMount() {
+
     }
-
-    _loadInitialState = async () => {
-      try {
-
-        const value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-        if (value == null  || value !== "true") {
-          Actions.app();
-        } else {
-          const token = await AsyncStorage.getItem(USER_TOKEN);
-          Actions.main({token});
-        }
-      } catch (error) {
-        console.error(`Could not use Persistance store.`);
-      }
-    };
 
     render() {
       const store = configureStore();
@@ -57,6 +41,7 @@ export default function native(platform) {
           <Provider store={store}>
             <Router hideNavBar={true}>
               <Scene key="root">
+                <Scene key="initial" component={InitialScreen} initial/>
                 <Scene key="app"
                        type={ActionConst.REPLACE}
                        component={Induction}/>
@@ -88,4 +73,9 @@ export default function native(platform) {
 }
 
 // TODO: Please remove when we have the real screens in place.
-const PlaceHolder = () => <View><Text>Place Holder</Text></View>
+const PlaceHolder = () => (
+    <View>
+    <TouchableHighlight onPress={() => AsyncStorage.clear() }>
+      <Text>Reset AsyncStore</Text>
+    </TouchableHighlight>
+    </View>);
