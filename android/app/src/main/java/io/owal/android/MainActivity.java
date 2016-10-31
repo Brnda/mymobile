@@ -3,6 +3,7 @@ package io.owal.android;
 import android.content.Intent;
 
 import com.facebook.react.ReactActivity;
+import com.github.yamill.orientation.OrientationPackage;
 
 public class MainActivity extends ReactActivity {
 

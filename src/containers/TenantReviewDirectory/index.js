@@ -13,6 +13,7 @@ import InductionHeader from '../../components/InductionHeader';
 import {connect} from 'react-redux';
 import * as InductionState from '../../reducers/induction/inductionReducer';
 import {Actions} from 'react-native-router-flux';
+import Orientation from 'react-native-orientation';
 
 class TenantReviewDirectory extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class TenantReviewDirectory extends Component {
       Keyboard.addListener('keyboardDidShow', this.keyboardDidShow.bind(this));
     this.keyboardDidHideListener =
       Keyboard.addListener('keyboardDidHide', this.keyboardDidHide.bind(this));
+    Orientation.lockToPortrait();
   }
 
   componentWillUnmount() {

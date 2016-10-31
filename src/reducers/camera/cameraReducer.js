@@ -30,9 +30,8 @@ const initialState = Map({
 export const getCamera = (camera_id) => {
   return (dispatch, getState) => {
     const state = getState();
-    //const token = state.induction.get('SESSION_TOKEN');
-    // DO NOT SUBMIT!
-    const token = "ntwpFLrUBcyMRpDEr1AefhXAwZIhydnn";
+    const token = state.induction.get('SESSION_TOKEN');
+
     dispatch(getCameraRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/camera/get`, {
       method: 'POST',
@@ -51,7 +50,6 @@ export const getCamera = (camera_id) => {
 };
 
 export default function spaces(state = initialState, action) {
-  //console.log("spaces reducer, state=" + JSON.stringify(state, null, 2) + " action=" + JSON.stringify(action, null, 2));
   switch (action.type) {
     case GET_CAMERA_REQUEST:
       return state.set('GETTING', true);
