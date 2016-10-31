@@ -1,8 +1,7 @@
 # OSX
 #
 .DS_Store
-.tern-port
-        
+
 # Xcode
 #
 build/
@@ -22,18 +21,29 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+ios/owalprotos/
+ios/exportOptions.plist
 
 # Android/IJ
 #
+*.iml
 .idea
 .gradle
 local.properties
 
 # node.js
 #
-npm-debug.log
 node_modules/
-# jest
-coverage/
+npm-debug.log
 
-src/lib/config.js
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores
+
+# Logs
+logs/*.log
+
+#Secrets
+api/config/secret.js
