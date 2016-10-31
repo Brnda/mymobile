@@ -17,15 +17,6 @@ const icons = {
   pool: require('./../../icons/pool.png')
 };
 
-const icons = {
-  buildingEntrance: require('./../../icons/building.png'),
-  garage: require('./../../icons/garage.png'),
-  gym: require('./../../icons/gym.png'),
-  laundry: require('./../../icons/laundry.png'),
-  myfloor: require('./../../icons/myfloor.png'),
-  pool: require('./../../icons/pool.png')
-};
-
 class Home extends Component {
 
   componentWillMount() {
