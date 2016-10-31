@@ -1,0 +1,1203 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00E356F31AD99517003FC87E /* owalMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* owalMobileTests.m */; };
+		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3511D7622B000FBCFFD /* DINPro.otf */; };
+		2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */; };
+		2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */; };
+		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
+		2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */; };
+		2D35E8DE1DADDBA8009A5FF2 /* VideoControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */; };
+		2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */; };
+		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
+		2D8F169E1DAD635000400ED9 /* cmdutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F15921DAD635000400ED9 /* cmdutils.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F169F1DAD635000400ED9 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16191DAD635000400ED9 /* libavcodec.a */; };
+		2D8F16A01DAD635000400ED9 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F161A1DAD635000400ED9 /* libavformat.a */; };
+		2D8F16A11DAD635000400ED9 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F161B1DAD635000400ED9 /* libavutil.a */; };
+		2D8F16A21DAD635000400ED9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F161C1DAD635000400ED9 /* libswresample.a */; };
+		2D8F16A31DAD635000400ED9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F161D1DAD635000400ED9 /* libswscale.a */; };
+		2D8F16A41DAD635000400ED9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F166D1DAD635000400ED9 /* libcrypto.a */; };
+		2D8F16A51DAD635000400ED9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F166E1DAD635000400ED9 /* libssl.a */; };
+		2D8F16A61DAD635000400ED9 /* VKFullscreenContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16731DAD635000400ED9 /* VKFullscreenContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F16A71DAD635000400ED9 /* VKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16751DAD635000400ED9 /* VKPlayerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F16A81DAD635000400ED9 /* VKPlayerControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16771DAD635000400ED9 /* VKPlayerControllerBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F16A91DAD635000400ED9 /* VKScrollViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16791DAD635000400ED9 /* VKScrollViewContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F16AA1DAD635000400ED9 /* libVideoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F167B1DAD635000400ED9 /* libVideoKit.a */; };
+		2D8F16B01DAD635000400ED9 /* license-form.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F16931DAD635000400ED9 /* license-form.plist */; };
+		2D8F16B11DAD635000400ED9 /* VKPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16961DAD635000400ED9 /* VKPlayerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D8F16B21DAD635000400ED9 /* VKImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F169D1DAD635000400ED9 /* VKImages.bundle */; };
+		2D8F16B41DAD640700400ED9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B31DAD640700400ED9 /* libz.tbd */; };
+		2D8F16B61DAD641B00400ED9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B51DAD641B00400ED9 /* libiconv.tbd */; };
+		2D8F16B81DAD644100400ED9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B71DAD644100400ED9 /* QuartzCore.framework */; };
+		2D8F16BA1DAD645200400ED9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B91DAD645200400ED9 /* SystemConfiguration.framework */; };
+		2D8F16BC1DAD646500400ED9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16BB1DAD646500400ED9 /* MediaPlayer.framework */; };
+		2D8F16BE1DAD647900400ED9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16BD1DAD647900400ED9 /* AudioToolbox.framework */; };
+		2D8F16C01DAD649A00400ED9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16BF1DAD649A00400ED9 /* OpenGLES.framework */; };
+		2D8F16C21DAD64D900400ED9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C11DAD64D900400ED9 /* AVFoundation.framework */; };
+		2D8F16C41DAD64E300400ED9 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C31DAD64E300400ED9 /* VideoToolbox.framework */; };
+		2D8F16C61DAD64F100400ED9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C51DAD64F100400ED9 /* CoreVideo.framework */; };
+		2D8F16C81DAD64FD00400ED9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */; };
+		2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C91DAD650B00400ED9 /* GLKit.framework */; };
+		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		CFF41E2FCCC4495EA17D9453 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTActionSheet;
+		};
+		00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTGeolocation;
+		};
+		00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B511DB1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = owalMobile;
+		};
+		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTSettings;
+		};
+		139FDEF31B06529B00C62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C86DF461ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
+		146834031AC3E56700842450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+
+		2D35E8EB1DADDBA9009A5FF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		2DA350411DBAF7BC00DEC2A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTOrientation;
+		};
+
+		2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RCTCamera;
+		};
+		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTLinking;
+		};
+		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* owalMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = owalMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* owalMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = owalMobileTests.m; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* owalMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = owalMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = owalMobile/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = owalMobile/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = owalMobile/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = owalMobile/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = owalMobile/main.m; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2D16A3511D7622B000FBCFFD /* DINPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINPro.otf; sourceTree = "<group>"; };
+		2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Italic.otf"; sourceTree = "<group>"; };
+		2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
+		2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventNotificationCenter.h; path = owalMobile/EventNotificationCenter.h; sourceTree = "<group>"; };
+		2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventNotificationCenter.m; path = owalMobile/EventNotificationCenter.m; sourceTree = "<group>"; };
+		2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerManager.h; path = owalMobile/VideoControllerManager.h; sourceTree = "<group>"; };
+		2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerManager.m; path = owalMobile/VideoControllerManager.m; sourceTree = "<group>"; };
+		2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerView.h; path = owalMobile/VideoControllerView.h; sourceTree = "<group>"; };
+		2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerView.m; path = owalMobile/VideoControllerView.m; sourceTree = "<group>"; };
+		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
+		2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComponent.m; sourceTree = "<group>"; };
+		2D8F15921DAD635000400ED9 /* cmdutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdutils.c; sourceTree = "<group>"; };
+		2D8F16191DAD635000400ED9 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
+		2D8F161A1DAD635000400ED9 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
+		2D8F161B1DAD635000400ED9 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
+		2D8F161C1DAD635000400ED9 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
+		2D8F161D1DAD635000400ED9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		2D8F166D1DAD635000400ED9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		2D8F166E1DAD635000400ED9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		2D8F16701DAD635000400ED9 /* VKReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKReachability.h; sourceTree = "<group>"; };
+		2D8F16721DAD635000400ED9 /* VKFullscreenContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKFullscreenContainer.h; sourceTree = "<group>"; };
+		2D8F16731DAD635000400ED9 /* VKFullscreenContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKFullscreenContainer.m; sourceTree = "<group>"; };
+		2D8F16741DAD635000400ED9 /* VKPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPlayerController.h; sourceTree = "<group>"; };
+		2D8F16751DAD635000400ED9 /* VKPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPlayerController.m; sourceTree = "<group>"; };
+		2D8F16761DAD635000400ED9 /* VKPlayerControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPlayerControllerBase.h; sourceTree = "<group>"; };
+		2D8F16771DAD635000400ED9 /* VKPlayerControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPlayerControllerBase.m; sourceTree = "<group>"; };
+		2D8F16781DAD635000400ED9 /* VKScrollViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKScrollViewContainer.h; sourceTree = "<group>"; };
+		2D8F16791DAD635000400ED9 /* VKScrollViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKScrollViewContainer.m; sourceTree = "<group>"; };
+		2D8F167B1DAD635000400ED9 /* libVideoKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVideoKit.a; sourceTree = "<group>"; };
+		2D8F167C1DAD635000400ED9 /* VKAudioDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAudioDecoder.h; sourceTree = "<group>"; };
+		2D8F167D1DAD635000400ED9 /* VKAVDecodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAVDecodeManager.h; sourceTree = "<group>"; };
+		2D8F167E1DAD635000400ED9 /* VKClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKClock.h; sourceTree = "<group>"; };
+		2D8F167F1DAD635000400ED9 /* VKClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKClockManager.h; sourceTree = "<group>"; };
+		2D8F16801DAD635000400ED9 /* VKColorPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKColorPlane.h; sourceTree = "<group>"; };
+		2D8F16811DAD635000400ED9 /* VKDecodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDecodeManager.h; sourceTree = "<group>"; };
+		2D8F16821DAD635000400ED9 /* VKDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDecoder.h; sourceTree = "<group>"; };
+		2D8F16831DAD635000400ED9 /* VKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKManager.h; sourceTree = "<group>"; };
+		2D8F16841DAD635000400ED9 /* VKPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPacket.h; sourceTree = "<group>"; };
+		2D8F16851DAD635000400ED9 /* VKQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKQueue.h; sourceTree = "<group>"; };
+		2D8F16861DAD635000400ED9 /* VKRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKRecorder.h; sourceTree = "<group>"; };
+		2D8F16871DAD635000400ED9 /* VKVideoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKVideoDecoder.h; sourceTree = "<group>"; };
+		2D8F16881DAD635000400ED9 /* VKVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKVideoFrame.h; sourceTree = "<group>"; };
+		2D8F16891DAD635000400ED9 /* VKVideoFrameRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKVideoFrameRGB.h; sourceTree = "<group>"; };
+		2D8F168A1DAD635000400ED9 /* VKVideoFrameYUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKVideoFrameYUV.h; sourceTree = "<group>"; };
+		2D8F168B1DAD635000400ED9 /* VKVideoFrameYUVVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKVideoFrameYUVVT.h; sourceTree = "<group>"; };
+		2D8F16931DAD635000400ED9 /* license-form.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-form.plist"; sourceTree = "<group>"; };
+		2D8F16951DAD635000400ED9 /* VKPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPlayerViewController.h; sourceTree = "<group>"; };
+		2D8F16961DAD635000400ED9 /* VKPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPlayerViewController.m; sourceTree = "<group>"; };
+		2D8F16981DAD635000400ED9 /* VKGLES2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKGLES2View.h; sourceTree = "<group>"; };
+		2D8F16991DAD635000400ED9 /* VKGLES2ViewRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKGLES2ViewRGB.h; sourceTree = "<group>"; };
+		2D8F169A1DAD635000400ED9 /* VKGLES2ViewYUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKGLES2ViewYUV.h; sourceTree = "<group>"; };
+		2D8F169B1DAD635000400ED9 /* VKGLES2ViewYUVVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKGLES2ViewYUVVT.h; sourceTree = "<group>"; };
+		2D8F169C1DAD635000400ED9 /* VKStreamInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKStreamInfoView.h; sourceTree = "<group>"; };
+		2D8F169D1DAD635000400ED9 /* VKImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VKImages.bundle; sourceTree = "<group>"; };
+		2D8F16B31DAD640700400ED9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2D8F16B51DAD641B00400ED9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		2D8F16B71DAD644100400ED9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2D8F16B91DAD645200400ED9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2D8F16BB1DAD646500400ED9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2D8F16BD1DAD647900400ED9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2D8F16BF1DAD649A00400ED9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2D8F16C11DAD64D900400ED9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2D8F16C31DAD64E300400ED9 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		2D8F16C51DAD64F100400ED9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2D8F16C91DAD650B00400ED9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
+		3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
+		5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */,
+				2D8F16C81DAD64FD00400ED9 /* CoreMedia.framework in Frameworks */,
+				2D8F16C61DAD64F100400ED9 /* CoreVideo.framework in Frameworks */,
+				2D8F16C41DAD64E300400ED9 /* VideoToolbox.framework in Frameworks */,
+				2D8F16C21DAD64D900400ED9 /* AVFoundation.framework in Frameworks */,
+				2D8F16C01DAD649A00400ED9 /* OpenGLES.framework in Frameworks */,
+				2D8F16BE1DAD647900400ED9 /* AudioToolbox.framework in Frameworks */,
+				2D8F16BC1DAD646500400ED9 /* MediaPlayer.framework in Frameworks */,
+				2D8F16BA1DAD645200400ED9 /* SystemConfiguration.framework in Frameworks */,
+				2D8F16B81DAD644100400ED9 /* QuartzCore.framework in Frameworks */,
+				2D8F16B61DAD641B00400ED9 /* libiconv.tbd in Frameworks */,
+				2D8F16B41DAD640700400ED9 /* libz.tbd in Frameworks */,
+				2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */,
+				2D8F16AA1DAD635000400ED9 /* libVideoKit.a in Frameworks */,
+				2D8F16A21DAD635000400ED9 /* libswresample.a in Frameworks */,
+				2D8F16A51DAD635000400ED9 /* libssl.a in Frameworks */,
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				2D8F16A41DAD635000400ED9 /* libcrypto.a in Frameworks */,
+				2D8F16A31DAD635000400ED9 /* libswscale.a in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				2D8F16A11DAD635000400ED9 /* libavutil.a in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				2D8F16A01DAD635000400ED9 /* libavformat.a in Frameworks */,
+				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				2D8F169F1DAD635000400ED9 /* libavcodec.a in Frameworks */,
+				CFF41E2FCCC4495EA17D9453 /* libRCTOrientation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302B61ABCB90400DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302BC1ABCB91800DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302D41ABCB9D200DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302E01ABCB9EE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00E356EF1AD99517003FC87E /* owalMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* owalMobileTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = owalMobileTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139105B71AF99BAD00B5F7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139FDEE71B06529A00C62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* owalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */,
+				2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */,
+				2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */,
+				2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */,
+				2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */,
+				2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */,
+				2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */,
+				2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */,
+			);
+			name = owalMobile;
+			sourceTree = "<group>";
+		};
+		146834001AC3E56700842450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146834041AC3E56700842450 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D35E8D11DADD63E009A5FF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D35E8EC1DADDBA9009A5FF2 /* libRNSVG.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D5C9C8F1D3FF6AF0028B3D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */,
+				2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */,
+				2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */,
+				2D16A3511D7622B000FBCFFD /* DINPro.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2D8F15901DAD635000400ED9 /* VideoKit */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F15911DAD635000400ED9 /* 3rd-party */,
+				2D8F16711DAD635000400ED9 /* Controller */,
+				2D8F167A1DAD635000400ED9 /* Core */,
+				2D8F16931DAD635000400ED9 /* license-form.plist */,
+				2D8F16941DAD635000400ED9 /* ViewController */,
+				2D8F16971DAD635000400ED9 /* Views */,
+				2D8F169D1DAD635000400ED9 /* VKImages.bundle */,
+			);
+			path = VideoKit;
+			sourceTree = "<group>";
+		};
+		2D8F15911DAD635000400ED9 /* 3rd-party */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F15921DAD635000400ED9 /* cmdutils.c */,
+				2D8F15931DAD635000400ED9 /* ffmpeg */,
+				2D8F161E1DAD635000400ED9 /* openSSL */,
+				2D8F166F1DAD635000400ED9 /* Reachability */,
+			);
+			path = "3rd-party";
+			sourceTree = "<group>";
+		};
+		2D8F15931DAD635000400ED9 /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16181DAD635000400ED9 /* lib */,
+			);
+			path = ffmpeg;
+			sourceTree = "<group>";
+		};
+		2D8F16181DAD635000400ED9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16191DAD635000400ED9 /* libavcodec.a */,
+				2D8F161A1DAD635000400ED9 /* libavformat.a */,
+				2D8F161B1DAD635000400ED9 /* libavutil.a */,
+				2D8F161C1DAD635000400ED9 /* libswresample.a */,
+				2D8F161D1DAD635000400ED9 /* libswscale.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2D8F161E1DAD635000400ED9 /* openSSL */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F166C1DAD635000400ED9 /* lib */,
+			);
+			path = openSSL;
+			sourceTree = "<group>";
+		};
+		2D8F166C1DAD635000400ED9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F166D1DAD635000400ED9 /* libcrypto.a */,
+				2D8F166E1DAD635000400ED9 /* libssl.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2D8F166F1DAD635000400ED9 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16701DAD635000400ED9 /* VKReachability.h */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		2D8F16711DAD635000400ED9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16721DAD635000400ED9 /* VKFullscreenContainer.h */,
+				2D8F16731DAD635000400ED9 /* VKFullscreenContainer.m */,
+				2D8F16741DAD635000400ED9 /* VKPlayerController.h */,
+				2D8F16751DAD635000400ED9 /* VKPlayerController.m */,
+				2D8F16761DAD635000400ED9 /* VKPlayerControllerBase.h */,
+				2D8F16771DAD635000400ED9 /* VKPlayerControllerBase.m */,
+				2D8F16781DAD635000400ED9 /* VKScrollViewContainer.h */,
+				2D8F16791DAD635000400ED9 /* VKScrollViewContainer.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D8F167A1DAD635000400ED9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F167B1DAD635000400ED9 /* libVideoKit.a */,
+				2D8F167C1DAD635000400ED9 /* VKAudioDecoder.h */,
+				2D8F167D1DAD635000400ED9 /* VKAVDecodeManager.h */,
+				2D8F167E1DAD635000400ED9 /* VKClock.h */,
+				2D8F167F1DAD635000400ED9 /* VKClockManager.h */,
+				2D8F16801DAD635000400ED9 /* VKColorPlane.h */,
+				2D8F16811DAD635000400ED9 /* VKDecodeManager.h */,
+				2D8F16821DAD635000400ED9 /* VKDecoder.h */,
+				2D8F16831DAD635000400ED9 /* VKManager.h */,
+				2D8F16841DAD635000400ED9 /* VKPacket.h */,
+				2D8F16851DAD635000400ED9 /* VKQueue.h */,
+				2D8F16861DAD635000400ED9 /* VKRecorder.h */,
+				2D8F16871DAD635000400ED9 /* VKVideoDecoder.h */,
+				2D8F16881DAD635000400ED9 /* VKVideoFrame.h */,
+				2D8F16891DAD635000400ED9 /* VKVideoFrameRGB.h */,
+				2D8F168A1DAD635000400ED9 /* VKVideoFrameYUV.h */,
+				2D8F168B1DAD635000400ED9 /* VKVideoFrameYUVVT.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2D8F16941DAD635000400ED9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16951DAD635000400ED9 /* VKPlayerViewController.h */,
+				2D8F16961DAD635000400ED9 /* VKPlayerViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2D8F16971DAD635000400ED9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F16981DAD635000400ED9 /* VKGLES2View.h */,
+				2D8F16991DAD635000400ED9 /* VKGLES2ViewRGB.h */,
+				2D8F169A1DAD635000400ED9 /* VKGLES2ViewYUV.h */,
+				2D8F169B1DAD635000400ED9 /* VKGLES2ViewYUVVT.h */,
+				2D8F169C1DAD635000400ED9 /* VKStreamInfoView.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DA350381DBAF7BC00DEC2A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DA350421DBAF7BC00DEC2A6 /* libRCTOrientation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DF4FB5E1D66C657004F0EEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DF4FB641D66C658004F0EEE /* libRCTCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C398B11ACF4ADC00677621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */,
+				146833FF1AC3E56700842450 /* React.xcodeproj */,
+				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
+				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
+				00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */,
+				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
+				00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */,
+				139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */,
+				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
+				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
+				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		832341B11AAA6A8300B99B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				2D8F16C91DAD650B00400ED9 /* GLKit.framework */,
+				2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */,
+				2D8F16C51DAD64F100400ED9 /* CoreVideo.framework */,
+				2D8F16C31DAD64E300400ED9 /* VideoToolbox.framework */,
+				2D8F16C11DAD64D900400ED9 /* AVFoundation.framework */,
+				2D8F16BF1DAD649A00400ED9 /* OpenGLES.framework */,
+				2D8F16BD1DAD647900400ED9 /* AudioToolbox.framework */,
+				2D8F16BB1DAD646500400ED9 /* MediaPlayer.framework */,
+				2D8F16B91DAD645200400ED9 /* SystemConfiguration.framework */,
+				2D8F16B71DAD644100400ED9 /* QuartzCore.framework */,
+				2D8F16B51DAD641B00400ED9 /* libiconv.tbd */,
+				2D8F16B31DAD640700400ED9 /* libz.tbd */,
+				2D8F15901DAD635000400ED9 /* VideoKit */,
+				2D5C9C8F1D3FF6AF0028B3D9 /* Resources */,
+				13B07FAE1A68108700A75B9A /* owalMobile */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* owalMobileTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* owalMobile.app */,
+				00E356EE1AD99517003FC87E /* owalMobileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* owalMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "owalMobileTests" */;
+			buildPhases = (
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = owalMobileTests;
+			productName = owalMobileTests;
+			productReference = 00E356EE1AD99517003FC87E /* owalMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* owalMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "owalMobile" */;
+			buildPhases = (
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = owalMobile;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* owalMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 610;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = MHEL4UWLN7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "owalMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
+					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 2DF4FB5E1D66C657004F0EEE /* Products */;
+					ProjectRef = 2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
+					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
+					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
+					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
+					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 2DA350381DBAF7BC00DEC2A6 /* Products */;
+					ProjectRef = 5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */;
+				},
+				{
+					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
+					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
+					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
+					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+				},
+				{
+					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
+					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = 146834001AC3E56700842450 /* Products */;
+					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 2D35E8D11DADD63E009A5FF2 /* Products */;
+					ProjectRef = 3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* owalMobile */,
+				00E356ED1AD99517003FC87E /* owalMobileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTActionSheet.a;
+			remoteRef = 00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTGeolocation.a;
+			remoteRef = 00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302C01ABCB91800DB3ED1 /* libRCTImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTImage.a;
+			remoteRef = 00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTVibration.a;
+			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSettings.a;
+			remoteRef = 139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139FDEF41B06529B00C62182 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 139FDEF31B06529B00C62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		146834041AC3E56700842450 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D35E8EC1DADDBA9009A5FF2 /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = 2D35E8EB1DADDBA9009A5FF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DA350421DBAF7BC00DEC2A6 /* libRCTOrientation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTOrientation.a;
+			remoteRef = 2DA350411DBAF7BC00DEC2A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2DF4FB641D66C658004F0EEE /* libRCTCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCamera.a;
+			remoteRef = 2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */,
+				2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2D8F16B01DAD635000400ED9 /* license-form.plist in Resources */,
+				2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */,
+				2D8F16B21DAD635000400ED9 /* VKImages.bundle in Resources */,
+				2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* owalMobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D8F16B11DAD635000400ED9 /* VKPlayerViewController.m in Sources */,
+				2D8F16A91DAD635000400ED9 /* VKScrollViewContainer.m in Sources */,
+				2D8F169E1DAD635000400ED9 /* cmdutils.c in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */,
+				2D8F16A81DAD635000400ED9 /* VKPlayerControllerBase.m in Sources */,
+				2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */,
+				2D8F16A61DAD635000400ED9 /* VKFullscreenContainer.m in Sources */,
+				2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				2D8F16A71DAD635000400ED9 /* VKPlayerController.m in Sources */,
+				2D35E8DE1DADDBA8009A5FF2 /* VideoControllerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* owalMobile */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = owalMobile;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = owalMobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = owalMobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 16;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"~/Documents/FacebookSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"./VideoKit/3rd-party/ffmpeg/include",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+				);
+				INFOPLIST_FILE = owalMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoKit/3rd-party/ffmpeg/lib",
+					"$(PROJECT_DIR)/VideoKit/3rd-party/openSSL/lib",
+					"$(PROJECT_DIR)/VideoKit/Core",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
+				PRODUCT_NAME = owalMobile;
+				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 16;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"~/Documents/FacebookSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"./VideoKit/3rd-party/ffmpeg/include",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+				);
+				INFOPLIST_FILE = owalMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VideoKit/3rd-party/ffmpeg/lib",
+					"$(PROJECT_DIR)/VideoKit/3rd-party/openSSL/lib",
+					"$(PROJECT_DIR)/VideoKit/Core",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
+				PRODUCT_NAME = owalMobile;
+				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "owalMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "owalMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "owalMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

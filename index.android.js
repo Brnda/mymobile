@@ -4,4 +4,3 @@ import owal from './src/owal';
 
 owal('android');
 
-

@@ -9,7 +9,7 @@ workflows:
   primary:
     steps:
     - activate-ssh-key@3.1.0:
-        title: Activate App SSH key
+        title: Activate Induction SSH key
         inputs:
         - ssh_key_save_path: "$HOME/.ssh/steplib_ssh_step_id_rsa"
     - git-clone@3.1.1: {}
