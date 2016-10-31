@@ -16,6 +16,7 @@ import {Actions} from 'react-native-router-flux';
 import InductionHeader from '../../components/InductionHeader';
 import {connect} from 'react-redux';
 import * as InductionState from '../../reducers/induction/inductionReducer'
+import Orientation from 'react-native-orientation';
 
 class TextInviteCodeScreen extends Component {
   constructor(props) {
@@ -24,6 +25,11 @@ class TextInviteCodeScreen extends Component {
       continue: false
     };
   }
+
+  componentWillMount() {
+    Orientation.lockToPortrait();
+  }
+
 
   _onPressContinueButton() {
     this.props.onSelect(this.state.text);

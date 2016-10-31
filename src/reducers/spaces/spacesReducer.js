@@ -82,6 +82,8 @@ export const fetchSpacesResponse = (json) => {
 };
 
 export const selectSpace = (spaceId) => {
+  if (!spaceId) return { type: "NO_OP"};
+
   return {
     type: SPACE_SELECTED,
     payload: {spaceId}
@@ -95,11 +97,8 @@ const initialState = Map({
   'SPACE_ID': null
 });
 
-export const updateSpaces = () => {
-  return (dispatch, getState) => {
-    const state = getState();
-    const token = state.induction.get('SESSION_TOKEN');
-
+export const updateSpaces = (token) => {
+  return (dispatch) => {
     dispatch(fetchSpacesRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/space/list`, {
       method: 'POST',

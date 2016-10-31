@@ -4,12 +4,13 @@ import {
     Navigator,
     View,
     AsyncStorage,
-    Text
+    Text,
+    TouchableHighlight
 } from 'react-native';
 import {
     Router,
     Scene,
-    ActionConst
+    ActionConst,
 } from 'react-native-router-flux';
 import {Provider} from 'react-redux';
 import configureStore from './lib/configureStore';
@@ -17,12 +18,11 @@ import Induction from './containers/Induction/index';
 import TenantReview from './containers/TenantReview';
 import QRCodeScreen from './components/QRCodeScreen';
 import Enjoy from './components/Enjoy';
+import InitialScreen from './components/InitialScreen';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
-import {SKIP_INDUCTION_KEY} from './lib/constants';
-import {Actions} from 'react-native-router-flux';
-import ViewVideo from './containers/ViewVideo';
+import MyFloorView from './containers/MyFloorView';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
@@ -30,22 +30,6 @@ import TabIconProfile from './components/TabIconProfile';
 export default function native(platform) {
 
   class Owal extends Component {
-    componentDidMount() {
-      this._loadInitialState().done();
-    }
-
-    _loadInitialState = async () => {
-      try {
-        var value = await AsyncStorage.getItem(SKIP_INDUCTION_KEY);
-        if (value == null  || value !== "true") {
-          Actions.app();
-        } else {
-          Actions.main();
-        }
-      } catch (error) {
-        console.error(`Could not use Persistance store.`);
-      }
-    };
 
     render() {
       const store = configureStore();
@@ -54,6 +38,7 @@ export default function native(platform) {
           <Provider store={store}>
             <Router hideNavBar={true}>
               <Scene key="root">
+                <Scene key="initial" component={InitialScreen} initial/>
                 <Scene key="app"
                        type={ActionConst.REPLACE}
                        component={Induction}/>
@@ -65,15 +50,15 @@ export default function native(platform) {
                        component={QRCodeScreen}/>
                 <Scene key="textinvitecodescreen"
                        component={TextInviteCodeScreen}/>
-                <Scene key="main" tabs={true} style={{backgroundColor: 'grey'}}>
+                <Scene key="main" tabs={true} style={{backgroundColor: '#262626'}}>
                   <Scene key="home" component={Home} title="Tab #1" icon={TabIconBuilding} />
-                  <Scene key="tab2" component={Enjoy} title="Tab #2" icon={TabIconMessage} />
-                  <Scene key="tab3" component={Enjoy} title="Tab #3" icon={TabIconProfile} />
+                  <Scene key="tab2" component={PlaceHolder} title="Tab #2" icon={TabIconMessage} />
+                  <Scene key="tab3" component={PlaceHolder} title="Tab #3" icon={TabIconProfile} />
                 </Scene>
                 <Scene key="enjoy"
                        component={Enjoy}/>
                 <Scene key="viewVideo"
-                       component={ViewVideo}/>
+                       component={MyFloorView}/>
               </Scene>
             </Router>
           </Provider>
@@ -83,3 +68,11 @@ export default function native(platform) {
 
   AppRegistry.registerComponent('owalMobile', () => Owal)
 }
+
+// TODO: Please remove when we have the real screens in place.
+const PlaceHolder = () => (
+    <View>
+    <TouchableHighlight onPress={() => AsyncStorage.clear() }>
+      <Text>Reset AsyncStore</Text>
+    </TouchableHighlight>
+    </View>);

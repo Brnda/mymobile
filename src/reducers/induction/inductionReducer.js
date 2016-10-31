@@ -1,6 +1,7 @@
 import {Map} from 'immutable';
 import {Actions} from 'react-native-router-flux';
-import APP_CONST from '../../lib/constants'
+import APP_CONST, {USER_TOKEN} from '../../lib/constants';
+import {AsyncStorage} from 'react-native';
 
 //Actions
 export const SEND_INVITATION = 'InductionState/SEND_INVITATION';
@@ -10,14 +11,6 @@ export const INVITE_ERROR = 'InductionState/INVITE_ERROR';
 export const INVITE_ERROR_RESET = 'InductionState/INVITE_ERROR_RESET';
 
 //Action creators
-export const setInviteCode = (code) => {
-  Actions.tenatReview();
-  return {
-    type: SET_INVITATION,
-    payload: code
-  };
-};
-
 export const resetInviteError = () => {
   return {
     type: INVITE_ERROR_RESET
@@ -26,21 +19,24 @@ export const resetInviteError = () => {
 
 export const addNametoDirectory = (first_name, last_name) => {
   return (dispatch, getState) => {
-    const state = getState();
-    const token = state.induction.get('SESSION_TOKEN');
-    fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/directory/update`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({token, show_full_name_in_directory: true, first_name, last_name})
-    })
-    .then((res) => res.json())
-    .then((json) => {
-      Actions.enjoy();
-    })
-    .catch((err) => {console.log(`Got an error ${err}`)})
+    AsyncStorage.getItem(USER_TOKEN).then((token) => {
+      fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/directory/update`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({token, show_full_name_in_directory: true, first_name, last_name})
+      })
+          .then((res) => res.json())
+          .then((json) => {
+            Actions.enjoy();
+          })
+          .catch((err) => {
+            console.log(`Got an error ${err}`)
+          })
+    }).done();
+
   };
 };
 
@@ -54,37 +50,34 @@ export const checkInviteCode = (code) => {
       },
       body: JSON.stringify({code})
     })
-    .then((res) => res.json())
-    .then((json) => {
-      if(json.ok) {
-        dispatch({
-          type: SEND_INVITATION,
-          payload: {
-            auth: json.auth,
-            user: json.user
-          }
-        });
-        Actions.tenatReview();
-      } else {
-       dispatch({
-        type: INVITE_ERROR,
-        message: 'Token not valid.'
-       });
-      }
-    })
-    .catch((err) => {
-      dispatch({
-        type: INVITE_ERROR,
-        message: 'Network problem.'
-      });
-    });
-  };
-};
+        .then((res) => res.json())
+        .then((json) => {
+          if (json.ok) {
+            dispatch({
+              type: SEND_INVITATION,
+              payload: {
+                auth: json.auth,
+                user: json.user
+              }
+            });
 
-export const includeInDirectory = () => {
-  return {
-    type: TOGGLE_INCLUDE_DIR
-    };
+            AsyncStorage.setItem(USER_TOKEN, json.auth.token).then((err) => {
+              Actions.tenatReview();
+            });
+          } else {
+            dispatch({
+              type: INVITE_ERROR,
+              message: 'Token not valid.'
+            });
+          }
+        })
+        .catch((err) => {
+          dispatch({
+            type: INVITE_ERROR,
+            message: 'Network problem.'
+          });
+        });
+  };
 };
 
 //Reducer
@@ -97,18 +90,13 @@ const initialState = Map({'INCLUDE_DIR': true});
 export default function inductionReducer(state = initialState, action) {
   switch (action.type) {
     case INVITE_ERROR:
-      return state.set('ERROR', action.message );
+      return state.set('ERROR', action.message);
     case INVITE_ERROR_RESET:
-      return state.set('ERROR', null );
+      return state.set('ERROR', null);
     case TOGGLE_INCLUDE_DIR:
       return state.set('INCLUDE_DIR', !state.get('INCLUDE_DIR'))
     case SEND_INVITATION:
-      return state.set('USER', action.payload.user)
-          .set('SESSION_TOKEN', action.payload.auth.token)
-          .set('SESSION_TOKEN_CAN_DELEGATE', action.payload.auth.can_delegate);
-    case SEND_INVITATION_FAIL:
-      return state.delete('USER').delete('SESSION_TOKEN')
-          .delete('SESSION_TOKEN_CAN_DELEGATE');
+      return state.set('USER', action.payload.user);
   }
   return state;
 }

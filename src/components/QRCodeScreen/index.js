@@ -14,6 +14,7 @@ import styles from './styles';
 import {Actions} from 'react-native-router-flux';
 import * as InductionState from '../../reducers/induction/inductionReducer'
 import {connect} from 'react-redux';
+import Orientation from 'react-native-orientation';
 
 class QRCodeScreen extends Component {
   constructor(props) {
@@ -21,6 +22,11 @@ class QRCodeScreen extends Component {
     this.state = {read: false};
     this._onBarCodeRead = this._onBarCodeRead.bind(this);
   }
+
+  componentWillMount() {
+    Orientation.lockToPortrait();
+  }
+
   _onBarCodeRead(result) {
     if(!this.state.read) {
       (Platform.OS === 'ios') ? VibrationIOS.vibrate() : Vibration.vibrate();

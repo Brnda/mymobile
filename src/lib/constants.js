@@ -5,11 +5,13 @@ const APP_CONST_PROD = {
 
 // Local server
 const APP_CONST_LOCALDEV = {
-  BaseUrl: '127.0.0.1',
+  BaseUrl: '192.168.0.78',
+  // BaseUrl: '127.0.0.1',
   Port: '3030'
 };
 
 export const SKIP_INDUCTION_KEY = '@AsyncStorage:skipInduction';
+export const USER_TOKEN = '@AsyncStorage:userToken';
 
 // DO NOT SUBMIT IF UNCOMMENTED
 //export default APP_CONST_LOCALDEV;
