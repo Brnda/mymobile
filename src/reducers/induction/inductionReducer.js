@@ -61,6 +61,7 @@ export const checkInviteCode = (code) => {
               }
             });
 
+            AsyncStorage.setItem('BUILDING_ID', json.user.building_id).done();
             AsyncStorage.setItem(USER_TOKEN, json.auth.token).then((err) => {
               Actions.tenatReview();
             });
