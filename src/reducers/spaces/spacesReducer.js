@@ -1,6 +1,5 @@
 import {Map} from 'immutable';
 import APP_CONST from '../../lib/constants'
-import firebase from 'firebase';
 
 // Actions
 export const FETCH_SPACES_REQUEST = 'HomeScreenState/FETCH_SPACES_REQUEST';
@@ -10,7 +9,6 @@ export const FETCH_SPACES_RESPONSE = 'HomeScreenState/FETCH_SPACES_RESPONSE';
 // So, we must set the chosen scene in the global state.
 // See https://github.com/aksonov/react-native-router-flux/issues/167
 export const SPACE_SELECTED = 'HomeScreenState/SPACE_SELECTED';
-export const UPDATE_SPACES_BARS = 'HomeScreenState/UPDATE_SPACES_BARS';
 
 const defaultSpacesSet = {
   main_entrance: {
@@ -76,6 +74,7 @@ export const fetchSpacesRequest = () => {
 };
 
 export const fetchSpacesResponse = (json) => {
+  console.log(`json is ${JSON.stringify(json)}`);
   return {
     type: FETCH_SPACES_RESPONSE,
     payload: json
@@ -98,18 +97,22 @@ const initialState = Map({
   'SPACE_ID': null
 });
 
-export const updateSpacesBars = (bars) => {
-  return {
-    type: UPDATE_SPACES_BARS,
-    payload: bars
-  };
-};
-
-export const updateSpaces = (building) => {
+export const updateSpaces = (token) => {
   return (dispatch) => {
-    firebase.database().ref(`/buildings/${building}`).once('value').then((snapshot) => {
-      dispatch(fetchSpacesResponse(snapshot.val()));
-    });
+    dispatch(fetchSpacesRequest());
+    fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/space/list`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({token})
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch(fetchSpacesResponse(json));
+      })
+      .catch((err) => {console.error(`Got an error ${err}`)})
   };
 };
 
@@ -118,11 +121,9 @@ export default function spaces(state = initialState, action) {
     case FETCH_SPACES_REQUEST:
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
-      return state.set('SPACES', action.payload).set('FETCHING', false);
+      return state.set('SPACES', action.payload.spaces).set('FETCHING', false);
     case SPACE_SELECTED:
       return state.set('SPACE_ID', action.payload.spaceId);
-    case UPDATE_SPACES_BARS:
-      return state.set('SPACES', action.payload);
     default:
       return state;
   }
