@@ -26,21 +26,10 @@ import MyFloorView from './containers/MyFloorView';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
-import firebase from 'firebase';
 
 export default function native(platform) {
 
   class Owal extends Component {
-
-    componentWillMount() {
-      firebase.initializeApp({
-        apiKey: "AIzaSyB-BpGkCcsL1vPukVsnx-9NTYDYOlpY8z0",
-        authDomain: "owalcomms.firebaseapp.com",
-        databaseURL: "https://owalcomms.firebaseio.com",
-        storageBucket: "owalcomms.appspot.com",
-        messagingSenderId: "801875666151"
-      });
-    }
 
     render() {
       const store = configureStore();
