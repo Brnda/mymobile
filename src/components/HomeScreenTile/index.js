@@ -38,7 +38,8 @@ class HomeScreenTile extends Component {
               width={120}
               indeterminate={this.props.fetching}
               style={styles.progressbar}
-              color='#0f0'/>
+              color={this.props.statusColor}
+            />
             <View style={{height: 10}} />
           </View>
         }
