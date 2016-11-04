@@ -19,4 +19,4 @@ export const TENANT_ID = '@AsyncStorage:tenantID';
 // DO NOT SUBMIT IF UNCOMMENTED
 //export default APP_CONST_LOCALDEV;
 
-export default APP_CONST_LOCALDEV;
+export default APP_CONST_PROD;
