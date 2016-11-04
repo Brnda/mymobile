@@ -6,16 +6,7 @@ import * as spacesReducer from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 import Orientation from 'react-native-orientation';
-import {USER_TOKEN} from '../../lib/constants';
-
-const icons = {
-  buildingEntrance: require('./../../icons/building.png'),
-  garage: require('./../../icons/garage.png'),
-  gym: require('./../../icons/gym.png'),
-  laundry: require('./../../icons/laundry.png'),
-  myfloor: require('./../../icons/myfloor.png'),
-  pool: require('./../../icons/pool.png')
-};
+import APP_CONST, {TENANT_ID, USER_TOKEN} from '../../lib/constants';
 
 const icons = {
   buildingEntrance: require('./../../icons/building.png'),
@@ -33,6 +24,31 @@ class Home extends Component {
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
+    this._setupWebService();
+  }
+
+  _setupWebService() {
+    const ws = new WebSocket(`ws://${APP_CONST.BaseUrl}:${APP_CONST.PortWS}/`);
+
+    ws.onmessage = (e) => {
+      AsyncStorage.getItem(TENANT_ID).then((id) => {
+        if(id && id === e.data) {
+          AsyncStorage.getItem(USER_TOKEN).then((token) => {
+            this.props.updateSpaces(token);
+          })
+        }
+      });
+    };
+
+    ws.onerror = (e) => {
+      // an error occurred
+      console.error(e.message);
+    };
+
+    ws.onclose = (e) => {
+      // connection closed
+      console.error(e.code, e.reason);
+    };
   }
 
   render() {
