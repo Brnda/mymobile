@@ -2,24 +2,30 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
     flex: 1,
-    margin: 20,
-    alignItems: 'center'
+    margin: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: 'black',
+    borderStyle: 'solid',
+    borderBottomWidth: 1
   },
   text: {
     fontSize: 20
   },
-  textView: {},
   icon: {
     height: 40,
     width: 40,
     resizeMode: 'contain'
   },
-  divider: {
-    height: 1,
-    width: 160,
-    backgroundColor: 'black'
+  statusText: {
+    fontSize: 10,
+    fontWeight: 'bold',
+    fontFamily: 'DINPro-Bold'
+  },
+  progressBar: {
+    marginTop: 5,
+    marginBottom: 5
   }
 });
 

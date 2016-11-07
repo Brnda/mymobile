@@ -24,7 +24,7 @@ class Home extends Component {
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
-    this._setupWebService();
+    // this._setupWebService();
   }
 
   _setupWebService() {
@@ -54,54 +54,50 @@ class Home extends Component {
   render() {
     return (
         <View style={styles.container}>
-          <View style={styles.header}><Text
-              style={styles.headerText}>SPACES { this.props.fetching ? " LOADING" : ""} </Text></View>
+          <View style={styles.header}>
+            <Text style={styles.headerText}>SPACES</Text>
+          </View>
           <View style={styles.row}>
-            <HomeScreenTile
-                text={this.props.spaces.main_entrance.name}
-                containerStyle={{}}
+            <HomeScreenTile text="Front Door"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.main_entrance.label}
-                icon={icons[this.props.spaces.main_entrance.icon_name]}
-            />
-            <HomeScreenTile
-                text={this.props.spaces.my_floor.name}
+                spaceId={this.props.spaces.main_entrance.name}
+                icon={icons['buildingEntrance']}/>
+            <HomeScreenTile text="My Floor"
                 onSelect={this.props.selectSpace}
                 spaceId={this.props.spaces.my_floor._id}
-                icon={icons[this.props.spaces.my_floor.icon_name]}
-            />
+                icon={icons['myfloor']}/>
           </View>
           <View style={styles.row}>
-            <HomeScreenTile
-                text={this.props.spaces.laundry.name}
+            <HomeScreenTile text="Laundry"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.laundry.label}
-                icon={icons[this.props.spaces.laundry.icon_name]}
-                statusText={this.props.spaces.laundry.status_text}
-                statusColor={this.props.spaces.laundry.status_color}
+                spaceId={this.props.spaces.laundry.name}
+                icon={icons['laundry']}
                 statusBarFilled={this.props.spaces.laundry.status_bar_filled}
                 statusBarTotal={this.props.spaces.laundry.status_bar_total}
-                fetching={this.props.fetching}
-            />
-            <HomeScreenTile
-                text={this.props.spaces.gym.name}
+                fetching={this.props.fetching}/>
+            <HomeScreenTile text="Gym"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.gym._id}
-                icon={icons[this.props.spaces.gym.icon_name]}
-                statusText={this.props.spaces.gym.status_text}
-                status/>
+                spaceId={this.props.spaces.gym.name}
+                icon={icons['gym']}
+                statusBarFilled={this.props.spaces.gym.status_bar_filled}
+                statusBarTotal={this.props.spaces.gym.status_bar_total}
+                fetching={this.props.fetching}/>
           </View>
           <View style={styles.row}>
-            <HomeScreenTile
-                text={this.props.spaces.pool.name}
+            <HomeScreenTile text="Pool"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.pool._id}
-                icon={icons[this.props.spaces.pool.icon_name]}/>
-            <HomeScreenTile
-                text={this.props.spaces.garage.name}
+                spaceId={this.props.spaces.pool.name}
+                icon={icons['pool']}
+                statusBarFilled={this.props.spaces.pool.status_bar_filled}
+                statusBarTotal={this.props.spaces.pool.status_bar_total}
+                fetching={this.props.fetching}/>
+            <HomeScreenTile text="Garage"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.garage._id}
-                icon={icons[this.props.spaces.garage.icon_name]}/>
+                spaceId={this.props.spaces.garage.name}
+                icon={icons['garage']}
+                statusBarFilled={this.props.spaces.garage.status_bar_filled}
+                statusBarTotal={this.props.spaces.garage.status_bar_total}
+                fetching={this.props.fetching}/>
           </View>
         </View>
     );
