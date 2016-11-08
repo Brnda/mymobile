@@ -42,7 +42,6 @@
 		2D8F16A71DAD635000400ED9 /* VKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16751DAD635000400ED9 /* VKPlayerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D8F16A81DAD635000400ED9 /* VKPlayerControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16771DAD635000400ED9 /* VKPlayerControllerBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D8F16A91DAD635000400ED9 /* VKScrollViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16791DAD635000400ED9 /* VKScrollViewContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2D8F16AA1DAD635000400ED9 /* libVideoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F167B1DAD635000400ED9 /* libVideoKit.a */; };
 		2D8F16B01DAD635000400ED9 /* license-form.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F16931DAD635000400ED9 /* license-form.plist */; };
 		2D8F16B11DAD635000400ED9 /* VKPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F16961DAD635000400ED9 /* VKPlayerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D8F16B21DAD635000400ED9 /* VKImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F169D1DAD635000400ED9 /* VKImages.bundle */; };
@@ -59,6 +58,8 @@
 		2D8F16C81DAD64FD00400ED9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */; };
 		2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C91DAD650B00400ED9 /* GLKit.framework */; };
 		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
+		6658886C1DD18DA6001F4D9F /* VideoControllerViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6658886B1DD18DA6001F4D9F /* VideoControllerViewView.m */; };
+		66BDE1811DD21ACC0055465C /* libVideoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F167B1DAD635000400ED9 /* libVideoKit.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		CFF41E2FCCC4495EA17D9453 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */; };
 /* End PBXBuildFile section */
@@ -127,7 +128,6 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-
 		2D35E8EB1DADDBA9009A5FF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */;
@@ -142,7 +142,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTOrientation;
 		};
-
 		2DF4FB631D66C658004F0EEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */;
@@ -256,6 +255,8 @@
 		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
+		6658886A1DD18DA6001F4D9F /* VideoControllerViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerViewView.h; path = owalMobile/VideoControllerViewView.h; sourceTree = "<group>"; };
+		6658886B1DD18DA6001F4D9F /* VideoControllerViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerViewView.m; path = owalMobile/VideoControllerViewView.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
@@ -274,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BDE1811DD21ACC0055465C /* libVideoKit.a in Frameworks */,
 				2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */,
 				2D8F16C81DAD64FD00400ED9 /* CoreMedia.framework in Frameworks */,
 				2D8F16C61DAD64F100400ED9 /* CoreVideo.framework in Frameworks */,
@@ -287,7 +289,6 @@
 				2D8F16B61DAD641B00400ED9 /* libiconv.tbd in Frameworks */,
 				2D8F16B41DAD640700400ED9 /* libz.tbd in Frameworks */,
 				2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */,
-				2D8F16AA1DAD635000400ED9 /* libVideoKit.a in Frameworks */,
 				2D8F16A21DAD635000400ED9 /* libswresample.a in Frameworks */,
 				2D8F16A51DAD635000400ED9 /* libssl.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -401,6 +402,8 @@
 				2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */,
 				2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */,
 				2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */,
+				6658886A1DD18DA6001F4D9F /* VideoControllerViewView.h */,
+				6658886B1DD18DA6001F4D9F /* VideoControllerViewView.m */,
 				2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */,
 				2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */,
 			);
@@ -937,6 +940,7 @@
 				2D8F16A81DAD635000400ED9 /* VKPlayerControllerBase.m in Sources */,
 				2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */,
 				2D8F16A61DAD635000400ED9 /* VKFullscreenContainer.m in Sources */,
+				6658886C1DD18DA6001F4D9F /* VideoControllerViewView.m in Sources */,
 				2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				2D8F16A71DAD635000400ED9 /* VKPlayerController.m in Sources */,

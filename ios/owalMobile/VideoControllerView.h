@@ -12,7 +12,7 @@
 @interface VideoControllerView : UIViewController
 
 - (void)player:(VKPlayerControllerBase *)player didChangeState:(VKDecoderState)state errorCode:(VKError)errCode;
-- (id)initWithURLString:(NSString *)urlString decoderOptions:(NSDictionary *)options;
+- (id)initWithDecoderOptions:(NSDictionary *)options;
 
 ///The bar title of Video Player
 @property (nonatomic, retain) NSString *barTitle;
@@ -41,5 +41,7 @@
 
 ///If license-form is not accessible, fill this parameter with your secret taken from our server
 @property (nonatomic, retain) NSString *secret;
+
+- (void)playUri:(NSString *)uri;
 
 @end

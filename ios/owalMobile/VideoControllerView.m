@@ -9,14 +9,13 @@
 #import "VideoControllerView.h"
 #import "VKPlayerViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "VideoControllerViewView.h"
 
 @interface VideoControllerView() <VKPlayerControllerDelegate> {
-  NSString *_urlString;
   NSDictionary *_options;
   VKPlayerControllerBase *_playerController;
   BOOL _allowAirPlay;
   BOOL _fillScreen;
-
 }
 @end
 
@@ -30,21 +29,20 @@
 @synthesize username = _username;
 @synthesize secret = _secret;
 
-- (id)initWithURLString:(NSString *)urlString decoderOptions:(NSDictionary *)options {
+- (id)initWithDecoderOptions:(NSDictionary *)options {
   
   self = [super init];
   if (self) {
     // Custom initialization
-    _urlString = urlString;
     _options = options;
-    _playerController = [[VKPlayerController alloc] initWithURLString:_urlString];
+    _playerController = [[VKPlayerController alloc] init];
     
     _playerController.barTitle = @"My Floor";
     _playerController.decoderOptions = _options;
     
 //  _playerController.delegate = self;
-    self.username = @"";
-    self.secret = @"";
+    _username = @"sol@owal.io";
+    _secret = @"a285d4025ca53fd8bd75ab3402d0f88e";
     return self;
   }
   return nil;
@@ -75,7 +73,9 @@
 //    bounds =  CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.height, bounds.size.width);
 //  }
   
-  self.view = [[UIView alloc] initWithFrame:bounds];
+  VideoControllerViewView *view = [[VideoControllerViewView alloc] initWithFrame:bounds];
+  view.controller = self;
+  self.view = view;
   self.view.backgroundColor = [UIColor blackColor];
 }
 
@@ -89,6 +89,7 @@
   }
   _playerController.username = _username;
   _playerController.secret = _secret;
+  
   UIView *playerView = _playerController.view;
   playerView.translatesAutoresizingMaskIntoConstraints = NO;
   //_playerController.containerVc = self;
@@ -101,7 +102,7 @@
   // align _playerController.view from the top and bottom
   [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[playerView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(playerView)]];
   
-  [_playerController play];
+  //[_playerController play];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -124,6 +125,13 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return  YES;//(interfaceOrientation != UIDeviceOrientationPortraitUpsideDown);
+}
+
+- (void)playUri:(NSString *)uri {
+  
+  NSLog(@"Playing uri: %@", uri);
+  _playerController.contentURLString = uri;
+  [_playerController play];
 }
 
 @end

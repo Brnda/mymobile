@@ -21,6 +21,7 @@ class VideoController extends Component {
 }
 
 VideoController.propTypes = {
+  uri: React.PropTypes.string,
 };
 
 var VideoControllerz = requireNativeComponent('VideoController', VideoController);

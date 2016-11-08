@@ -9,7 +9,7 @@ class MyFloor extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <VideoController/>
+        <VideoController uri="rtsp://admin:12345@76.10.32.8/Streaming/Channels/101"/>
       </View>
     );
   }
