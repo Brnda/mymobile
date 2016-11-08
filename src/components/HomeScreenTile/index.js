@@ -38,8 +38,6 @@ class HomeScreenTile extends Component {
 
   render() {
     const percentage = this.props.statusBarFilled / this.props.statusBarTotal;
-    console.log(`filled: <${this.props.text}> ${this.props.statusBarFilled} percentage: ${this.props.statusBarTotal}`);
-    console.log(`percentage: ${percentage}`);
     return (
       <TouchableOpacity style={styles.container} onPress={this._onSelect.bind(this)}>
         <Image source={this.props.icon} style={styles.icon}/>

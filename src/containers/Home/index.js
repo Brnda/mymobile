@@ -18,19 +18,22 @@ const icons = {
 };
 
 class Home extends Component {
+  constructor() {
+    super();
+    this._ws = new WebSocket(`ws://${APP_CONST.BaseUrl}:${APP_CONST.PortWS}/`);
+  }
 
   componentWillMount() {
     Orientation.lockToPortrait();
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
-    // this._setupWebService();
+    this._setupWebService();
   }
 
   _setupWebService() {
-    const ws = new WebSocket(`ws://${APP_CONST.BaseUrl}:${APP_CONST.PortWS}/`);
 
-    ws.onmessage = (e) => {
+    this._ws.onmessage = (e) => {
       AsyncStorage.getItem(TENANT_ID).then((id) => {
         if(id && id === e.data) {
           AsyncStorage.getItem(USER_TOKEN).then((token) => {
@@ -40,15 +43,19 @@ class Home extends Component {
       });
     };
 
-    ws.onerror = (e) => {
+    this._ws.onerror = (e) => {
       // an error occurred
       console.error(e.message);
     };
 
-    ws.onclose = (e) => {
+    this._ws.onclose = (e) => {
       // connection closed
       console.error(e.code, e.reason);
     };
+  }
+
+  componentWillUnmount() {
+    this._ws.close();
   }
 
   render() {
