@@ -27,10 +27,9 @@ const initialState = Map({
   'GETTING': true
 });
 
-export const getCamera = (camera_id) => {
+export const getCamera = (camera_id, token) => {
   return (dispatch, getState) => {
     const state = getState();
-    const token = state.induction.get('SESSION_TOKEN');
 
     dispatch(getCameraRequest());
     fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/camera/get`, {

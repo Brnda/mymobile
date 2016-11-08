@@ -16,6 +16,6 @@
 @property (nonatomic, assign) NSString *uri;
 
 ///The controller
-@property (nonatomic, weak) VideoControllerView *controller;
+@property (nonatomic, strong) VideoControllerView *controller;
 
 @end

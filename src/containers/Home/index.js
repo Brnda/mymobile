@@ -64,7 +64,7 @@ class Home extends Component {
                 icon={icons['buildingEntrance']}/>
             <HomeScreenTile text="My Floor"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.my_floor._id}
+                spaceId={this.props.spaces.my_floor.name}
                 icon={icons['myfloor']}/>
           </View>
           <View style={styles.row}>

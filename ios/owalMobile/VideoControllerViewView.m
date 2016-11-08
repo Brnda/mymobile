@@ -22,6 +22,8 @@
   NSLog(@"Setting URI to %@", uri);
   if ([self controller] != nil) {
     [self.controller playUri:uri];
+  } else {
+    NSLog(@"Controller is nil, *NOT* playing...");
   }
 }
 

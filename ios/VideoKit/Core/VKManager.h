@@ -27,7 +27,7 @@
 #include "cmdutils.h"
 
 //#define TRIAL                            1
-#define TRIAL 0
+//#define TRIAL 0
 
 #define VK_CLIENT_VERSION                @"2.6"
 
