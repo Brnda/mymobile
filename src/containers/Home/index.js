@@ -3,6 +3,7 @@ import {View, Text, AsyncStorage} from 'react-native';
 import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
 import * as spacesReducer from '../../reducers/spaces/spacesReducer';
+import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 import Orientation from 'react-native-orientation';
@@ -26,13 +27,13 @@ class Home extends Component {
   componentWillMount() {
     Orientation.lockToPortrait();
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
+      console.log(`Updating spaces!!!`)
       this.props.updateSpaces(token);
     });
-    this._setupWebService();
+    //this._setupWebService();
   }
 
   _setupWebService() {
-
     this._ws.onmessage = (e) => {
       AsyncStorage.getItem(TENANT_ID).then((id) => {
         if(id && id === e.data) {
@@ -67,12 +68,16 @@ class Home extends Component {
           <View style={styles.row}>
             <HomeScreenTile text="Front Door"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.main_entrance.name}
-                icon={icons['buildingEntrance']}/>
+                spaceId="main_entrance"
+                icon={icons['buildingEntrance']}
+                uri="rtsp://admin:12345@76.10.32.8/Streaming/Channels/602"
+                            getCamera={this.props.getCamera}/>
             <HomeScreenTile text="My Floor"
                 onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.my_floor._id}
-                icon={icons['myfloor']}/>
+                spaceId="my_floor"
+                icon={icons['myfloor']}
+                uri={this.props.uri}
+                            getCamera={this.props.getCamera}/>
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Laundry"
@@ -81,14 +86,16 @@ class Home extends Component {
                 icon={icons['laundry']}
                 statusBarFilled={this.props.spaces.laundry.status_bar_filled}
                 statusBarTotal={this.props.spaces.laundry.status_bar_total}
-                fetching={this.props.fetching}/>
+                fetching={this.props.fetching} uri={this.props.uri}
+                            getCamera={this.props.getCamera}/>
             <HomeScreenTile text="Gym"
                 onSelect={this.props.selectSpace}
                 spaceId={this.props.spaces.gym.name}
                 icon={icons['gym']}
                 statusBarFilled={this.props.spaces.gym.status_bar_filled}
                 statusBarTotal={this.props.spaces.gym.status_bar_total}
-                fetching={this.props.fetching}/>
+                fetching={this.props.fetching} uri="rtsp://admin:12345@76.10.32.8/Streaming/Channels/1602"
+                            getCamera={this.props.getCamera}/>
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Pool"
@@ -97,14 +104,18 @@ class Home extends Component {
                 icon={icons['pool']}
                 statusBarFilled={this.props.spaces.pool.status_bar_filled}
                 statusBarTotal={this.props.spaces.pool.status_bar_total}
-                fetching={this.props.fetching}/>
+                fetching={this.props.fetching}
+                uri="rtsp://admin:12345@76.10.32.8/Streaming/Channels/102"
+                getCamera={this.props.getCamera}/>
             <HomeScreenTile text="Garage"
                 onSelect={this.props.selectSpace}
                 spaceId={this.props.spaces.garage.name}
                 icon={icons['garage']}
                 statusBarFilled={this.props.spaces.garage.status_bar_filled}
                 statusBarTotal={this.props.spaces.garage.status_bar_total}
-                fetching={this.props.fetching}/>
+                fetching={this.props.fetching}
+                uri="rtsp://admin:12345@76.10.32.8/Streaming/Channels/1102"
+                            getCamera={this.props.getCamera}/>
           </View>
         </View>
     );
@@ -116,6 +127,7 @@ Home.propTypes = {
 };
 
 const mapStateToProps = (state) => {
+  console.log(`called...spaces update`)
   return {
     fetching: state.spaces.get('FETCHING'),
     spaces: state.spaces.get('SPACES')
@@ -127,9 +139,14 @@ const mapDispatchToProps = (dispatch) => {
     updateSpaces: (token) => {
       dispatch(spacesReducer.updateSpaces(token))
     },
-    selectSpace: (spaceId) => {
+    selectSpace: (spaceId, uri) => {
       dispatch(spacesReducer.selectSpace(spaceId));
+      var VideoControllerManager = require('NativeModules').VideoControllerManager;
+      VideoControllerManager.setURI(uri);
       Actions.viewVideo();
+    },
+    getCamera: (cameraId) => {
+      dispatch(cameraReducer.getCamera(cameraId))
     }
   }
 };

@@ -5,11 +5,12 @@ import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import VideoController from '../../components/VideoController';
 
+
 class MyFloor extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <VideoController/>
+        <VideoController />
       </View>
     );
   }

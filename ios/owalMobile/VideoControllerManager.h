@@ -9,5 +9,5 @@
 #import "RCTViewManager.h"
 
 @interface VideoControllerManager : RCTViewManager
-
+//@property (nonatomic, copy) NSString *uri;
 @end

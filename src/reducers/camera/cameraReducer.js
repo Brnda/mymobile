@@ -1,6 +1,6 @@
 import {Map} from 'immutable';
-import {Actions} from 'react-native-router-flux';
-import APP_CONST from '../../lib/constants'
+import APP_CONST, {USER_TOKEN} from '../../lib/constants';
+import {AsyncStorage} from 'react-native';
 
 // Actions
 export const GET_CAMERA_REQUEST = 'CameraReducer/GET_CAMERA_REQUEST';
@@ -28,24 +28,24 @@ const initialState = Map({
 });
 
 export const getCamera = (camera_id) => {
-  return (dispatch, getState) => {
-    const state = getState();
-    const token = state.induction.get('SESSION_TOKEN');
+  return (dispatch) => {
 
-    dispatch(getCameraRequest());
-    fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/camera/get`, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({token, camera_id})
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        dispatch(getCameraResponse(json));
+    AsyncStorage.getItem(USER_TOKEN).then((token) => {
+      dispatch(getCameraRequest());
+      fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/camera/get`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({token, camera_id})
       })
-      .catch((err) => {console.error(`Got an error ${err}`)})
+          .then((res) => res.json())
+          .then((json) => {
+            dispatch(getCameraResponse(json));
+          })
+          .catch((err) => {console.error(`Got an error ${err}`)})
+    });
   };
 };
 

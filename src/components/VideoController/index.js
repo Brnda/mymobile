@@ -3,6 +3,8 @@ import { View, requireNativeComponent, NativeModules, NativeEventEmitter } from 
 import Orientation from 'react-native-orientation';
 import {Actions} from 'react-native-router-flux';
 
+
+
 const myModuleEvt = new NativeEventEmitter(NativeModules.EventNotificationCenter);
 myModuleEvt.addListener('closeVideoManager', (data) => {
     Orientation.lockToPortrait();
@@ -13,6 +15,7 @@ class VideoController extends Component {
 
   componentDidMount() {
     Orientation.unlockAllOrientations();
+
   }
 
   render() {

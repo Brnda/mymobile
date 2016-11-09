@@ -18,7 +18,7 @@ const defaultSpacesSet = {
     has_status: false
   },
   my_floor: {
-    name: "My Floor",
+    name: "My Xloor",
     enabled: false,
     icon_name: "myfloor",
     has_status: false,
@@ -119,6 +119,7 @@ export default function spaces(state = initialState, action) {
     case FETCH_SPACES_REQUEST:
       return state.set('FETCHING', true);
     case FETCH_SPACES_RESPONSE:
+      console.log(`action.payload.spaces ${JSON.stringify(action.payload.spaces)}`)
       return state.set('SPACES', action.payload.spaces).set('FETCHING', false);
     case SPACE_SELECTED:
       return state.set('SPACE_ID', action.payload.spaceId);
