@@ -28,7 +28,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>16</string>
+	<string>18</string>
 	<key>FacebookAppID</key>
 	<string>1038715489517463</string>
 	<key>FacebookDisplayName</key>
@@ -58,7 +58,7 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>App plays audio</string>
+		<string>audio</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -66,6 +66,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Used for scanning QR codes</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

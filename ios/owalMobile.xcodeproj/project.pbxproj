@@ -706,6 +706,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = MHEL4UWLN7;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -1007,10 +1008,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yakov Okshtein (MHEL4UWLN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MHEL4UWLN7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1039,7 +1040,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4833b913-0aef-4e92-a44c-91e523dc9ecc";
+				PROVISIONING_PROFILE_SPECIFIER = "Owal Distribution";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1049,9 +1051,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yakov Okshtein (MHEL4UWLN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MHEL4UWLN7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1080,7 +1082,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4833b913-0aef-4e92-a44c-91e523dc9ecc";
+				PROVISIONING_PROFILE_SPECIFIER = "Owal Distribution";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
