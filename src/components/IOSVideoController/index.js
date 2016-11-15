@@ -9,7 +9,7 @@ myModuleEvt.addListener('closeVideoManager', (data) => {
     Actions.pop()
     });
 
-class VideoController extends Component {
+class IOSVideoController extends Component {
 
   componentDidMount() {
     Orientation.unlockAllOrientations();
@@ -20,9 +20,9 @@ class VideoController extends Component {
   }
 }
 
-VideoController.propTypes = {
+IOSVideoController.propTypes = {
 };
 
-var VideoControllerz = requireNativeComponent('VideoController', VideoController);
+var VideoControllerz = requireNativeComponent('VideoController', IOSVideoController);
 
-export default VideoController;
+export default IOSVideoController;
