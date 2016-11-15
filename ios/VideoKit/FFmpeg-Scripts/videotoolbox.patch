@@ -1,0 +1,65 @@
+--- videotoolbox.c	2016-06-27 02:54:29.000000000 +0300
++++ videotoolbox-m.c	2016-09-16 17:31:31.000000000 +0300
+@@ -38,6 +38,9 @@
+ 
+ #define VIDEOTOOLBOX_ESDS_EXTRADATA_PADDING  12
+ 
++//[VideoKit-FIX]
++static void videotoolbox_reset_session(AVCodecContext *avctx);
++
+ static void videotoolbox_buffer_release(void *opaque, uint8_t *data)
+ {
+     CVPixelBufferRef cv_buffer = (CVImageBufferRef)data;
+@@ -181,6 +184,9 @@
+         av_freep(&vtctx->bitstream);
+         if (vtctx->frame)
+             CVPixelBufferRelease(vtctx->frame);
++        
++        //[VideoKit-FIX]
++        av_videotoolbox_default_free(avctx);
+     }
+ 
+     return 0;
+@@ -339,6 +345,10 @@
+                                                0);      // infoFlagsOut
+     if (status == noErr)
+         status = VTDecompressionSessionWaitForAsynchronousFrames(videotoolbox->session);
++    //[VideoKit-FIX]
++    else if (status == kVTInvalidSessionErr) {
++        videotoolbox_reset_session(avctx);
++    }
+ 
+     CFRelease(sample_buf);
+ 
+@@ -351,7 +361,8 @@
+     AVVideotoolboxContext *videotoolbox = avctx->hwaccel_context;
+     VTContext *vtctx = avctx->internal->hwaccel_priv_data;
+ 
+-    av_buffer_unref(&frame->buf[0]);
++    //[VideoKit-FIX]
++    //av_buffer_unref(&frame->buf[0]);
+ 
+     if (!videotoolbox->session || !vtctx->bitstream)
+         return AVERROR_INVALIDDATA;
+@@ -596,12 +607,21 @@
+             CFRelease(videotoolbox->cm_fmt_desc);
+ 
+         if (videotoolbox->session) {
++            VTDecompressionSessionWaitForAsynchronousFrames(videotoolbox->session);
+             VTDecompressionSessionInvalidate(videotoolbox->session);
+             CFRelease(videotoolbox->session);
+         }
+     }
+ }
+ 
++//[VideoKit-FIX]
++static void videotoolbox_reset_session(AVCodecContext *avctx)
++{
++    videotoolbox_default_free(avctx);
++    videotoolbox_default_init(avctx);
++}
++
++
+ AVHWAccel ff_h263_videotoolbox_hwaccel = {
+     .name           = "h263_videotoolbox",
+     .type           = AVMEDIA_TYPE_VIDEO,
