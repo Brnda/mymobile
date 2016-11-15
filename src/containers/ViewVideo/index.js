@@ -1,9 +1,10 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text, ActivityIndicator} from 'react-native';
+import {View, Text, ActivityIndicator, Platform} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import AndroidNativeVideo from '../../components/AndroidNativeVideo';
+import IOSVideoController from '../../components/IOSVideoController';
 
 class ViewVideo extends Component {
 
@@ -21,6 +22,14 @@ class ViewVideo extends Component {
     }
   }
 
+  getTitle() {
+    let spaceId = this.props.spaceId;
+    if (spaceId && this.props.spaces && this.props.spaces.hasOwnProperty(spaceId) && this.props.spaces[spaceId].name) {
+      return this.props.spaces[spaceId].name;
+    }
+    return "Video";
+  }
+
   render() {
     let spinner;
     let video;
@@ -30,16 +39,33 @@ class ViewVideo extends Component {
         uri = this.props.camera.cameras[0].streams[0];
       }
     }
-    /*
-     */
+    let title = this.getTitle();
+    let player;
+    if (Platform.OS === 'ios') {
+      player = <IOSVideoController style={styles.nativeVideoView}/>;
+      var VideoControllerManager = require('NativeModules').VideoControllerManager;
+      VideoControllerManager.setURI(uri);
+    } else {
+      player = <AndroidNativeVideo style={styles.nativeVideoView} uri={uri}/>
+    }
+    let no_video;
+    if (!this.props.getting && !uri) {
+      no_video = <Text>Video not available</Text>;
+    }
     return (
       <View style={styles.container}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>Video!</Text>
+          <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>{title}</Text>
         </View>
 
         <View style={styles.videoContainer}>
-          <ActivityIndicator size="large" style={styles.activityIndicator}/>
+          {this.props.getting &&
+            <ActivityIndicator size="large" style={styles.activityIndicator}/>
+          }
+          {uri &&
+            player
+          }
+          {no_video}
         </View>
       </View>
     )
