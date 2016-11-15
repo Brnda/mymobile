@@ -22,7 +22,7 @@ import InitialScreen from './components/InitialScreen';
 import Home from './containers/Home';
 import TenantReviewDirectory from './containers/TenantReviewDirectory';
 import TextInviteCodeScreen from './containers/TextInviteCodeScreen';
-import MyFloorView from './containers/MyFloorView';
+import ViewVideo from './containers/ViewVideo';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
@@ -58,7 +58,7 @@ export default function native(platform) {
                 <Scene key="enjoy"
                        component={Enjoy}/>
                 <Scene key="viewVideo"
-                       component={MyFloorView}/>
+                       component={ViewVideo}/>
               </Scene>
             </Router>
           </Provider>
