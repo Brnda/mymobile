@@ -9,7 +9,7 @@ import IOSVideoController from '../../components/IOSVideoController';
 class ViewVideo extends Component {
 
   getCameraIDs() {
-    if (this.props.hasOwnProperty('spaceId') && typeof this.props.spaceId !== 'undefined' && this.props.hasOwnProperty('spaces') && typeof this.props.hasOwnProperty('spaces') !== 'undefined' && this.props.spaces.hasOwnProperty(this.props.spaceId)) {
+    if (this.props.spaceId && this.props.spaces && this.props.spaces[this.props.spaceId]) {
       return this.props.spaces[this.props.spaceId].camera_ids;
     }
     return null;
@@ -24,7 +24,7 @@ class ViewVideo extends Component {
 
   getTitle() {
     let spaceId = this.props.spaceId;
-    if (spaceId && this.props.spaces && this.props.spaces.hasOwnProperty(spaceId) && this.props.spaces[spaceId].name) {
+    if (spaceId && this.props.spaces && this.props.spaces[spaceId] && this.props.spaces[spaceId].name) {
       return this.props.spaces[spaceId].name;
     }
     return "Video";
@@ -40,17 +40,22 @@ class ViewVideo extends Component {
       }
     }
     let title = this.getTitle();
-    let player;
-    if (Platform.OS === 'ios') {
-      player = <IOSVideoController style={styles.nativeVideoView}/>;
-      var VideoControllerManager = require('NativeModules').VideoControllerManager;
-      VideoControllerManager.setURI(uri);
-    } else {
-      player = <AndroidNativeVideo style={styles.nativeVideoView} uri={uri}/>
+
+    let videoContainer;
+    if (this.props.getting) {
+      videoContainer = <ActivityIndicator size="large" style={styles.activityIndicator}/>
     }
-    let no_video;
-    if (!this.props.getting && !uri) {
-      no_video = <Text>Video not available</Text>;
+    if (uri) {
+      if (Platform.OS === 'ios') {
+        videoContainer = <IOSVideoController style={styles.nativeVideoView}/>;
+        var VideoControllerManager = require('NativeModules').VideoControllerManager;
+        VideoControllerManager.setURI(uri);
+      } else {
+        videoContainer = <AndroidNativeVideo style={styles.nativeVideoView} uri={uri}/>
+      }
+    }
+    if (!videoContainer) {
+      videoContainer = <Text>Video not available</Text>;
     }
     return (
       <View style={styles.container}>
@@ -59,13 +64,7 @@ class ViewVideo extends Component {
         </View>
 
         <View style={styles.videoContainer}>
-          {this.props.getting &&
-            <ActivityIndicator size="large" style={styles.activityIndicator}/>
-          }
-          {uri &&
-            player
-          }
-          {no_video}
+          {videoContainer}
         </View>
       </View>
     )
