@@ -40,7 +40,6 @@ class ViewVideo extends Component {
       }
     }
     let title = this.getTitle();
-
     let videoContainer;
     if (this.props.getting) {
       videoContainer = <ActivityIndicator size="large" style={styles.activityIndicator}/>
