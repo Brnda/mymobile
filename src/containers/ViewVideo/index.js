@@ -1,14 +1,22 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text, ActivityIndicator} from 'react-native';
+import {View, Text, ActivityIndicator, Platform, TouchableHighlight} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import AndroidNativeVideo from '../../components/AndroidNativeVideo';
+import IOSVideoController from '../../components/IOSVideoController';
+import Orientation from 'react-native-orientation';
+import {Actions} from 'react-native-router-flux';
 
 class ViewVideo extends Component {
 
+  pop() {
+    Orientation.lockToPortrait();
+    Actions.pop()
+  }
+
   getCameraIDs() {
-    if (this.props.hasOwnProperty('spaceId') && typeof this.props.spaceId !== 'undefined' && this.props.hasOwnProperty('spaces') && typeof this.props.hasOwnProperty('spaces') !== 'undefined' && this.props.spaces.hasOwnProperty(this.props.spaceId)) {
+    if (this.props.spaceId && this.props.spaces && this.props.spaces[this.props.spaceId]) {
       return this.props.spaces[this.props.spaceId].camera_ids;
     }
     return null;
@@ -21,6 +29,14 @@ class ViewVideo extends Component {
     }
   }
 
+  getTitle() {
+    let spaceId = this.props.spaceId;
+    if (spaceId && this.props.spaces && this.props.spaces[spaceId] && this.props.spaces[spaceId].name) {
+      return this.props.spaces[spaceId].name;
+    }
+    return "Video";
+  }
+
   render() {
     let spinner;
     let video;
@@ -30,16 +46,37 @@ class ViewVideo extends Component {
         uri = this.props.camera.cameras[0].streams[0];
       }
     }
-    /*
-     */
+    let title = this.getTitle();
+
+    let videoContainer;
+    if (this.props.getting) {
+      videoContainer = <ActivityIndicator size="large" style={styles.activityIndicator}/>
+    }
+    if (uri) {
+      if (Platform.OS === 'ios') {
+        videoContainer = <IOSVideoController style={styles.nativeVideoView}/>;
+        var VideoControllerManager = require('NativeModules').VideoControllerManager;
+        VideoControllerManager.setURI(uri);
+      } else {
+        videoContainer = <AndroidNativeVideo style={styles.nativeVideoView} uri={uri}/>
+      }
+    }
+    if (!videoContainer) {
+      videoContainer = <Text>Video not available</Text>;
+    }
     return (
       <View style={styles.container}>
+        <View style={styles.topRow}>
+          <TouchableHighlight onPress={() => this.pop() }>
+            <Text onPress={() => this.pop()}>&lt; Back to Main</Text>
+          </TouchableHighlight>
+        </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>Video!</Text>
+          <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>{title}</Text>
         </View>
 
         <View style={styles.videoContainer}>
-          <ActivityIndicator size="large" style={styles.activityIndicator}/>
+          {videoContainer}
         </View>
       </View>
     )
