@@ -1,12 +1,19 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text, ActivityIndicator, Platform} from 'react-native';
+import {View, Text, ActivityIndicator, Platform, TouchableHighlight} from 'react-native';
 import styles from './styles';
 import {connect} from 'react-redux';
 import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import AndroidNativeVideo from '../../components/AndroidNativeVideo';
 import IOSVideoController from '../../components/IOSVideoController';
+import Orientation from 'react-native-orientation';
+import {Actions} from 'react-native-router-flux';
 
 class ViewVideo extends Component {
+
+  pop() {
+    Orientation.lockToPortrait();
+    Actions.pop()
+  }
 
   getCameraIDs() {
     if (this.props.spaceId && this.props.spaces && this.props.spaces[this.props.spaceId]) {
@@ -59,6 +66,11 @@ class ViewVideo extends Component {
     }
     return (
       <View style={styles.container}>
+        <View style={styles.topRow}>
+          <TouchableHighlight onPress={() => this.pop() }>
+            <Text onPress={() => this.pop()}>&lt; Back to Main</Text>
+          </TouchableHighlight>
+        </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Text style={[styles.titleText, {textAlign: 'center', flex: 1}]}>{title}</Text>
         </View>
