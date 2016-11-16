@@ -55,13 +55,13 @@
   NSLog(@"Error is %u", errCode);
 }
 
-- (void)player:(VKPlayerControllerBase *)player didStartRecordingWithPath:(NSString *)recordPath {
-  
-}
-
-- (void)player:(VKPlayerControllerBase *)player didStopRecordingWithPath:(NSString *)recordPath error:(VKErrorRecorder)error {
-  
-}
+//- (void)player:(VKPlayerControllerBase *)player didStartRecordingWithPath:(NSString *)recordPath {
+//  
+//}
+//
+//- (void)player:(VKPlayerControllerBase *)player didStopRecordingWithPath:(NSString *)recordPath error:(VKErrorRecorder)error {
+//  
+//}
 
 #pragma mark View life cycle
 
