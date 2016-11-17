@@ -25,4 +25,5 @@ VideoController.propTypes = {
 
 var VideoControllerz = requireNativeComponent('VideoController', VideoController);
 
+
 export default VideoController;

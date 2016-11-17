@@ -28,7 +28,7 @@ class Home extends Component {
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
-    this._setupWebService();
+    //this._setupWebService();
   }
 
   _setupWebService() {

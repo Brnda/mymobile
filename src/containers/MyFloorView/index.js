@@ -15,6 +15,9 @@ class MyFloor extends Component {
   }
 }
 
+var VideoControllerManager = require('NativeModules').VideoControllerManager;
+VideoControllerManager.setURI('rtsp://admin:tpat2015@76.10.32.13/Streaming/Channels/1?transportmode=unicast&profile=Profile_1');
+
 MyFloor.propTypes = {
   // spaceId: PropTypes.string.isRequired,
   // spaces: PropTypes.object.isRequired,
