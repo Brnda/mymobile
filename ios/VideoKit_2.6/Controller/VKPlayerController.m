@@ -15,6 +15,7 @@
 #import "VKGLES2View.h"
 #import "VKStreamInfoView.h"
 #import "VKFullscreenContainer.h"
+#import "EventNotificationCenter.h"
 
 #import <MediaPlayer/MediaPlayer.h>
 
@@ -1156,6 +1157,9 @@ retry:
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.9 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                     [[NSNotificationCenter defaultCenter] postNotificationName:kVKPlayerDidExitFullscreenNotification object:self userInfo:nil];
                 });
+                 //Owal: Customization
+                [EventNotificationCenter emitEventWithName:@"" andPayload:@{}];
+                [self stop];
             }
         }
     }
