@@ -28,6 +28,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flexDirection: 'row',
     flex: 1
+  },
+  overlay: {
+    flex: 1,
+    position: 'absolute',
+    flexDirection: 'column',
+    left: 0,
+    top: 0,
+    opacity: 0.7,
+    backgroundColor: 'white'
+  },
+  activityIndicator: {
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 80
   }
 });
 

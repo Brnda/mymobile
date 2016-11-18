@@ -1,11 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import {View, Text} from 'react-native';
 import styles from './styles';
-import {connect} from 'react-redux';
-import * as cameraReducer from '../../reducers/camera/cameraReducer';
 import VideoController from '../../components/VideoController';
+var VideoControllerManager = require('NativeModules').VideoControllerManager;
 
 class MyFloor extends Component {
+  componentWillMount() {
+    VideoControllerManager.setURI(this.props.uri);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -15,31 +18,8 @@ class MyFloor extends Component {
   }
 }
 
-var VideoControllerManager = require('NativeModules').VideoControllerManager;
-VideoControllerManager.setURI('rtsp://admin:tpat2015@76.10.32.13/Streaming/Channels/1?transportmode=unicast&profile=Profile_1');
-
 MyFloor.propTypes = {
-  // spaceId: PropTypes.string.isRequired,
-  // spaces: PropTypes.object.isRequired,
-  // getting: PropTypes.bool.isRequired,
-  camera: PropTypes.object
+  uri: PropTypes.string.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    spaceId: state.spaces.get('SPACE_ID'),
-    spaces: state.spaces.get('SPACES'),
-    camera: state.camera.get('CAMERA'),
-    getting: state.camera.get('GETTING')
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getCamera: (cameraId) => {
-      dispatch(cameraReducer.getCamera(cameraId))
-    }
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(MyFloor);
+export default MyFloor;

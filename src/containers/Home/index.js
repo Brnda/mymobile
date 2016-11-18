@@ -1,10 +1,9 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text, AsyncStorage} from 'react-native';
+import {View, Text, AsyncStorage, ActivityIndicator,Dimensions} from 'react-native';
 import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
 import * as spacesReducer from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
-import {Actions} from 'react-native-router-flux';
 import Orientation from 'react-native-orientation';
 import APP_CONST, {TENANT_ID, USER_TOKEN} from '../../lib/constants';
 
@@ -28,30 +27,6 @@ class Home extends Component {
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
-    //this._setupWebService();
-  }
-
-  _setupWebService() {
-
-    this._ws.onmessage = (e) => {
-      AsyncStorage.getItem(TENANT_ID).then((id) => {
-        if(id && id === e.data) {
-          AsyncStorage.getItem(USER_TOKEN).then((token) => {
-            this.props.updateSpaces(token);
-          })
-        }
-      });
-    };
-
-    this._ws.onerror = (e) => {
-      // an error occurred
-      console.error(e.message);
-    };
-
-    this._ws.onclose = (e) => {
-      // connection closed
-      console.error(e.code, e.reason);
-    };
   }
 
   componentWillUnmount() {
@@ -59,6 +34,7 @@ class Home extends Component {
   }
 
   render() {
+    const {width, height} = Dimensions.get('window');
     return (
         <View style={styles.container}>
           <View style={styles.header}>
@@ -66,46 +42,57 @@ class Home extends Component {
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Front Door"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.main_entrance.name}
-                icon={icons['buildingEntrance']}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.main_entrance._id}
+                            icon={icons['buildingEntrance']}
+                            enabled={!this.props.fetching}/>
             <HomeScreenTile text="My Floor"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.my_floor._id}
-                icon={icons['myfloor']}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.my_floor._id}
+                            icon={icons['myfloor']}
+                            enabled={!this.props.fetching}/>
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Laundry"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.laundry.name}
-                icon={icons['laundry']}
-                statusBarFilled={this.props.spaces.laundry.status_bar_filled}
-                statusBarTotal={this.props.spaces.laundry.status_bar_total}
-                fetching={this.props.fetching}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.laundry._id}
+                            icon={icons['laundry']}
+                            statusBarFilled={this.props.spaces.laundry.status_bar_filled}
+                            statusBarTotal={this.props.spaces.laundry.status_bar_total}
+                            enabled={!this.props.fetching}/>
             <HomeScreenTile text="Gym"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.gym.name}
-                icon={icons['gym']}
-                statusBarFilled={this.props.spaces.gym.status_bar_filled}
-                statusBarTotal={this.props.spaces.gym.status_bar_total}
-                fetching={this.props.fetching}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.gym._id}
+                            icon={icons['gym']}
+                            statusBarFilled={this.props.spaces.gym.status_bar_filled}
+                            statusBarTotal={this.props.spaces.gym.status_bar_total}
+                            enabled={!this.props.fetching}/>
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Pool"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.pool.name}
-                icon={icons['pool']}
-                statusBarFilled={this.props.spaces.pool.status_bar_filled}
-                statusBarTotal={this.props.spaces.pool.status_bar_total}
-                fetching={this.props.fetching}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.pool._id}
+                            icon={icons['pool']}
+                            statusBarFilled={this.props.spaces.pool.status_bar_filled}
+                            statusBarTotal={this.props.spaces.pool.status_bar_total}
+                            enabled={!this.props.fetching}/>
             <HomeScreenTile text="Garage"
-                onSelect={this.props.selectSpace}
-                spaceId={this.props.spaces.garage.name}
-                icon={icons['garage']}
-                statusBarFilled={this.props.spaces.garage.status_bar_filled}
-                statusBarTotal={this.props.spaces.garage.status_bar_total}
-                fetching={this.props.fetching}/>
+                            onSelect={this.props.selectSpace}
+                            spaceId={this.props.spaces.garage._id}
+                            icon={icons['garage']}
+                            statusBarFilled={this.props.spaces.garage.status_bar_filled}
+                            statusBarTotal={this.props.spaces.garage.status_bar_total}
+                            enabled={!this.props.fetching}/>
           </View>
+          {this.props.fetching &&
+          <View style={[styles.overlay, { height, width}]}>
+            <ActivityIndicator
+                animating={true}
+                style={styles.activityIndicator}
+                color="black"
+                size="large"/>
+          </View>
+          }
         </View>
     );
   }
@@ -129,7 +116,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     selectSpace: (spaceId) => {
       dispatch(spacesReducer.selectSpace(spaceId));
-      Actions.viewVideo();
     }
   }
 };

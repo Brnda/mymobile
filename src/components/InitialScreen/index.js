@@ -7,11 +7,10 @@ import {
     AsyncStorage,
     ActivityIndicator
 } from 'react-native';
-import {connect} from 'react-redux';
 import styles from './styles';
 import InductionHeader from '../../components/InductionHeader';
 import {Actions} from 'react-native-router-flux';
-import {SKIP_INDUCTION_KEY, USER_TOKEN} from '../../lib/constants';
+import {USER_TOKEN} from '../../lib/constants';
 import Orientation from 'react-native-orientation';
 
 class Enjoy extends Component {

@@ -18,7 +18,7 @@ class HomeScreenTile extends Component {
 
   _selectStatusText(percentage) {
     if(percentage >= 0 && percentage <= 0.25) {
-      return {text: 'ALMOST EMPTY', color: '#39a851'};
+      return {text: 'EMPTY', color: '#39a851'};
     }
 
     if(percentage > 0.25 && percentage <= 0.50) {
@@ -39,7 +39,8 @@ class HomeScreenTile extends Component {
   render() {
     const percentage = this.props.statusBarFilled / this.props.statusBarTotal;
     return (
-      <TouchableOpacity style={styles.container} onPress={this._onSelect.bind(this)}>
+      <TouchableOpacity style={styles.container}
+          onPress={this._onSelect.bind(this)}>
         <Image source={this.props.icon} style={styles.icon}/>
         <Text>{this.props.text}</Text>
         {(this.props.statusBarTotal && this.props.statusBarTotal > 0) &&
@@ -48,7 +49,7 @@ class HomeScreenTile extends Component {
               style={styles.progressBar}
               progress={percentage}
               width={120}
-              indeterminate={this.props.fetching}
+              indeterminate={!this.props.enabled}
               color={this._selectStatusText(percentage)['color']}/>
 
             <Text style={styles.statusText}>{this._selectStatusText(percentage).text}</Text>

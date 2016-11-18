@@ -1,6 +1,5 @@
 import induction from './induction/inductionReducer'
 import spaces from './spaces/spacesReducer'
-import camera from './camera/cameraReducer'
 
 import {combineReducers} from 'redux'
 
@@ -12,8 +11,7 @@ import {combineReducers} from 'redux'
  */
 const rootReducer = combineReducers({
   induction,
-  spaces,
-  camera
+  spaces
 })
 
 export default rootReducer
