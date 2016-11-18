@@ -11,9 +11,7 @@ class MyFloor extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
         <VideoController/>
-      </View>
     );
   }
 }

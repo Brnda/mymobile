@@ -28,7 +28,6 @@
 		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
 		2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */; };
 		2D35E8DE1DADDBA8009A5FF2 /* VideoControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */; };
-		2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
 		2D6CA0F61DDC081B008332A1 /* cmdutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C9FDE1DDC081B008332A1 /* cmdutils.c */; };
 		2D6CA0F71DDC081B008332A1 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CA0651DDC081B008332A1 /* libavcodec.a */; };
@@ -199,8 +198,6 @@
 		2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventNotificationCenter.m; path = owalMobile/EventNotificationCenter.m; sourceTree = "<group>"; };
 		2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerManager.h; path = owalMobile/VideoControllerManager.h; sourceTree = "<group>"; };
 		2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerManager.m; path = owalMobile/VideoControllerManager.m; sourceTree = "<group>"; };
-		2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerView.h; path = owalMobile/VideoControllerView.h; sourceTree = "<group>"; };
-		2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerView.m; path = owalMobile/VideoControllerView.m; sourceTree = "<group>"; };
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
 		2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComponent.m; sourceTree = "<group>"; };
 		2D6C9FDE1DDC081B008332A1 /* cmdutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdutils.c; sourceTree = "<group>"; };
@@ -411,8 +408,6 @@
 				2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */,
 				2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */,
 				2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */,
-				2D4EC7CC1DB165D2008F27EE /* VideoControllerView.h */,
-				2D4EC7CD1DB165D2008F27EE /* VideoControllerView.m */,
 				2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */,
 				2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */,
 			);
@@ -950,7 +945,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				2D6CA0F61DDC081B008332A1 /* cmdutils.c in Sources */,
-				2D4EC7CE1DB165D2008F27EE /* VideoControllerView.m in Sources */,
 				2D6CA0FF1DDC081B008332A1 /* VKFullscreenContainer.m in Sources */,
 				2D6CA1141DDC081B008332A1 /* VKGLES2ViewYUVVT.m in Sources */,
 				2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */,

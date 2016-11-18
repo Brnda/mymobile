@@ -7,7 +7,7 @@
 //
 
 #import "VideoControllerManager.h"
-#import "VideoControllerView.h"
+#import "VKPlayerController.h"
 
 @implementation VideoControllerManager
 
@@ -21,12 +21,26 @@ RCT_EXPORT_METHOD(setURI:(NSString* )uri) {
 
 - (UIView *)view
 {
-  //rtsp://admin:tpat2015@76.10.32.13/Streaming/Channels/1?transportmode=unicast&profile=Profile_1
+  UIView *parent = [[UIView alloc] init];
   
-  VideoControllerView *viewz = [[VideoControllerView alloc] initWithURLString:_uri decoderOptions:[NSDictionary dictionaryWithObject:VKDECODER_OPT_VALUE_RTSP_TRANSPORT_TCP forKey:VKDECODER_OPT_KEY_RTSP_TRANSPORT]];
-
-//  NSLog(@"view is %@", NSStringFromCGRect(viewz.frame));
-  return viewz.view;
+  VKPlayerController *controller = [[VKPlayerController alloc] initWithURLString:_uri];
+  
+  //Configure controller view for display.
+  UIView *playerView = controller.view;
+  playerView.translatesAutoresizingMaskIntoConstraints = NO;
+  [controller setFullScreen:YES];
+  
+  [parent addSubview:playerView];
+   // align playerView from the horizontally.
+  [parent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[playerView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(playerView)]];
+  // align playerView from the top.
+  [parent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[playerView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(playerView)]];
+  
+  //Set uri and automatically play stream
+  controller.contentURLString = _uri;
+  [controller play];
+  
+  return parent;
 }
 
 @end
