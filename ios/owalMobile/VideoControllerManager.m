@@ -12,11 +12,13 @@
 @implementation VideoControllerManager
 
 static NSString* _uri = @"";
+static NSString* _title = @"";
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(setURI:(NSString* )uri) {
+RCT_EXPORT_METHOD(setURI:(NSString* )uri title:(NSString* )title) {
   _uri = uri;
+  _title = title;
 }
 
 - (UIView *)view
@@ -29,6 +31,7 @@ RCT_EXPORT_METHOD(setURI:(NSString* )uri) {
   UIView *playerView = controller.view;
   playerView.translatesAutoresizingMaskIntoConstraints = NO;
   [controller setFullScreen:YES];
+  controller.barTitle = _title;
   
   [parent addSubview:playerView];
    // align playerView from the horizontally.

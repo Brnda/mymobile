@@ -6,7 +6,7 @@ var VideoControllerManager = require('NativeModules').VideoControllerManager;
 
 class MyFloor extends Component {
   componentWillMount() {
-    VideoControllerManager.setURI(this.props.uri);
+    VideoControllerManager.setURI(this.props.uri, 'Matzero is the best!');
   }
 
   render() {

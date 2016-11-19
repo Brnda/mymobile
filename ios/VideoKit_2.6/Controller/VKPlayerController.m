@@ -147,7 +147,8 @@
 
 - (void)createUIFullScreen {
     [self createUIFullScreenBar];
-    [self createUIFullScreenPanel];
+  //Owal: customization
+//    [self createUIFullScreenPanel];
 }
 
 - (void)createUIFullScreenBar {
@@ -155,14 +156,17 @@
     _toolBar = [[UIToolbar alloc] initWithFrame:CGRectZero];
     _toolBar.translatesAutoresizingMaskIntoConstraints = NO;
     _toolBar.barStyle = UIBarStyleDefault;
-    _toolBar.tintColor = [UIColor darkGrayColor];
-    
+    _toolBar.translucent = NO;
+    _toolBar.tintColor = [UIColor whiteColor];
+    _toolBar.barTintColor = [UIColor whiteColor];
+    _toolBar.alpha = 1.0;
+  
     NSMutableArray *toolBarItems = [NSMutableArray array];
     
     UIButton *buttonDone = [[[UIButton alloc] init] autorelease];
     buttonDone.translatesAutoresizingMaskIntoConstraints = NO;
     [buttonDone setTitle:TR(@"Done") forState:UIControlStateNormal];
-    [[buttonDone titleLabel] setFont:[UIFont boldSystemFontOfSize:16.0]];
+  [[buttonDone titleLabel] setFont:[UIFont fontWithName:@"DINPro-Bold" size:15.0]];
     [buttonDone setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [buttonDone setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     [buttonDone addTarget:self action:@selector(onBarButtonsTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -193,8 +197,8 @@
     _labelBarTitle.numberOfLines = 1;
     _labelBarTitle.backgroundColor = [UIColor clearColor];
     _labelBarTitle.shadowOffset = CGSizeMake(0.0, -1.0);
-    _labelBarTitle.textColor = [UIColor darkGrayColor];
-    _labelBarTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:18];
+    _labelBarTitle.textColor = [UIColor blackColor];
+    _labelBarTitle.font = [UIFont fontWithName:@"DINPro" size:18];
     _labelBarTitle.text = [self staturBarInitialText];
     [_viewCenteredOnBar addSubview:_labelBarTitle];
     
@@ -600,19 +604,20 @@
 }
 
 - (void)addUIFullScreen {
-    if (![_viewControlPanel superview]) {
-        [self.view addSubview:_viewControlPanel];
-        
-        // center _viewControlPanel horizontally in self.view
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_viewControlPanel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
-        
-        // align _viewControlPanel from the bottom
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_viewControlPanel(==93)]-3-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_viewControlPanel)]];
-        
-        // width constraint
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_viewControlPanel(==314)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_viewControlPanel)]];
-    }
-    
+  //Owal: customization
+//    if (![_viewControlPanel superview]) {
+//        [self.view addSubview:_viewControlPanel];
+//        
+//        // center _viewControlPanel horizontally in self.view
+//        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_viewControlPanel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+//        
+//        // align _viewControlPanel from the bottom
+//        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_viewControlPanel(==93)]-3-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_viewControlPanel)]];
+//        
+//        // width constraint
+//        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_viewControlPanel(==314)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_viewControlPanel)]];
+//    }
+  
     if (![_toolBar superview]) {
         [self.view addSubview:_toolBar];
         
