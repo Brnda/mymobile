@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {View, Text, AsyncStorage, ActivityIndicator,Dimensions} from 'react-native';
 import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
-import * as spacesReducer from '../../reducers/spaces/spacesReducer';
+import {selectSpace, updateSpaces} from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
 import Orientation from 'react-native-orientation';
 import APP_CONST, {TENANT_ID, USER_TOKEN} from '../../lib/constants';
@@ -17,20 +17,12 @@ const icons = {
 };
 
 class Home extends Component {
-  constructor() {
-    super();
-    this._ws = new WebSocket(`ws://${APP_CONST.BaseUrl}:${APP_CONST.PortWS}/`);
-  }
 
   componentWillMount() {
     Orientation.lockToPortrait();
     AsyncStorage.getItem(USER_TOKEN).then((token) => {
       this.props.updateSpaces(token);
     });
-  }
-
-  componentWillUnmount() {
-    this._ws.close();
   }
 
   render() {
@@ -109,15 +101,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    updateSpaces: (token) => {
-      dispatch(spacesReducer.updateSpaces(token))
-    },
-    selectSpace: (spaceId) => {
-      dispatch(spacesReducer.selectSpace(spaceId));
-    }
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, {updateSpaces, selectSpace})(Home);
