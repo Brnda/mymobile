@@ -127,8 +127,6 @@ export const selectSpace = (spaceId) => {
                 console.error(`Camera not found`);
               } else {
                 dispatch(getCameraResponse(json));
-                console.log(`FFFF FF ${JSON.stringify(json)}`);
-
                 Actions.viewVideo({uri: json.cameras[0].streams[0], title:json.cameras[0].description});
               }
           })

@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import {View, Text} from 'react-native';
-import styles from './styles';
 import VideoController from '../../components/VideoController';
 var VideoControllerManager = require('NativeModules').VideoControllerManager;
 
@@ -10,9 +9,7 @@ class MyFloor extends Component {
   }
 
   render() {
-    return (
-        <VideoController/>
-    );
+    return <VideoController/>
   }
 }
 
