@@ -357,8 +357,12 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
             _decodeManager.initialPlaybackTime = _initialPlaybackTime;
             _decodeManager.autoStopAtEnd = _autoStopAtEnd;
             _decodeManager.loopPlayback = _loopPlayback;
-            _decodeManager.showPicOnInitialBuffering = _showPictureOnInitialBuffering;
+            //Owal: customization
+            _decodeManager.showPicOnInitialBuffering = YES;
             _decodeManager.volumeLevel = _volumeLevel;
+            //Owal: customization.
+            _decodeManager.minFramesToStartPlaying = 1;
+          
             if (_mute)
                 _decodeManager.volumeLevel = 0.0;
             _decodeManager.delegate = self;
@@ -377,7 +381,9 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
                     _scrollView.backgroundColor = [UIColor blackColor];
                     _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
                     [self.view insertSubview:_scrollView atIndex:0];
-
+                  
+                  
+                  
                     //create glview to render video pictures
                     if ([_decodeManager videoStreamColorFormat] == VKVideoStreamColorFormatRGB) {
                         _renderView = [[VKGLES2ViewRGB alloc] init];
