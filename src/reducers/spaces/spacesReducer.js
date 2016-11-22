@@ -6,6 +6,8 @@ import {Actions} from 'react-native-router-flux';
 // Actions
 export const FETCH_SPACES_REQUEST = 'HomeScreenState/FETCH_SPACES_REQUEST';
 export const FETCH_SPACES_RESPONSE = 'HomeScreenState/FETCH_SPACES_RESPONSE';
+export const SET_ERROR = 'HomeScreenState/SET_ERROR';
+export const UNSET_ERROR = 'HomeScreenState/UNSET_ERROR';
 
 export const GET_CAMERA_RESPONSE = 'CameraReducer/GET_CAMERA_RESPONSE';
 
@@ -83,6 +85,19 @@ export const fetchSpacesResponse = (json) => {
   }
 };
 
+export const setErrorCondition = (message) => {
+  return {
+    type: SET_ERROR,
+    payload: message
+  }
+};
+
+export const unsetErrorCondition = () => {
+  return {
+    type: UNSET_ERROR
+  };
+};
+
 export const getCameraResponse = (response) => {
   return {
     type: GET_CAMERA_RESPONSE,
@@ -124,7 +139,7 @@ export const selectSpace = (spaceId) => {
           .then((json) => {
               if (!json.cameras || !json.cameras[0] || !json.cameras[0].streams
                     || !json.cameras[0].streams[0]) {
-                console.error(`Camera not found`);
+                dispatch(setErrorCondition(`Camera not found`));
               } else {
                 dispatch(getCameraResponse(json));
                 Actions.viewVideo({uri: json.cameras[0].streams[0], title:json.cameras[0].description});
@@ -141,7 +156,8 @@ const initialState = Map({
   'FETCHING': true,
   'SPACES': defaultSpacesSet,
   'SPACE_ID': null,
-  'CAMERA': null
+  'CAMERA': null,
+  'ERROR': null
 });
 
 export const updateSpaces = (token) => {
@@ -172,6 +188,10 @@ export default function spaces(state = initialState, action) {
       return state.set('SPACE_ID', action.payload.spaceId).set('FETCHING', true);
     case GET_CAMERA_RESPONSE:
       return state.set('CAMERA', action.response).set('FETCHING', false);
+    case SET_ERROR:
+      return state.set('ERROR', action.payload).set('FETCHING', false);
+    case UNSET_ERROR:
+      return state.set('ERROR', null).set('FETCHING', false);
     default:
       return state;
   }

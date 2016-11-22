@@ -1,11 +1,18 @@
 import React, {Component, PropTypes} from 'react';
-import {View, Text, AsyncStorage, ActivityIndicator,Dimensions} from 'react-native';
+import {
+    View,
+    Text,
+    AsyncStorage,
+    ActivityIndicator,
+    Dimensions,
+    Alert
+} from 'react-native';
 import styles from './styles';
 import HomeScreenTile from '../../components/HomeScreenTile'
-import {selectSpace, updateSpaces} from '../../reducers/spaces/spacesReducer';
+import {selectSpace, updateSpaces, unsetErrorCondition} from '../../reducers/spaces/spacesReducer';
 import {connect} from 'react-redux';
 import Orientation from 'react-native-orientation';
-import APP_CONST, {TENANT_ID, USER_TOKEN} from '../../lib/constants';
+import {USER_TOKEN} from '../../lib/constants';
 
 const icons = {
   buildingEntrance: require('./../../icons/building.png'),
@@ -27,8 +34,16 @@ class Home extends Component {
 
   render() {
     const {width, height} = Dimensions.get('window');
+    
     return (
         <View style={styles.container}>
+          {this.props.error &&
+            Alert.alert('Error',
+                this.props.error,
+                [
+                  {text: 'OK', onPress: () => this.props.unsetErrorCondition()},
+                ])
+          }
           <View style={styles.header}>
             <Text style={styles.headerText}>SPACES</Text>
           </View>
@@ -77,7 +92,7 @@ class Home extends Component {
                             enabled={!this.props.fetching}/>
           </View>
           {this.props.fetching &&
-          <View style={[styles.overlay, { height, width}]}>
+          <View style={[styles.overlay, {height, width}]}>
             <ActivityIndicator
                 animating={true}
                 style={styles.activityIndicator}
@@ -95,10 +110,12 @@ Home.propTypes = {
 };
 
 const mapStateToProps = (state) => {
+  console.log(`error in coming ${state.spaces.get('ERROR')}`)
   return {
     fetching: state.spaces.get('FETCHING'),
-    spaces: state.spaces.get('SPACES')
+    spaces: state.spaces.get('SPACES'),
+    error: state.spaces.get('ERROR')
   }
 };
 
-export default connect(mapStateToProps, {updateSpaces, selectSpace})(Home);
+export default connect(mapStateToProps, {updateSpaces, selectSpace, unsetErrorCondition})(Home);
