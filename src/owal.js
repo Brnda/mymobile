@@ -26,6 +26,8 @@ import MyFloorView from './containers/MyFloorView';
 import TabIconBuilding from './components/TabIconBuilding';
 import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
+import ChatScreen from './components/ChatScreen';
+import UserProfile from './containers/UserProfile';
 
 export default function native(platform) {
 
@@ -52,8 +54,8 @@ export default function native(platform) {
                        component={TextInviteCodeScreen}/>
                 <Scene key="main" tabs={true} style={{backgroundColor: '#262626'}}>
                   <Scene key="home" component={Home} title="Tab #1" icon={TabIconBuilding} />
-                  <Scene key="tab2" component={PlaceHolder} title="Tab #2" icon={TabIconMessage} />
-                  <Scene key="tab3" component={PlaceHolder} title="Tab #3" icon={TabIconProfile} />
+                  <Scene key="message" component={ChatScreen} title="Message" icon={TabIconMessage} />
+                  <Scene key="profile" component={UserProfile} title="Profile" icon={TabIconProfile} />
                 </Scene>
                 <Scene key="enjoy"
                        component={Enjoy}/>
@@ -68,11 +70,3 @@ export default function native(platform) {
 
   AppRegistry.registerComponent('owalMobile', () => Owal)
 }
-
-// TODO: Please remove when we have the real screens in place.
-const PlaceHolder = () => (
-    <View>
-    <TouchableHighlight onPress={() => AsyncStorage.clear() }>
-      <Text>Reset AsyncStore</Text>
-    </TouchableHighlight>
-    </View>);
