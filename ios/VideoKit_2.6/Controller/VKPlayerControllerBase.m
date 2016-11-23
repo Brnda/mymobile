@@ -393,13 +393,14 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
                     } else {
                         _renderView = [[VKGLES2ViewYUV alloc] init];
                     }
-                    
+                  
                     //_renderView.backgroundColor = [UIColor greenColor]; //Owal:customization
                     if ([_renderView initGLWithDecodeManager:_decodeManager bounds:_scrollView.bounds] == kVKErrorNone) {
                     
                         [_scrollView addSubview:_renderView];
                         [(VKScrollViewContainer *)_scrollView setZoomView:_renderView];
-                        
+                        [self zoomInital]; //Owal: customization
+                      
                         if (_fillScreen)
                             [self setFillScreen:YES];
                         
@@ -630,6 +631,21 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
         CGRect rectToZoom = CGRectMake(x, y, w, h);
         [_scrollView zoomToRect:rectToZoom animated:YES];
     }
+}
+
+//Owal:customization
+- (void)zoomInital {
+  CGPoint touch = _scrollView.center;
+  
+  CGSize scrollViewSize = _scrollView.bounds.size;
+  
+  CGFloat w = scrollViewSize.width / _scrollView.maximumZoomScale;
+  CGFloat h = scrollViewSize.height / _scrollView.maximumZoomScale;
+  CGFloat x = touch.x - w/2.0;
+  CGFloat y = touch.y - h/2.0;
+  
+  CGRect rectToZoom = CGRectMake(x, y, w, h);
+  [_scrollView zoomToRect:rectToZoom animated:YES];
 }
 
 - (void)setFullScreen:(BOOL)value {
