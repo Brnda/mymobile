@@ -30,6 +30,7 @@ RCT_EXPORT_METHOD(setURI:(NSString* )uri title:(NSString* )title) {
   //Configure controller view for display.
   UIView *playerView = controller.view;
   playerView.translatesAutoresizingMaskIntoConstraints = NO;
+  
   [controller setFullScreen:YES];
   controller.barTitle = _title;
   

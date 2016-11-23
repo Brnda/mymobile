@@ -9,7 +9,12 @@ class MyFloor extends Component {
   }
 
   render() {
-    return <VideoController/>
+    return (
+      <View style={{flex: 1, backgroundColor: 'black'}}>
+        <VideoController />
+      </View>
+    );
+
   }
 }
 

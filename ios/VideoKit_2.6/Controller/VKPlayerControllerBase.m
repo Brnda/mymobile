@@ -378,7 +378,8 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
                 
                 if (error == kVKErrorNone) {
                     _scrollView = [[VKScrollViewContainer alloc] initWithFrame:self.view.bounds];
-                    _scrollView.backgroundColor = [UIColor blackColor];
+                    //Owal: customization
+                    //_scrollView.backgroundColor = [UIColor redColor];
                     _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
                     [self.view insertSubview:_scrollView atIndex:0];
                   
@@ -393,7 +394,7 @@ NSString *kVKPlayerDidExitFullscreenNotification = @"VKPlayerDidExitFullscreenNo
                         _renderView = [[VKGLES2ViewYUV alloc] init];
                     }
                     
-                    _renderView.backgroundColor = [UIColor blackColor];
+                    //_renderView.backgroundColor = [UIColor greenColor]; //Owal:customization
                     if ([_renderView initGLWithDecodeManager:_decodeManager bounds:_scrollView.bounds] == kVKErrorNone) {
                     
                         [_scrollView addSubview:_renderView];

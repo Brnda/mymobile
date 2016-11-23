@@ -319,7 +319,7 @@
             [_viewControlPanel addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blurEffectView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(blurEffectView)]];
         }  
         else {
-            _viewControlPanel.backgroundColor = [UIColor whiteColor];
+            _viewControlPanel.backgroundColor = [UIColor blackColor];
         }
     } else {
         _viewControlPanel.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
@@ -754,7 +754,7 @@
     
     __block NSLayoutConstraint *constraintTopByWin, *constraintLeftByWin, *constraintWidthByWin, *constraintHeightByWin;
     
-    [topVc presentViewController:fsContainerVc animated:YES completion:^{
+    [topVc presentViewController:fsContainerVc animated:NO completion:^{
         
         [windowActive addSubview:self.view];
         
@@ -780,9 +780,22 @@
             [windowActive setNeedsLayout];
             [windowActive layoutIfNeeded];
         }
-        
-        [UIView animateWithDuration:duration animations:^{
-            
+          //Owal: customization
+//        [UIView animateWithDuration:duration animations:^{
+      
+//          UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc]
+//                                               initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//      
+//          //  activityView.center = self.view.center;
+//          activityView.translatesAutoresizingMaskIntoConstraints = NO;
+//          [activityView startAnimating];
+//          [self.view addSubview:activityView];
+//      
+//          [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[activityView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(activityView)]];
+//          // align playerView from the top.
+//          [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[activityView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(activityView)]];
+      
+      
             if (![self.view translatesAutoresizingMaskIntoConstraints]) {
                 //view has autolayout
                 constraintTopByWin.constant = 0.0;
@@ -800,8 +813,8 @@
                 [_renderView updateOpenGLFrameSizes];
             }
             
-        } completion:^(BOOL finished) {
-            
+//        } completion:^(BOOL finished) {
+      
             _containerVc = [fsContainerVc retain];
             
             [fsContainerVc.view addSubview:self.view];
@@ -843,7 +856,7 @@
                 [self.scrollView setDisableCenterViewNow:NO];
             }
             [[NSNotificationCenter defaultCenter] postNotificationName:kVKPlayerDidEnterFullscreenNotification object:nil userInfo:nil];
-        }];
+//        }];
     }];
 }
 

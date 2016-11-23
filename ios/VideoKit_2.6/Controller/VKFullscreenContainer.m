@@ -108,7 +108,8 @@
             }
             
             [self dismissViewControllerAnimated:NO completion:^{
-                [UIView animateWithDuration:duration animations:^{
+              //Owal: customization
+//                [UIView animateWithDuration:duration animations:^{
                     if (![_playerController.view translatesAutoresizingMaskIntoConstraints]) {
                         constraintTopByWin.constant = _rectBefore.origin.y;
                         constraintLeftByWin.constant = _rectBefore.origin.x;
@@ -125,8 +126,8 @@
                     }
                     _playerController.view.backgroundColor = [UIColor clearColor];
                     _playerController.scrollView.backgroundColor = _playerController.view.backgroundColor;
-                } completion:^(BOOL finished) {
-                    
+//                } completion:^(BOOL finished) {
+                  
                     [_superviewBefore addSubview:_playerController.view];
                     
                     if (![_playerController.view translatesAutoresizingMaskIntoConstraints]) {
@@ -155,7 +156,7 @@
                     }];
                     
                 }];
-            }];
+//            }];
         }];
 #else
 //os is tvOS (AppleTV)

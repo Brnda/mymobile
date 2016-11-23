@@ -34,7 +34,7 @@ class Home extends Component {
 
   render() {
     const {width, height} = Dimensions.get('window');
-    
+
     return (
         <View style={styles.container}>
           {this.props.error &&
@@ -110,7 +110,6 @@ Home.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  console.log(`error in coming ${state.spaces.get('ERROR')}`)
   return {
     fetching: state.spaces.get('FETCHING'),
     spaces: state.spaces.get('SPACES'),
