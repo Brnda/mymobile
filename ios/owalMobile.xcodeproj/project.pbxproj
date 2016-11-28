@@ -12,7 +12,6 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* owalMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* owalMobileTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -20,7 +19,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3511D7622B000FBCFFD /* DINPro.otf */; };
 		2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A35F1D78F47D00FBCFFD /* DINPro-Bold.otf */; };
@@ -52,6 +50,8 @@
 		2D6CA1141DDC081B008332A1 /* VKGLES2ViewYUVVT.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CA0F21DDC081B008332A1 /* VKGLES2ViewYUVVT.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D6CA1151DDC081B008332A1 /* VKStreamInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CA0F41DDC081B008332A1 /* VKStreamInfoView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D6CA1161DDC081B008332A1 /* VKImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CA0F51DDC081B008332A1 /* VKImages.bundle */; };
+		2D6F25D61DECC9C500FD16BC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6F25D51DECC9C500FD16BC /* UserNotifications.framework */; };
+		2D8D4EEC1DECC0E800E2A42A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D8D4EEB1DECC0E800E2A42A /* GoogleService-Info.plist */; };
 		2D8F16B41DAD640700400ED9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B31DAD640700400ED9 /* libz.tbd */; };
 		2D8F16B61DAD641B00400ED9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B51DAD641B00400ED9 /* libiconv.tbd */; };
 		2D8F16B81DAD644100400ED9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16B71DAD644100400ED9 /* QuartzCore.framework */; };
@@ -65,8 +65,10 @@
 		2D8F16C81DAD64FD00400ED9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */; };
 		2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F16C91DAD650B00400ED9 /* GLKit.framework */; };
 		2DF4FB6F1D66C6F3004F0EEE /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF4FB641D66C658004F0EEE /* libRCTCamera.a */; };
+		6754449FB292F8A46BE465F8 /* libPods-owalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A86F5F556ED14C3E91A6A6B6 /* libPods-owalMobile.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		CFF41E2FCCC4495EA17D9453 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */; };
+		F5D58B3EA4334DB6AEDE682C /* libRNFIRMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6191E7B755EA4BEC9082D99F /* libRNFIRMessaging.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,13 +107,6 @@
 			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
 			remoteInfo = RCTVibration;
 		};
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = owalMobile;
-		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -139,6 +134,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
 			remoteInfo = RNSVG;
+		};
+		2D4EB60A1DECB6C1009E39FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF7ED314C9E4971A9E23E30 /* RNFIRMessaging.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFIRMessaging;
 		};
 		2DA350411DBAF7BC00DEC2A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -177,7 +179,6 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* owalMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = owalMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* owalMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = owalMobileTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
@@ -250,6 +251,8 @@
 		2D6CA0F31DDC081B008332A1 /* VKStreamInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKStreamInfoView.h; sourceTree = "<group>"; };
 		2D6CA0F41DDC081B008332A1 /* VKStreamInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKStreamInfoView.m; sourceTree = "<group>"; };
 		2D6CA0F51DDC081B008332A1 /* VKImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VKImages.bundle; sourceTree = "<group>"; };
+		2D6F25D51DECC9C500FD16BC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		2D8D4EEB1DECC0E800E2A42A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D8F16B31DAD640700400ED9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2D8F16B51DAD641B00400ED9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		2D8F16B71DAD644100400ED9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -264,25 +267,26 @@
 		2D8F16C91DAD650B00400ED9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
+		404B1CA0391509093151471E /* Pods-owalMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owalMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-owalMobileTests/Pods-owalMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		4EFE266A5E675BFFBF122F9F /* Pods-owalMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owalMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-owalMobile/Pods-owalMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
+		6191E7B755EA4BEC9082D99F /* libRNFIRMessaging.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFIRMessaging.a; sourceTree = "<group>"; };
+		6662AF093DBF9630FF7C8F73 /* Pods-owalMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owalMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-owalMobile/Pods-owalMobile.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		92BE5A7DE9DA4D9B14752C5B /* libPods-owalMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-owalMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CCDFDF36C64942BCD1AD65 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
+		A86F5F556ED14C3E91A6A6B6 /* libPods-owalMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-owalMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90A2F90C1D0C3FE05EEA1DA /* Pods-owalMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owalMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-owalMobileTests/Pods-owalMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF7ED314C9E4971A9E23E30 /* RNFIRMessaging.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFIRMessaging.xcodeproj; path = "../node_modules/react-native-fcm/ios/RNFIRMessaging.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6F25D61DECC9C500FD16BC /* UserNotifications.framework in Frameworks */,
 				2D6CA0FD1DDC081B008332A1 /* libssl.a in Frameworks */,
 				2D6CA0F91DDC081B008332A1 /* libavutil.a in Frameworks */,
 				2D8F16CA1DAD650B00400ED9 /* GLKit.framework in Frameworks */,
@@ -315,6 +319,8 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				CFF41E2FCCC4495EA17D9453 /* libRCTOrientation.a in Frameworks */,
+				F5D58B3EA4334DB6AEDE682C /* libRNFIRMessaging.a in Frameworks */,
+				6754449FB292F8A46BE465F8 /* libPods-owalMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +408,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				2D8D4EEB1DECC0E800E2A42A /* GoogleService-Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */,
@@ -422,10 +429,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		21B2EAFE8F9569BD1C1DC44D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D6F25D51DECC9C500FD16BC /* UserNotifications.framework */,
+				A86F5F556ED14C3E91A6A6B6 /* libPods-owalMobile.a */,
+				92BE5A7DE9DA4D9B14752C5B /* libPods-owalMobileTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D35E8D11DADD63E009A5FF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				2D35E8EC1DADDBA9009A5FF2 /* libRNSVG.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D4EB5FB1DECB6C1009E39FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D4EB60B1DECB6C1009E39FC /* libRNFIRMessaging.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -617,6 +642,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				5CCCB31A000E40C891DE6E5D /* RCTOrientation.xcodeproj */,
+				CEF7ED314C9E4971A9E23E30 /* RNFIRMessaging.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -650,6 +676,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* owalMobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				8ECF7DAED54DD7D878ECB41E /* Pods */,
+				21B2EAFE8F9569BD1C1DC44D /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -659,40 +687,35 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* owalMobile.app */,
-				00E356EE1AD99517003FC87E /* owalMobileTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ECF7DAED54DD7D878ECB41E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EFE266A5E675BFFBF122F9F /* Pods-owalMobile.debug.xcconfig */,
+				6662AF093DBF9630FF7C8F73 /* Pods-owalMobile.release.xcconfig */,
+				A90A2F90C1D0C3FE05EEA1DA /* Pods-owalMobileTests.debug.xcconfig */,
+				404B1CA0391509093151471E /* Pods-owalMobileTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* owalMobileTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "owalMobileTests" */;
-			buildPhases = (
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = owalMobileTests;
-			productName = owalMobileTests;
-			productReference = 00E356EE1AD99517003FC87E /* owalMobileTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* owalMobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "owalMobile" */;
 			buildPhases = (
+				F318933D8374602CBC39A792 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				BB4B2397043C799908E6E0EE /* [CP] Embed Pods Frameworks */,
+				7226CC2D98AB38DA666EE2B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -712,10 +735,6 @@
 				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = MHEL4UWLN7;
 					};
@@ -782,6 +801,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 2D4EB5FB1DECB6C1009E39FC /* Products */;
+					ProjectRef = CEF7ED314C9E4971A9E23E30 /* RNFIRMessaging.xcodeproj */;
+				},
+				{
 					ProductGroup = 2D35E8D11DADD63E009A5FF2 /* Products */;
 					ProjectRef = 3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */;
 				},
@@ -789,7 +812,6 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* owalMobile */,
-				00E356ED1AD99517003FC87E /* owalMobileTests */,
 			);
 		};
 /* End PBXProject section */
@@ -858,6 +880,13 @@
 			remoteRef = 2D35E8EB1DADDBA9009A5FF2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		2D4EB60B1DECB6C1009E39FC /* libRNFIRMessaging.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFIRMessaging.a;
+			remoteRef = 2D4EB60A1DECB6C1009E39FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		2DA350421DBAF7BC00DEC2A6 /* libRCTOrientation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -889,19 +918,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2D16A3621D78F47D00FBCFFD /* DINPro-Bold.otf in Resources */,
 				2D6CA10F1DDC081B008332A1 /* license-form.plist in Resources */,
+				2D8D4EEC1DECC0E800E2A42A /* GoogleService-Info.plist in Resources */,
 				2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				2D16A3521D7622B000FBCFFD /* DINPro.otf in Resources */,
@@ -928,17 +951,54 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		7226CC2D98AB38DA666EE2B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-owalMobile/Pods-owalMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB4B2397043C799908E6E0EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-owalMobile/Pods-owalMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F318933D8374602CBC39A792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* owalMobileTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -966,14 +1026,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* owalMobile */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
@@ -987,45 +1039,16 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = owalMobileTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = owalMobileTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/owalMobile.app/owalMobile";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFE266A5E675BFFBF122F9F /* Pods-owalMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = MHEL4UWLN7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1038,6 +1061,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"./VideoKit_2.6/3rd-party/ffmpeg/include",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				INFOPLIST_FILE = owalMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1064,11 +1088,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6662AF093DBF9630FF7C8F73 /* Pods-owalMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = MHEL4UWLN7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1081,6 +1107,7 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"./VideoKit_2.6/3rd-party/ffmpeg/include",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				INFOPLIST_FILE = owalMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1144,6 +1171,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1185,6 +1213,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
+					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1196,15 +1225,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "owalMobileTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "owalMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
