@@ -28,10 +28,31 @@ import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
 import ChatScreen from './components/ChatScreen';
 import UserProfile from './containers/UserProfile';
+import FCM from 'react-native-fcm';
 
 export default function native(platform) {
 
   class Owal extends Component {
+    componentDidMount() {
+      FCM.requestPermissions(); // for iOS
+      FCM.getFCMToken().then(token => {
+        console.log(token)
+        // store fcm token in your server
+      });
+      this.notificationUnsubscribe = FCM.on('notification', (notif) => {
+        // there are two parts of notif. notif.notification contains the notification payload, notif.data contains data payload
+        if(notif.local_notification){
+          //this is a local notification
+        }
+        if(notif.opened_from_tray){
+          //app is open/resumed because user clicked banner
+        }
+      });
+      this.refreshUnsubscribe = FCM.on('refreshToken', (token) => {
+        console.log(token)
+        // fcm token may not be available on first load, catch it here
+      });
+    }
 
     render() {
       const store = configureStore();
