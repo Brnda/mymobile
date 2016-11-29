@@ -12,6 +12,7 @@
     "key-mirror": "^1.0.1",
     "lodash": "^4.15.0",
     "react": "~15.3.1",
+    "react-dom": "^15.2.1",
     "react-native": "^0.33.0",
     "react-native-barcodescanner": "^3.1.1",
     "react-native-button": "^1.6.0",
