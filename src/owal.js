@@ -40,6 +40,7 @@ export default function native(platform) {
         // store fcm token in your server
       });
       this.notificationUnsubscribe = FCM.on('notification', (notif) => {
+        console.log(`notification received!`);
         // there are two parts of notif. notif.notification contains the notification payload, notif.data contains data payload
         if(notif.local_notification){
           //this is a local notification

@@ -265,6 +265,7 @@
 		2D8F16C51DAD64F100400ED9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		2D8F16C71DAD64FD00400ED9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		2D8F16C91DAD650B00400ED9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2DD5F1DD1DEE8A9600418AE4 /* owalMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = owalMobile.entitlements; path = owalMobile/owalMobile.entitlements; sourceTree = "<group>"; };
 		2DF4FB5D1D66C657004F0EEE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		3F5DB161C4F74E838B8EFC46 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		404B1CA0391509093151471E /* Pods-owalMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-owalMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-owalMobileTests/Pods-owalMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +404,7 @@
 		13B07FAE1A68108700A75B9A /* owalMobile */ = {
 			isa = PBXGroup;
 			children = (
+				2DD5F1DD1DEE8A9600418AE4 /* owalMobile.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -737,6 +739,15 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = MHEL4UWLN7;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1044,6 +1055,7 @@
 			baseConfigurationReference = 4EFE266A5E675BFFBF122F9F /* Pods-owalMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = owalMobile/owalMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 16;
@@ -1064,6 +1076,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				INFOPLIST_FILE = owalMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1081,7 +1094,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cfc6bf37-bc86-4d96-9aee-1834dab1704f";
+				PROVISIONING_PROFILE_SPECIFIER = OwalMobileAPNs;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1091,6 +1105,7 @@
 			baseConfigurationReference = 6662AF093DBF9630FF7C8F73 /* Pods-owalMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = owalMobile/owalMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 16;
@@ -1110,6 +1125,7 @@
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 				);
 				INFOPLIST_FILE = owalMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1127,7 +1143,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cfc6bf37-bc86-4d96-9aee-1834dab1704f";
+				PROVISIONING_PROFILE_SPECIFIER = OwalMobileAPNs;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
