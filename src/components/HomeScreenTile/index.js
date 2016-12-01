@@ -39,22 +39,10 @@ class HomeScreenTile extends Component {
   render() {
     const percentage = this.props.statusBarFilled / this.props.statusBarTotal;
     return (
-      <TouchableOpacity style={styles.container}
-          onPress={this._onSelect.bind(this)}>
-        <Image source={this.props.icon} style={styles.icon}/>
-        <Text>{this.props.text}</Text>
-        {(this.props.statusBarTotal > 0) &&
-          <View style={{alignItems: 'center'}}>
-            <Progress.Bar
-              style={styles.progressBar}
-              progress={percentage}
-              width={120}
-              indeterminate={!this.props.enabled}
-              color={this._selectStatusText(percentage)['color']}/>
+      <TouchableOpacity style={styles.container}>
 
-            <Text style={styles.statusText}>{this._selectStatusText(percentage).text}</Text>
-          </View>
-        }
+        <Text>Title Text</Text>
+
       </TouchableOpacity>
     )
   }
