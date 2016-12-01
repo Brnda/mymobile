@@ -43,7 +43,7 @@ class HomeScreenTile extends Component {
           onPress={this._onSelect.bind(this)}>
         <Image source={this.props.icon} style={styles.icon}/>
         <Text>{this.props.text}</Text>
-        {(this.props.statusBarTotal && this.props.statusBarTotal > 0) &&
+        {(this.props.statusBarTotal > 0) &&
           <View style={{alignItems: 'center'}}>
             <Progress.Bar
               style={styles.progressBar}
