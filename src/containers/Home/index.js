@@ -52,12 +52,14 @@ class Home extends Component {
                             onSelect={this.props.selectSpace}
                             spaceId={this.props.spaces.main_entrance._id}
                             icon={icons['buildingEntrance']}
-                            enabled={!this.props.fetching}/>
+                            enabled={!this.props.fetching}
+                            hideStatusBar/>
             <HomeScreenTile text="My Floor"
                             onSelect={this.props.selectSpace}
                             spaceId={this.props.spaces.my_floor._id}
                             icon={icons['myfloor']}
-                            enabled={!this.props.fetching}/>
+                            enabled={!this.props.fetching}
+                            hideStatusBar/>
           </View>
           <View style={styles.row}>
             <HomeScreenTile text="Laundry"
@@ -65,14 +67,12 @@ class Home extends Component {
                             spaceId={this.props.spaces.laundry._id}
                             icon={icons['laundry']}
                             statusBarFilled={this.props.spaces.laundry.status_bar_filled}
-                            statusBarTotal={this.props.spaces.laundry.status_bar_total}
                             enabled={!this.props.fetching}/>
             <HomeScreenTile text="Gym"
                             onSelect={this.props.selectSpace}
                             spaceId={this.props.spaces.gym._id}
                             icon={icons['gym']}
                             statusBarFilled={this.props.spaces.gym.status_bar_filled}
-                            statusBarTotal={this.props.spaces.gym.status_bar_total}
                             enabled={!this.props.fetching}/>
           </View>
           <View style={styles.row}>
@@ -81,14 +81,12 @@ class Home extends Component {
                             spaceId={this.props.spaces.pool._id}
                             icon={icons['pool']}
                             statusBarFilled={this.props.spaces.pool.status_bar_filled}
-                            statusBarTotal={this.props.spaces.pool.status_bar_total}
                             enabled={!this.props.fetching}/>
             <HomeScreenTile text="Garage"
                             onSelect={this.props.selectSpace}
                             spaceId={this.props.spaces.garage._id}
                             icon={icons['garage']}
                             statusBarFilled={this.props.spaces.garage.status_bar_filled}
-                            statusBarTotal={this.props.spaces.garage.status_bar_total}
                             enabled={!this.props.fetching}/>
           </View>
           {this.props.fetching &&
