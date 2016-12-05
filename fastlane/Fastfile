@@ -4,11 +4,11 @@ platform :ios do
                 
         lane :beta do
             increment_build_number(
-              xcodeproj: './ios/owalMobile.xcodeproj'
+              xcodeproj: './ios/owalMobile.xcodeproj',
+              build_number: latest_testflight_build_number + 1
             )
 
             gym(scheme: "owalMobile", project: "./ios/owalMobile.xcodeproj", use_legacy_build_api: true)
-
             sh("cp ../owalMobile.ipa $BITRISE_DEPLOY_DIR")
         end
 
