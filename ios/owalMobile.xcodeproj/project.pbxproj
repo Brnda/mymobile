@@ -1094,8 +1094,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "cfc6bf37-bc86-4d96-9aee-1834dab1704f";
-				PROVISIONING_PROFILE_SPECIFIER = OwalMobileAPNs;
+				PROVISIONING_PROFILE = "7fff485b-983c-4bd1-9eae-e742b4af4d41";
+				PROVISIONING_PROFILE_SPECIFIER = Owal_7d;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1107,7 +1107,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = owalMobile/owalMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: apple@owal.io (PCFAYYNZM6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = MHEL4UWLN7;
 				ENABLE_BITCODE = NO;
@@ -1143,8 +1143,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.owal.mobile.ios;
 				PRODUCT_NAME = owalMobile;
-				PROVISIONING_PROFILE = "cfc6bf37-bc86-4d96-9aee-1834dab1704f";
-				PROVISIONING_PROFILE_SPECIFIER = OwalMobileAPNs;
+				PROVISIONING_PROFILE = "889a0027-447c-4f5a-9f32-b09f5736c4f7";
+				PROVISIONING_PROFILE_SPECIFIER = Owal_7d_distribution;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
