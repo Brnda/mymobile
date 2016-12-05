@@ -1096,6 +1096,7 @@
 				PRODUCT_NAME = owalMobile;
 				PROVISIONING_PROFILE = "7fff485b-983c-4bd1-9eae-e742b4af4d41";
 				PROVISIONING_PROFILE_SPECIFIER = Owal_7d;
+
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1145,6 +1146,7 @@
 				PRODUCT_NAME = owalMobile;
 				PROVISIONING_PROFILE = "889a0027-447c-4f5a-9f32-b09f5736c4f7";
 				PROVISIONING_PROFILE_SPECIFIER = Owal_7d_distribution;
+
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
