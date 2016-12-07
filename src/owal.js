@@ -28,13 +28,52 @@ import TabIconMessage from './components/TabIconMessage';
 import TabIconProfile from './components/TabIconProfile';
 import ChatScreen from './components/ChatScreen';
 import UserProfile from './containers/UserProfile';
+import FCM from 'react-native-fcm';
+import APP_CONST, {USER_TOKEN} from './lib/constants'
+import {updateSpaces} from './reducers/spaces/spacesReducer';
 
 export default function native(platform) {
 
+  const store = configureStore();
+
   class Owal extends Component {
+    _callServer(messaging_token) {
+      AsyncStorage.getItem(USER_TOKEN).then((token) => {
+        if(token) {
+          fetch(`http://${APP_CONST.BaseUrl}:${APP_CONST.Port}/api/v1/messaging/get`, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({token, messaging_token})
+          })
+          .catch((err) => {console.error(`Got an error ${err}`)});
+        }
+      });
+    }
+
+    componentDidMount() {
+      FCM.requestPermissions(); // for iOS
+      FCM.getFCMToken().then(messaging_token => {
+        this._callServer(messaging_token)
+      });
+
+      this.notificationUnsubscribe = FCM.on('notification', (notif) => {
+        // there are two parts of notif. notif.notification contains the notification
+        // payload, notif.data contains data payload
+        AsyncStorage.getItem(USER_TOKEN).then((token) => {
+          if (token) {
+            store.dispatch(updateSpaces(token));
+          }
+        });
+      });
+      this.refreshUnsubscribe = FCM.on('refreshToken', (messaging_token) => {
+        this._callServer(messaging_token);
+      });
+    }
 
     render() {
-      const store = configureStore();
       // setup the router table with Induction selected as the initial component
       return (
           <Provider store={store}>
