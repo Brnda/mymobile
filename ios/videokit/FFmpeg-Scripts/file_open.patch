@@ -1,0 +1,21 @@
+--- file_open.c	2016-06-27 02:54:30.000000000 +0300
++++ file_open-m.c	2016-09-25 10:24:19.000000000 +0300
+@@ -115,7 +115,8 @@
+ #undef free
+     free(ptr);
+ #else
+-    size_t len = strlen(prefix) + 12; /* room for "/tmp/" and "XXXXXX\0" */
++    char *home = getenv("HOME");
++    size_t len = strlen(prefix) + strlen(home) + 12; /* room for "/tmp/" and "XXXXXX\0" */
+     *filename  = av_malloc(len);
+ #endif
+     /* -----common section-----*/
+@@ -132,7 +133,7 @@
+ #   endif
+     fd = open(*filename, O_RDWR | O_BINARY | O_CREAT | O_EXCL, 0600);
+ #else
+-    snprintf(*filename, len, "/tmp/%sXXXXXX", prefix);
++    snprintf(*filename, len, "%s/tmp/%sXXXXXX", home, prefix);
+     fd = mkstemp(*filename);
+ #if defined(_WIN32) || defined (__ANDROID__)
+     if (fd < 0) {
