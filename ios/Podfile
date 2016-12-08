@@ -8,9 +8,9 @@ target 'owalMobile' do
   # Pods for owalMobile
   pod 'Firebase/Messaging'
 
-  target 'owalMobileTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+#  target 'owalMobileTests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
 
 end
