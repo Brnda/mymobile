@@ -8,6 +8,15 @@
 
 #import "VideoControllerManager.h"
 #import "VKPlayerController.h"
+#import "VKAVDecodeManager.h"
+#import "VKGLES2ViewRGB.h"
+#import "VKGLES2ViewYUVVT.h"
+#import "VKGLES2ViewYUV.h"
+
+@interface VideoControllerManager ()<VKDecoderDelegate>{
+  
+}
+@end
 
 @implementation VideoControllerManager
 
@@ -24,27 +33,53 @@ RCT_EXPORT_METHOD(setURI:(NSString* )uri title:(NSString* )title) {
 - (UIView *)view
 {
   UIView *parent = [[UIView alloc] init];
+  UIView *playerView = [[UIView alloc]initWithFrame:CGRectMake(0, 50, 200, 130)];
+  [playerView setBackgroundColor:[UIColor yellowColor]];
   
-  VKPlayerController *controller = [[VKPlayerController alloc] initWithURLString:_uri];
-  
-  //Configure controller view for display.
-  UIView *playerView = controller.view;
-  playerView.translatesAutoresizingMaskIntoConstraints = NO;
-  
-  [controller setFullScreen:YES];
-  controller.barTitle = _title;
-  
+  //  NSDictionary *_decodeOptions = nil;
+  dispatch_async(dispatch_queue_create("play_stop_lock", NULL), ^(void) {
+    VKAVDecodeManager* _decodeManager = [[VKAVDecodeManager alloc] initWithUsername:@"" secret:@""];
+    if (_decodeManager) {
+      _decodeManager.delegate = self;
+      
+      //extra parameters
+      _decodeManager.avPacketCountLogFrequency = 0.01;
+      [_decodeManager setLogLevel:kVKLogLevelStateChanges];
+      [_decodeManager setInitialAVSync:YES];
+      
+      VKError error = [_decodeManager connectWithStreamURLString:@"rtsp://prod-vpn.p.owal.io:28718/proxyStream" options:nil];
+      
+      dispatch_sync(dispatch_get_main_queue(), ^{
+        VKGLES2View *_renderView;
+        if (error == kVKErrorNone) {
+          //create glview to render video pictures
+          if ([_decodeManager videoStreamColorFormat] == VKVideoStreamColorFormatRGB) {
+            _renderView = [[VKGLES2ViewRGB alloc] init];
+          } else if([_decodeManager videoStreamColorFormat] == VKVideoStreamColorFormatYUVVT) {
+            _renderView = [[VKGLES2ViewYUVVT alloc] init];
+          } else {
+            _renderView = [[VKGLES2ViewYUV alloc] init];
+          }
+          
+          if ([_renderView initGLWithDecodeManager:_decodeManager bounds:playerView.bounds] == kVKErrorNone) {
+            [playerView addSubview:_renderView];
+            
+            //readPackets and start decoding
+            [_decodeManager startToReadAndDecode];
+            
+          }
+        }
+      });
+    }
+  });
   [parent addSubview:playerView];
-   // align playerView from the horizontally.
-  [parent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[playerView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(playerView)]];
-  // align playerView from the top.
-  [parent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[playerView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(playerView)]];
-  
-  //Set uri and automatically play stream
-  controller.contentURLString = _uri;
-  [controller play];
-  
   return parent;
+}
+
+#pragma mark - Callbacks VKDecoderDelegate
+
+- (void)decoderStateChanged:(VKDecoderState)state errorCode:(VKError)errCode {
+  NSLog(@"Received state");
 }
 
 @end

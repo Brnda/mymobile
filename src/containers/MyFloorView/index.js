@@ -5,13 +5,14 @@ var VideoControllerManager = require('NativeModules').VideoControllerManager;
 
 class MyFloor extends Component {
   componentWillMount() {
+    console.log(`URL ${this.props.uri}`);
     VideoControllerManager.setURI(this.props.uri, this.props.title);
   }
 
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: 'black'}}>
-        <VideoController />
+      <View style={{flex: 1, backgroundColor: 'green'}}>
+          <VideoController/>
       </View>
     );
 

@@ -7,7 +7,9 @@
 //
 
 #import "RCTViewManager.h"
+#import "VKManager.h"
+#import "VKDecodeManager.h"
+#import "VKPlayerControllerBase.h"
 
 @interface VideoControllerManager : RCTViewManager
-
 @end
