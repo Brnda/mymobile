@@ -15,6 +15,7 @@ const APP_CONST_LOCALDEV = {
 export const SKIP_INDUCTION_KEY = '@AsyncStorage:skipInduction';
 export const USER_TOKEN = '@AsyncStorage:userToken';
 export const TENANT_ID = '@AsyncStorage:tenantID';
+export const TENANT = '@AsyncStorage:tenant';
 
 // DO NOT SUBMIT IF UNCOMMENTED
 //export default APP_CONST_LOCALDEV;
