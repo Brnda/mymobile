@@ -37,7 +37,7 @@ class TenantReview extends Component {
           <InductionHeader/>
           <View style={styles.header}>
             <Text style={styles.headerText}>
-              Welcome home {user.apartment}. Is this your correct address?
+              Welcome home {user.apt}. Is this your correct address?
             </Text>
           </View>
 
