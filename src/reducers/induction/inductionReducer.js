@@ -62,7 +62,6 @@ export const checkInviteCode = (code) => {
             });
 
             AsyncStorage.setItem(TENANT_ID, json.auth.tenant_id);
-            console.log("Saving tenant: " + JSON.stringify(json.user));
             AsyncStorage.setItem(TENANT, JSON.stringify(json.user));
             AsyncStorage.setItem(USER_TOKEN, json.auth.token).then((err) => {
               Actions.tenatReview();
