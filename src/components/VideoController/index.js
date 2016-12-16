@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import { View, requireNativeComponent, NativeModules, NativeEventEmitter } from 'react-native';
 import Orientation from 'react-native-orientation';
 import {Actions} from 'react-native-router-flux';
@@ -21,6 +21,7 @@ class VideoController extends Component {
 }
 
 VideoController.propTypes = {
+  uri: PropTypes.string.isRequired
 };
 
 var VideoControllerz = requireNativeComponent('VideoController', VideoController);

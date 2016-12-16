@@ -25,6 +25,7 @@
 		2D16A3631D78F47D00FBCFFD /* DINPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3601D78F47D00FBCFFD /* DINPro-Italic.otf */; };
 		2D16A3641D78F47D00FBCFFD /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */; };
 		2D21169E1DC187B50096EAFB /* EventNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */; };
+		2D2236961E004E3D00445E38 /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2236951E004E3D00445E38 /* VideoPlayerView.m */; };
 		2D35E8DE1DADDBA8009A5FF2 /* VideoControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D5C9C941D3FFD970028B3D9 /* CustomComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C9C931D3FFD970028B3D9 /* CustomComponent.m */; };
 		2D6F25D61DECC9C500FD16BC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6F25D51DECC9C500FD16BC /* UserNotifications.framework */; };
@@ -211,6 +212,8 @@
 		2D16A3611D78F47D00FBCFFD /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		2D21169C1DC187B50096EAFB /* EventNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventNotificationCenter.h; path = owalMobile/EventNotificationCenter.h; sourceTree = "<group>"; };
 		2D21169D1DC187B50096EAFB /* EventNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventNotificationCenter.m; path = owalMobile/EventNotificationCenter.m; sourceTree = "<group>"; };
+		2D2236941E004E3D00445E38 /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoPlayerView.h; path = owalMobile/VideoPlayerView.h; sourceTree = "<group>"; };
+		2D2236951E004E3D00445E38 /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPlayerView.m; path = owalMobile/VideoPlayerView.m; sourceTree = "<group>"; };
 		2D35E8DC1DADDBA8009A5FF2 /* VideoControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoControllerManager.h; path = owalMobile/VideoControllerManager.h; sourceTree = "<group>"; };
 		2D35E8DD1DADDBA8009A5FF2 /* VideoControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoControllerManager.m; path = owalMobile/VideoControllerManager.m; sourceTree = "<group>"; };
 		2D5C9C921D3FFD970028B3D9 /* CustomComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComponent.h; sourceTree = "<group>"; };
@@ -432,6 +435,8 @@
 		13B07FAE1A68108700A75B9A /* owalMobile */ = {
 			isa = PBXGroup;
 			children = (
+				2D2236941E004E3D00445E38 /* VideoPlayerView.h */,
+				2D2236951E004E3D00445E38 /* VideoPlayerView.m */,
 				2DD5F1DD1DEE8A9600418AE4 /* owalMobile.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1064,6 +1069,7 @@
 				2DCB50841DF7A510000A80ED /* VKQueue.m in Sources */,
 				2DCB50971DF7A510000A80ED /* VKGLES2View.m in Sources */,
 				2DCB507D1DF7A510000A80ED /* VKClock.m in Sources */,
+				2D2236961E004E3D00445E38 /* VideoPlayerView.m in Sources */,
 				2DCB50771DF7A510000A80ED /* VKFullscreenContainer.m in Sources */,
 				2DCB50891DF7A510000A80ED /* VKVideoFrameYUV.m in Sources */,
 				2DCB507E1DF7A510000A80ED /* VKClockManager.m in Sources */,
