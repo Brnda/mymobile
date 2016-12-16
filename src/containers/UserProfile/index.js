@@ -11,12 +11,9 @@ import {connect} from 'react-redux';
 class UserProfile extends Component {
 
   componentWillMount() {
-    console.log("Loading tenant...");
     AsyncStorage.getItem(TENANT).then((tenant) => {
-      console.log("Loaded tenant string: " + tenant);
       let user = JSON.parse(tenant);
       this.setState({user});
-      console.log("Loaded tenant object: " + JSON.stringify(user, null, 2));
     });
   }
 
@@ -36,13 +33,8 @@ class UserProfile extends Component {
     )
   }
   render() {
-    let user = (this.state && this.state.user) || {};
-    let text = //JSON.stringify(user, null, 2);
-      JSON.stringify(
-        {apt: user.apt, addr1: user.address1, addr2: user.address2},
-        null, 2
-      );
-    let title = (user.first_name || 'FirstName') + ' ' + (user.last_name || 'LastName');
+    const user = (this.state && this.state.user) || {};
+    const title = (user.first_name || 'FirstName') + ' ' + (user.last_name || 'LastName');
     return (
         <View style={styles.container}>
           <View style={styles.header}>
@@ -72,7 +64,12 @@ class UserProfile extends Component {
 
 
 UserProfile.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.shape({
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    apt: PropTypes.string,
+    show_full_name_in_directory: PropTypes.bool
+  })
 };
 
 export default UserProfile;
