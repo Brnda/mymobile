@@ -1,6 +1,6 @@
 import {Map} from 'immutable';
 import {Actions} from 'react-native-router-flux';
-import APP_CONST, {USER_TOKEN, TENANT_ID} from '../../lib/constants';
+import APP_CONST, {USER_TOKEN, TENANT_ID, TENANT} from '../../lib/constants';
 import {AsyncStorage} from 'react-native';
 
 //Actions
@@ -62,6 +62,7 @@ export const checkInviteCode = (code) => {
             });
 
             AsyncStorage.setItem(TENANT_ID, json.auth.tenant_id);
+            AsyncStorage.setItem(TENANT, JSON.stringify(json.user));
             AsyncStorage.setItem(USER_TOKEN, json.auth.token).then((err) => {
               Actions.tenatReview();
             });
